@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Viral Replicator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="logo"><span class="highlight">Viral</span> Replicator</h2>
+        <div class="nav-links">
+            <a href="#" class="active">🔥 Radar de Oportunidades</a>
+            <a href="#" onclick="runScraper()" style="background: rgba(46, 160, 67, 0.1); color: var(--success); border: 1px solid var(--success);">Disparar Varredura</a>
+        </div>
+        <div class="stats-box">
+            <h4>Total de Virais Extraídos</h4>
+            <div class="stats-value" id="tot-videos">...</div>
+        </div>
+        <div class="stats-box">
+            <h4>Maior Score Atual</h4>
+            <div class="stats-value highlight-score" id="max-score">0</div>
+        </div>
+        <div class="status-msg" id="status-msg">Atualização a cada 30min automática.</div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>🏆 Ouro Encontrado na Gringa</h1>
+            <p>Os vídeos explodindo nesse momento para você replicar antes de todo mundo no Brasil.</p>
+        </div>
+
+        <div class="grid-container" id="video-grid">
+            <div class="loading">Sincronizando banco de dados com a API...</div>
+        </div>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                const response = await fetch('/api/data');
+                const data = await response.json();
+                
+                const grid = document.getElementById('video-grid');
+                grid.innerHTML = '';
+                
+                if (data.status === 'no_data' || !data.data || data.data.length === 0) {
+                    grid.innerHTML = '<div class="loading">Nenhuma trend violenta encontrada ainda. O radar está varrendo.</div>';
+                    return;
+                }
+
+                document.getElementById('tot-videos').innerText = data.data.length;
+                let maxScore = Math.max(...data.data.map(v => parseFloat(v.viral_score) || 0));
+                document.getElementById('max-score').innerText = isFinite(maxScore) ? maxScore.toFixed(2) : 0;
+
+                data.data.forEach(video => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <span class="badge ${video.cluster.includes('Explicativos') ? 'badge-blue' : 'badge-red'}">${video.cluster}</span>
+                            <span class="score">🚀 Score: ${parseFloat(video.viral_score).toFixed(2)}</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>${video.pt_br_title || 'Adaptação indisponível'}</h3>
+                            <p class="original-title">Da Gringa: ${String(video.title).substring(0, 50)}...</p>
+                            
+                            <div class="metrics">
+                                <div><strong>👀 Views:</strong> ${(video.views/1000).toFixed(1)}K</div>
+                                <div><strong>⏱️ Há:</strong> ${video.hours_since_upload}h</div>
+                                <div><strong>📈 CR:</strong> ${video.engagement_rate}%</div>
+                            </div>
+
+                            <div class="ideas">
+                                <h4>💡 Gancho Inicial:</h4>
+                                <p>${video.suggested_hook || 'Básico e direto ao ponto.'}</p>
+                                <h4>🎨 Thumbnail:</h4>
+                                <p>${video.suggested_thumbnail || 'Rosto chocado + Fundo Escuro.'}</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://youtube.com/watch?v=${video.id}" target="_blank" class="btn">Visualizar Referência (Original)</a>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } catch (err) {
+                console.error(err);
+                document.getElementById('video-grid').innerHTML = '<div class="loading">Erro crítico ao extrair os relatórios em tempo real.</div>';
+            }
+        }
+
+        async function runScraper() {
+            const btn = document.getElementById('status-msg');
+            btn.innerHTML = "<span style='color:#2ea043'>Radar ativo na gringa! Pode demorar uns instantes.</span>";
+            try {
+                await fetch('/api/run');
+                setTimeout(() => { btn.innerHTML = ""; loadData(); }, 15000); 
+            } catch(e) {
+                btn.innerHTML = "<span style='color:red'>Falha na rede.</span>";
+            }
+        }
+
+        loadData();
+        setInterval(loadData, 30000); // Atualiza front-end sozinho
+    </script>
+</body>
+</html>

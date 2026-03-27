@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.stApp { background: #0a0a0a !important; color: #e8e8ed !important; font-family: 'Inter', sans-serif !important; }
+header[data-testid="stHeader"], footer, #MainMenu { display: none !important; }
+.block-container { padding: 0 !important; max-width: 100% !important; }
+section[data-testid="stMain"] > div { padding: 0 !important; }
+
+/* Topbar */
+.vrp-topbar { display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:64px; background:rgba(10,10,10,0.95); border-bottom:1px solid #1f1f1f; position:sticky; top:0; z-index:100; backdrop-filter: blur(10px); }
+.vrp-logo { display:flex; align-items:center; gap:12px; }
+.vrp-logo-icon { width:32px; height:32px; background:#111111; border:1px solid #333; border-radius:7px; display:flex; align-items:center; justify-content:center; font-size:0.78rem; color:#fafafa; font-weight:800; font-family:'Inter',sans-serif; }
+.vrp-logo-text { font-size:0.95rem; font-weight:700; color:#fafafa; letter-spacing:-0.3px; font-family:'Inter',sans-serif; }
+.vrp-logo-text em { color:#888888; font-style:normal; font-weight:400; }
+.vrp-status { display:flex; align-items:center; gap:8px; font-size:0.75rem; font-weight:500; color:#a1a1aa; font-family:'Inter',sans-serif; }
+.vrp-dot { width:7px; height:7px; background:#22c55e; border-radius:50%; box-shadow:0 0 8px rgba(34,197,94,0.4); }
+
+/* Section & Grid */
+.vrp-section-header { padding:28px 40px 16px; display:flex; align-items:center; justify-content:space-between; }
+.vrp-section-h2 { font-size:1.1rem; font-weight:700; color:#fafafa; letter-spacing:-0.3px; font-family:'Inter',sans-serif; }
+.vrp-section-meta { font-size:0.75rem; color:#888888; font-family:'Inter',sans-serif; }
+.vrp-grid-wrap { padding:0 30px 40px; }
+
+/* ─── CARD STANDARD ─── */
+.vrp-card { background:#111111; border:0.5px solid #1f1f1f; border-radius:12px; overflow:hidden; transition:all 0.2s cubic-bezier(0.4, 0, 0.2, 1); width:100%; display:flex; flex-direction:column; margin-bottom: 2px; }
+.vrp-card:hover { border-color:#333333; transform:scale(1.01); }
+.vrp-card-thumb { position:relative; width: 100%; height:200px; overflow:hidden; background:#0a0a0a; border-bottom:0.5px solid #1f1f1f; }
+.vrp-card-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+
+/* Badges sobrepostos */
+.badge-status { position:absolute; top:10px; left:10px; font-size:0.6rem; font-weight:800; padding:4px 8px; border-radius:4px; text-transform:uppercase; letter-spacing:0.5px; font-family:'Inter',sans-serif; }
+.badge-status.green { background:#22c55e; color:#ffffff; }
+.badge-status.yellow { background:#eab308; color:#000000; }
+.badge-status.orange { background:#f97316; color:#ffffff; }
+
+.badge-speed { position:absolute; top:10px; right:10px; background:rgba(0,0,0,0.6); backdrop-filter: blur(4px); color:#ffffff; font-size:0.65rem; font-weight:700; padding:4px 8px; border-radius:4px; font-family:'Inter',sans-serif; }
+
+.badge-window { position:absolute; bottom:10px; left:10px; font-size:0.6rem; font-weight:700; padding:4px 8px; border-radius:4px; text-transform:uppercase; color:#fff; font-family:'Inter',sans-serif; }
+.badge-window.b-red { background:#ef4444; }
+.badge-window.b-yellow { background:#eab308; color:#000; }
+.badge-window.b-green { background:#22c55e; }
+
+/* Blocks inside card */
+.vrp-card-body { padding:14px; display:flex; flex-direction:column; gap:12px; }
+
+/* Title & Channel */
+.vrp-card-title { font-size:15px; font-weight:600; color:#ffffff; line-height:1.4; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; font-family:'Inter',sans-serif; margin-bottom: 4px; }
+.vrp-card-channel { font-size:12px; color:#888888; font-family:'Inter',sans-serif; }
+
+/* Consolidado Score */
+.vrp-score-block { display:flex; flex-direction:column; gap:8px; align-items:center; background:#0a0a0a; padding:12px; border-radius:8px; border:0.5px solid #1f1f1f; }
+.vrp-score-mega { font-size:28px; font-weight:700; font-family:'Inter',sans-serif; line-height:1; }
+.txt-green { color:#22c55e; }
+.txt-yellow { color:#eab308; }
+.txt-red { color:#ef4444; }
+
+/* Mini barras */
+.vrp-bars { display:flex; flex-direction:column; gap:6px; width: 100%; margin-top: 4px; }
+.vrp-bar-row { display:flex; align-items:center; gap:8px; width: 100%; }
+.vrp-bar-label { font-size:10px; color:#888888; width:65px; text-align:right; font-weight:400; font-family:'Inter',sans-serif; }
+.vrp-bar-track { flex:1; height:4px; background:#1c1c1f; border-radius:2px; overflow:hidden; }
+.vrp-bar-fill { height:100%; border-radius:2px; }
+.fill-rep { background:#22c55e; }
+.fill-cre { background:#eab308; }
+.fill-ret { background:#3b82f6; } /* blue */
+.vrp-bar-val { font-size:10px; color:#888888; width:45px; flex-shrink:0; font-family:'Inter',sans-serif; }
+.vrp-bar-val span { font-size: 9px; color: #555; }
+
+/* Country Badge */
+.vrp-country-badge { background:#1a1a1a; border:0.5px solid #333333; border-radius:6px; padding:6px 10px; margin-top: 6px; font-size:11px; font-weight:400; color:#aaaaaa; display:flex; align-items:center; gap:6px; font-family:'Inter',sans-serif; width:fit-content; }
+
+/* Main HTML Button (Block 5) */
+.btn-main { width: 100%; height: 44px; margin-top: 14px; border-radius: 6px; font-family: 'Inter', sans-serif; cursor: pointer; transition: all 0.2s; outline: none; border: none; }
+.btn-attack { background: #22c55e; color: #000000; font-size: 14px; font-weight: 700; border: none; }
+.btn-attack:hover { background: #16a34a; }
+.btn-observe { background: transparent; color: #eab308; border: 1px solid #eab308; font-size: 14px; font-weight: 700; }
+.btn-observe:hover { background: rgba(234,179,8,0.1); color: #facc15; border-color: #facc15; }
+.btn-saturate { background: #222222; color: #888888; font-size: 14px; font-weight: 600; border: none; }
+.btn-saturate:hover { background: #2a2a2a; color: #999999; }
+
+/* ─── FEATURED CARD (Melhor Oportunidade) ─── */
+.vrp-featured-wrap { padding:20px 40px 4px; }
+.vrp-featured { border-radius:12px; overflow:hidden; background:#111111; border:0.5px solid #1f1f1f; display:flex; transition:border-color 0.2s; width: 100%; }
+.vrp-featured:hover { border-color:#333333; }
+.vrp-feat-left { width: 400px; flex-shrink: 0; position:relative; background:#0a0a0a; border-right:0.5px solid #1f1f1f; }
+.vrp-feat-img { width:100%; height:100%; object-fit:cover; display:block; }
+.vrp-feat-right { flex: 1; padding: 24px 32px; display:flex; flex-direction:column; gap:16px; }
+
+.vrp-rank-badge { display:inline-flex; align-items:center; gap:6px; background:transparent; border:1px solid #eab308; color:#eab308; font-size:11px; font-weight:700; padding:4px 10px; border-radius:4px; text-transform:uppercase; letter-spacing:1px; width:fit-content; font-family:'Inter',sans-serif; margin-bottom: 2px; }
+
+.vrp-feat-title { font-size:22px; font-weight:600; color:#ffffff; line-height:1.3; font-family:'Inter',sans-serif; }
+.vrp-feat-channel { font-size:13px; color:#888888; font-family:'Inter',sans-serif; }
+
+.vrp-feat-metrics { display:flex; gap:32px; padding: 12px 0; border-y: 0.5px solid #1f1f1f; }
+.vrp-feat-metric-val { font-size:18px; font-weight:700; color:#ffffff; font-family:'Inter',sans-serif; }
+.vrp-feat-metric-lbl { font-size:11px; color:#888888; text-transform:uppercase; font-family:'Inter',sans-serif; letter-spacing: 0.5px; }
+
+/* ─── STREAMLIT UI OVERRIDES ─── */
+[data-testid="stVerticalBlockBorderWrapper"] { background:transparent !important; border:none !important; padding:0 !important; margin-bottom:0 !important; }
+[data-testid="stColumn"] { padding:0 10px !important; }
+[data-testid="stSidebar"] { display:none !important; }
+
+/* Fusing HTML blocks with buttons vertically inside columns */
+div[data-testid="stVerticalBlock"] > div.element-container { margin-bottom: 0px !important; display:flex; justify-content:center; }
+div[data-testid="stVerticalBlock"] > div.element-container > div.stMarkdown { width: 100%; }
+div.stButton { width: 100% !important; }
+div.stButton > button { width: 100% !important; border-radius: 6px !important; font-family: 'Inter', sans-serif !important; border: none !important; transition: all 0.2s ease !important; cursor: pointer !important; margin-bottom: 8px !important; }
+
+/* Attack Button (Green) */
+button[kind="primary"] { background: #22c55e !important; color: #000000 !important; height: 44px !important; font-size: 14px !important; font-weight: 700 !important; }
+button[kind="primary"]:hover { background: #16a34a !important; transform: none !important; border: none !important; color: #000 !important; box-shadow: none !important; }
+
+/* Observe Button (Yellow Outline) */
+button[kind="secondary"].btn-observe { background: transparent !important; color: #eab308 !important; border: 1px solid #eab308 !important; height: 44px !important; font-size: 14px !important; font-weight: 700 !important; }
+button[kind="secondary"].btn-observe:hover { background: rgba(234,179,8,0.1) !important; color: #facc15 !important; border: 1px solid #facc15 !important; }
+
+/* Saturate Button (Dark Grey) */
+button[kind="secondary"].btn-saturate { background: #222222 !important; color: #888888 !important; height: 44px !important; font-size: 14px !important; font-weight: 600 !important; }
+button[kind="secondary"].btn-saturate:hover { background: #2a2a2a !important; color: #999999 !important; }
+
+/* Secondary Actions (Playbook / Salvar) styled by their column position */
+[data-testid="stHorizontalBlock"] { gap: 8px !important; }
+[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(1) button[kind="secondary"] {
+    background: transparent !important; border: 0.5px solid #ffffff !important; color: #ffffff !important; height: 36px !important; font-size: 13px !important; font-weight: 400 !important;
+}
+[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(1) button[kind="secondary"]:hover {
+    background: rgba(255,255,255,0.05) !important;
+}
+[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(2) button[kind="secondary"] {
+    background: transparent !important; border: 0.5px solid #555555 !important; color: #888888 !important; height: 36px !important; font-size: 13px !important; font-weight: 400 !important;
+}
+[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:nth-child(2) button[kind="secondary"]:hover {
+    background: rgba(255,255,255,0.03) !important; color: #aaaaaa !important; border-color: #666666 !important;
+}
+
+/* Feat Attack Button (Larger) */
+button[kind="primary"].btn-feat-attack { height: 52px !important; font-size: 16px !important; margin-top: 10px !important; }
+
+/* Topbar Navigation Overrides */
+.stRadio > div[role="radiogroup"] { display:flex; gap:2px; flex-wrap:wrap; }
+.stRadio > div[role="radiogroup"] > label { padding:0 14px; height:36px; border-radius:6px; transition:all 0.2s; cursor:pointer; background:transparent; border:none; margin-bottom:0; display:flex; align-items:center; }
+.stRadio > div[role="radiogroup"] > label:hover { background:rgba(255,255,255,0.04); }
+.stRadio > div[role="radiogroup"] > label[data-checked="true"] { background:rgba(255,255,255,0.06); }
+.stRadio > div[role="radiogroup"] [data-testid="stMarkdownContainer"] p { font-size:0.8rem; font-weight:500; font-family:'Inter',sans-serif; color:#888888; margin:0; }
+.stRadio > div[role="radiogroup"] > label[data-checked="true"] [data-testid="stMarkdownContainer"] p { color:#ffffff; }
+div[role="radiogroup"] > label > div:first-child { display:none !important; }
+
+div[data-testid="stTextInput"] label { display:none !important; }
+div[data-testid="stTextInput"] > div > div > input { background:#111111 !important; color:#ffffff !important; border:0.5px solid #333333 !important; border-radius:6px !important; font-family:'Inter' !important; font-size:0.8rem !important; padding:9px 14px !important; transition: border 0.2s; }
+div[data-testid="stTextInput"] > div > div > input:focus { border-color:#555555 !important; outline:none !important; box-shadow:none !important; }
+div[data-testid="stToggle"] label p { font-size:0.8rem !important; color:#888888 !important; font-family:'Inter' !important; }
