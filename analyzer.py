@@ -41,7 +41,19 @@ def calculate_metrics(video):
     video['duration_seconds'] = dur
     # Flag Shorts: qualquer vídeo menor que 62 segundos é Short
     video['is_short'] = dur < 62
-    
+
+    # Idade do canal em dias — sinal contínuo (sem gate), usado pelo scoring.
+    # Phantom channels (canais antigos) caem como sinal neutro; embrionários ganham boost.
+    c_date = video.get('channel_created_at', '')
+    if c_date:
+        try:
+            created = datetime.strptime(c_date, '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=timezone.utc)
+            video['channel_age_days'] = (now - created).days
+        except ValueError:
+            video['channel_age_days'] = None
+    else:
+        video['channel_age_days'] = None
+
     return video
 
 def analyze_videos(videos):
