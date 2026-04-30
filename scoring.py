@@ -1,3 +1,10 @@
+# TODO: calibrar com dados reais após 2 semanas em produção
+# - Se canais embrionários ranqueando baixo: subir EMBRYONIC_BOOST pra 20
+# - Se ruído alto entre 60-90 dias: apertar EMBRYONIC_AGE_DAYS pra 60
+EMBRYONIC_AGE_DAYS = 90
+EMBRYONIC_BOOST = 15
+
+
 def calculate_copy_score(video):
     v_h = video.get('views_per_hour', 0.1)
     subs = max(video.get('subscribers', 1), 1)
@@ -14,7 +21,14 @@ def calculate_copy_score(video):
     if subs > 50000: rising_score *= 0.1
     if padrao != 'Indefinido': rising_score += 20
     video['rising_channel_score'] = round(min(rising_score, 100), 2)
-    
+
+    # Boost de canal embrionário (sinal contínuo, sem gate; phantom channels são neutros)
+    age = video.get('channel_age_days')
+    if age is not None and age < EMBRYONIC_AGE_DAYS:
+        video['rising_channel_score'] = round(
+            min(video['rising_channel_score'] + EMBRYONIC_BOOST, 100), 2
+        )
+
     # 2. RETENÇÃO ESTIMADA
     like_ratio = (likes / views) * 100 
     retencao_estimada = like_ratio * 10 
