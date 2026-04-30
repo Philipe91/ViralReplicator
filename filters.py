@@ -95,14 +95,6 @@ def filter_viral_candidates(videos: list) -> list:
         if v.get('duration_seconds', 0) < 180:
             continue
 
-        # Gate 1b: Elimina shorts (<3 min) E canais velhos (antes de 2026)
-        if v.get('duration_seconds', 0) < 180:
-            continue
-            
-        c_date = v.get('channel_created_at', '')
-        if c_date and c_date < '2026-01-01':
-            continue
-
         # Gate 1: Excluir gaming / facecam
         if exclude_gaming(v):
             continue
