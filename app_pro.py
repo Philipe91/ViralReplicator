@@ -67,6 +67,21 @@ def fmt_num(n):
         return str(int(n))
     except: return "0"
 
+def fmt_velocity(v):
+    """Formata velocity (subs/dia) pra exibir no card. None ou < 1/dia → string vazia."""
+    if v is None:
+        return ""
+    try:
+        v = float(v)
+    except (TypeError, ValueError):
+        return ""
+    sign = "+" if v >= 0 else ""
+    if abs(v) >= 1000:
+        return f"{sign}{v/1000:.1f}k/dia"
+    if abs(v) >= 1:
+        return f"{sign}{v:.0f}/dia"
+    return ""
+
 # ── Inject CSS from external file (avoids Streamlit markdown parser bug) ──────
 css_path = Path(__file__).parent / "style.css"
 with open(css_path) as f:
@@ -178,6 +193,8 @@ def render_card(row, col, saved_list):
     subs_s = fmt_num(row.get('subscribers', 0))
     channel = str(row.get('channel_title', ''))
     hours = int(float(row.get('hours_since_upload', 0)))
+    vel_str = fmt_velocity(row.get('subscriber_velocity_7d'))
+    vel_md = f" &middot; <span style='color:#22c55e;font-weight:600;'>{vel_str}</span>" if vel_str else ""
     
     # Calculate base score (avg of all or main logic)
     score_consolidado = int((rising * 0.45) + (ret * 0.30) + (copy * 0.25))
@@ -199,7 +216,7 @@ def render_card(row, col, saved_list):
         f"</div>"
         f"<div class='vrp-card-body'>"
         f"<div class='vrp-card-title'>{pt_title}</div>"
-        f"<div class='vrp-card-channel'>{channel} &middot; {subs_s} subs</div>"
+        f"<div class='vrp-card-channel'>{channel} &middot; {subs_s} subs{vel_md}</div>"
         f"<div class='vrp-score-block'>"
         f"<div class='vrp-score-mega {score_color}'>Score {score_consolidado}</div>"
         f"<div class='vrp-bars'>"
@@ -248,7 +265,7 @@ with c_nav:
     st.markdown("<div style='padding:14px 40px 0;'>", unsafe_allow_html=True)
     nav_view = st.radio(
         "nav",
-        ["Radar", "Oportunidades", "Expansão", "Tendências", "Cold Case", "Histórias IA", "Salvos"],
+        ["Radar", "Oportunidades", "Expansão", "Tendências", "Aceleração", "Cold Case", "Histórias IA", "Salvos"],
         horizontal=True, label_visibility="collapsed"
     )
     st.markdown("</div>", unsafe_allow_html=True)
@@ -423,6 +440,28 @@ elif nav_view == "Tendências":
     df_view = df_base.sort_values(by='rising_channel_score', ascending=False)
     section_header("Tendências e Analytics", len(df_view))
     render_grid(df_view, saved_videos)
+
+elif nav_view == "Aceleração":
+    # Edge informacional próprio: ordena pelo delta de subs/dia calculado em
+    # cima do nosso channel_history. Canais que ainda não têm ≥2 snapshots
+    # vêm com velocity NULL e ficam fora.
+    if 'subscriber_velocity_7d' not in df_base.columns:
+        df_view = df_base.head(0)
+    else:
+        df_view = df_base.dropna(subset=['subscriber_velocity_7d'])
+        df_view = df_view[df_view['subscriber_velocity_7d'] > 0]
+        if not df_view.empty:
+            df_view = df_view.sort_values(by='subscriber_velocity_7d', ascending=False)
+    section_header("Aceleração — canais com velocity de subs > 0 (últimos 7d)", len(df_view))
+    if df_view.empty:
+        st.info(
+            "Sistema ainda acumulando histórico de canais (precisa de ≥2 rodadas com o mesmo canal). "
+            "Roda 'Varredura Agora' de novo daqui a algumas horas — nas próximas rodadas esta aba "
+            "vai listar canais ordenados pela velocidade de crescimento de inscritos, calculada em "
+            "cima de dado próprio (não da API search)."
+        )
+    else:
+        render_grid(df_view, saved_videos)
 
 elif nav_view == "Cold Case":
     # Busca ampla por keywords no título — não depende da coluna niche

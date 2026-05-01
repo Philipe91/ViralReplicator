@@ -7,6 +7,7 @@ from scoring import calculate_copy_score
 from copy_engine import generate_playbook
 from global_opportunity_engine import generate_global_insights
 from storage import save_to_csv, clear_old_videos, save_channel_snapshots
+from velocity import enrich_videos_with_velocity
 from alerts import check_alerts
 
 def run_pipeline():
@@ -42,6 +43,10 @@ def run_pipeline():
         # Classificar nicho de cada vídeo sobrevivente
         for v in viral_candidates:
             v['niche'] = classify_niche(v)
+
+        # Enriquecer com velocity (subs/dia, views/dia) lendo channel_history.
+        # Vídeos cujo canal não tem ≥2 snapshots ainda recebem velocity = None.
+        enrich_videos_with_velocity(viral_candidates)
 
         # ── Camada 4: Scoring, Insights e Armazenamento ───────────
         patterned   = extract_patterns(viral_candidates)

@@ -37,18 +37,23 @@ def init_db():
             global_opportunities_json TEXT,
             dark_score REAL,
             niche TEXT,
-            channel_created_at TEXT
+            channel_created_at TEXT,
+            subscriber_velocity_7d REAL,
+            view_velocity_7d REAL
         )
     ''')
-    # Migração segura: garantir coluna niche e channel_created_at em bancos antigos
-    try:
-        c.execute("ALTER TABLE videos ADD COLUMN niche TEXT DEFAULT 'general_dark'")
-    except Exception:
-        pass
-    try:
-        c.execute("ALTER TABLE videos ADD COLUMN channel_created_at TEXT DEFAULT ''")
-    except Exception:
-        pass
+    # Migração segura — bancos antigos ganham as colunas via ALTER TABLE.
+    # Inclusão repetida em DB já migrado dispara OperationalError, ignoramos.
+    for stmt in (
+        "ALTER TABLE videos ADD COLUMN niche TEXT DEFAULT 'general_dark'",
+        "ALTER TABLE videos ADD COLUMN channel_created_at TEXT DEFAULT ''",
+        "ALTER TABLE videos ADD COLUMN subscriber_velocity_7d REAL",
+        "ALTER TABLE videos ADD COLUMN view_velocity_7d REAL",
+    ):
+        try:
+            c.execute(stmt)
+        except Exception:
+            pass
     # Tabela de histórico de canais — usada pelo cálculo de velocity (próxima fase).
     # Acumula 1 snapshot por canal por rodada; cresce indefinidamente (cleanup futuro).
     c.execute('''
@@ -135,13 +140,15 @@ def save_to_db(videos):
             v.get('trend_timing', ''), playbook, detected_at,
             v.get('rising_channel_score', 0),
             v.get('retention_score', 0),
-            json.dumps(v.get('global_opportunities', {}), ensure_ascii=False), # Changed from gl_opps and default from [] to {}
+            json.dumps(v.get('global_opportunities', {}), ensure_ascii=False),
             v.get('dark_score', 0),
             v.get('niche', 'general_dark'),
-            v.get('channel_created_at', '') # Added channel_created_at
+            v.get('channel_created_at', ''),
+            v.get('subscriber_velocity_7d'),  # REAL, pode ser None
+            v.get('view_velocity_7d'),         # REAL, pode ser None
         )
         conn.execute(
-            'INSERT OR REPLACE INTO videos VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', # Added one '?' for channel_created_at
+            'INSERT OR REPLACE INTO videos VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
             tuple_data
         )
     conn.commit()
