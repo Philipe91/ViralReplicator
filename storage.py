@@ -1,6 +1,6 @@
 import sqlite3
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 DB_NAME = "viral_replicator_v3.db"
 
@@ -49,8 +49,56 @@ def init_db():
         c.execute("ALTER TABLE videos ADD COLUMN channel_created_at TEXT DEFAULT ''")
     except Exception:
         pass
+    # Tabela de histórico de canais — usada pelo cálculo de velocity (próxima fase).
+    # Acumula 1 snapshot por canal por rodada; cresce indefinidamente (cleanup futuro).
+    c.execute('''
+        CREATE TABLE IF NOT EXISTS channel_history (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            channel_id TEXT NOT NULL,
+            subscribers INTEGER,
+            view_count INTEGER,
+            video_count INTEGER,
+            seen_at TEXT NOT NULL
+        )
+    ''')
+    c.execute('CREATE INDEX IF NOT EXISTS idx_channel_history_channel_id ON channel_history(channel_id)')
+    c.execute('CREATE INDEX IF NOT EXISTS idx_channel_history_seen_at ON channel_history(seen_at)')
     conn.commit()
     conn.close()
+
+
+def save_channel_snapshots(videos):
+    """Salva 1 snapshot por canal único nesta rodada. Roda independente do
+    filtro: queremos o moat de TODOS os canais detectados, mesmo os descartados."""
+    if not videos:
+        return
+    init_db()
+    seen_at = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+
+    # Dedup por channel_id — vários vídeos da mesma rodada podem ser do mesmo canal
+    snapshots = {}
+    for v in videos:
+        cid = v.get('channel_id')
+        if not cid or cid in snapshots:
+            continue
+        snapshots[cid] = (
+            cid,
+            int(v.get('subscribers', 0) or 0),
+            int(v.get('channel_view_count', 0) or 0),
+            int(v.get('channel_video_count', 0) or 0),
+            seen_at,
+        )
+
+    if not snapshots:
+        return
+    conn = sqlite3.connect(DB_NAME)
+    conn.executemany(
+        'INSERT INTO channel_history (channel_id, subscribers, view_count, video_count, seen_at) VALUES (?,?,?,?,?)',
+        list(snapshots.values()),
+    )
+    conn.commit()
+    conn.close()
+    print(f"[DB] {len(snapshots)} snapshots de canal salvos em channel_history.")
 
 def clear_old_videos(hours: int = 48):
     """Remove vídeos detectados há mais de N horas para manter o banco fresco."""

@@ -109,21 +109,23 @@ def get_recent_videos():
             if response.status_code == 200:
                 items = response.json().get('items', [])
                 for item in items:
+                    stats = item.get('statistics', {})
                     channels_data[item['id']] = {
-                        'subscribers': int(item['statistics'].get('subscriberCount', 0)),
+                        'subscribers': int(stats.get('subscriberCount', 0)),
+                        'channel_view_count': int(stats.get('viewCount', 0)),
+                        'channel_video_count': int(stats.get('videoCount', 0)),
                         'channel_created_at': item.get('snippet', {}).get('publishedAt', '')
                     }
         except Exception as e:
             print(f"Erro ao conectar com API de Canais: {e}")
-                
-    # Atrelar quantidade de inscritos ao vídeo correspondente
+
+    # Atrelar dados do canal ao vídeo correspondente
+    empty_channel = {'subscribers': 0, 'channel_view_count': 0, 'channel_video_count': 0, 'channel_created_at': ''}
     for v in videos:
-            c_data = channels_data.get(v['channel_id'], {'subscribers': 0, 'channel_created_at': ''})
-            if isinstance(c_data, dict):
-                v['subscribers'] = c_data.get('subscribers', 0)
-                v['channel_created_at'] = c_data.get('channel_created_at', '')
-            else:
-                v['subscribers'] = c_data
-                v['channel_created_at'] = ''
+        c_data = channels_data.get(v['channel_id'], empty_channel)
+        v['subscribers'] = c_data.get('subscribers', 0)
+        v['channel_view_count'] = c_data.get('channel_view_count', 0)
+        v['channel_video_count'] = c_data.get('channel_video_count', 0)
+        v['channel_created_at'] = c_data.get('channel_created_at', '')
 
     return videos

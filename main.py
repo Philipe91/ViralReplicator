@@ -6,7 +6,7 @@ from idea_generator import apply_idea_generation
 from scoring import calculate_copy_score
 from copy_engine import generate_playbook
 from global_opportunity_engine import generate_global_insights
-from storage import save_to_csv, clear_old_videos
+from storage import save_to_csv, clear_old_videos, save_channel_snapshots
 from alerts import check_alerts
 
 def run_pipeline():
@@ -25,6 +25,10 @@ def run_pipeline():
         if not raw_videos:
             print("[PIPELINE] Nenhum vídeo coletado. Encerrando.")
             return
+
+        # Persiste snapshot de cada canal coletado (data moat — base do velocity score).
+        # Independe do filtro: salva TODOS os canais, mesmo os que serão descartados.
+        save_channel_snapshots(raw_videos)
 
         # ── Camada 2: Análise de metadados ───────────────────────
         analyzed_videos = analyze_videos(raw_videos)
