@@ -1,6 +1,6 @@
 # ESTADO — onde o projeto parou
 
-_Gerado automaticamente em 31/07/2026 06:45 por `estado.py`. Não edite fora do bloco manual._
+_Gerado automaticamente em 31/07/2026 10:23 por `estado.py`. Não edite fora do bloco manual._
 
 **Se você é uma sessão nova do Claude: leia este arquivo primeiro.** Ele diz
 o que já está no disco, o que a última conversa estava fazendo e qual é o
@@ -34,6 +34,15 @@ clara com pessoas na maioria dos planos**. Criado o preset `explicativo_claro` +
 `br_demo3_arterias`, 45s cada. Usam `de-DE-FlorianMultilingualNeural` (voz
 multilíngue, a MESMA identidade vocal nos dois idiomas) e **as mesmas imagens**,
 copiadas de um para o outro, de modo que a única variável do teste é o idioma.
+
+**Camada de direção entregue (31/07 09:30) — `direcao.py`.** O editor deixou de
+sortear movimento por índice (`MOVIMENTOS[i % 6]`, que era repetição de período
+fixo) e passou a executar uma direção declarada por plano: 12 câmeras reais,
+energia 0–5 governando amplitude, regra anti-repetição por eixo, color script por
+ato e ênfase automática em número/data/porcentagem na legenda. Vocabulário
+fechado e **validado** — pedir `orbit` para o render com explicação, em vez de ser
+ignorado em silêncio. Documentado no PLAYBOOK. Fases seguintes acordadas, ainda
+não feitas: profundidade (parallax + rack focus), motion graphics e B-roll real.
 
 **Esperando decisão do dono:**
 1. **Qual voz no português:** Florian multilíngue (mesma voz do alemão, pode deixar
@@ -84,14 +93,14 @@ não o valor medido da referência. Para colar na referência seria `MUSICA_LUFS
 - `br_demo3_arterias` → vídeo final: `output\producao\br_demo3_arterias\br_demo3_arterias_FINAL.mp4` (28 MB)
 - `casa_da_mae` → vídeo final: `output\producao\casa_da_mae\casa_da_mae_FINAL.mp4` (159 MB)
 - `de_demo2_arterien` → vídeo final: `output\producao\de_demo2_arterien\de_demo2_arterien_FINAL.mp4` (36 MB)
-- `de_demo3_arterien` → vídeo final: `output\producao\de_demo3_arterien\de_demo3_arterien_FINAL.mp4` (28 MB)
+- `de_demo3_arterien` → vídeo final: `output\producao\de_demo3_arterien\de_demo3_arterien_FINAL.mp4` (27 MB)
 - `de_demo_arterien` → vídeo final: `output\producao\de_demo_arterien\de_demo_arterien_FINAL.mp4` (49 MB)
 
 ## Serviços e repositório
 
 - **ComfyUI** (`127.0.0.1:8188`): 🟢 no ar
-- **git**: ramo `fix/saneamento-minimo`, 26 arquivo(s) não commitado(s)
-- último commit: `2fef3014 feat(velocity): channel velocity score and Aceleração tab`
+- **git**: ramo `fix/saneamento-minimo`, 6 arquivo(s) não commitado(s)
+- último commit: `9d2d6b52 feat(continuidade): ESTADO.md gerado por hook para nenhuma sessão perder o fio`
 
 ## Conversas em aberto
 
@@ -99,12 +108,12 @@ Sessões do Claude Code que tocaram este projeto nos últimos 14 dias, da mais
 recente para a mais antiga. Para reabrir uma: entre na pasta indicada e rode
 `claude --resume` (ou `claude --resume <id>`).
 
-### `C:\Users\ph_re\Documents\ViralReplicator` — 31/07 06:45
+### `C:\Users\ph_re\Documents\ViralReplicator` — 31/07 10:23
 
 - retomar: `cd "C:\Users\ph_re\Documents\ViralReplicator"` → `claude --resume 24d147a1-3716-4564-a41c-3b693540a0c8`
-- **última fala do dono:** resuma aqui em texto como vc faz pra gerar imagens atravez dos textos , e como funciona a edição dos videos. Preciso pensar como melhorar isso, ja esta muito bom, so precisamos fazer alguns ajustes.
-- **última resposta do Claude:** Segue o mapa dos dois sistemas, com os números reais que estão no código — são eles que você vai querer mexer. --- ## Parte 1 — Como o texto vira imagem O princípio é que **a fala manda em tudo**. Nada é decidido por duração fixa. **1. A narração vem primeiro.…
-- últimas ações: [Edit] C:\Users\ph_re\Documents\ViralReplicator\ESTADO.md, [Edit] C:\Users\ph_re\Documents\ViralReplicator\ESTADO.md, [Bash] List editor.py functions and constants, [Bash] List produce_video and planejar_planos structure, [Read] C:\Users\ph_re\Documents\ViralReplicator\editor.py, [Bash] Check seed determinism, resolution and sampler settin…
+- **última fala do dono:** A auditoria foi excelente. Concordo com sua análise e principalmente com o ponto mais importante: O VisualBrain não pertence ao editor. Ele pertence antes da geração de assets. Sua observação mudou completamente minha visão da arquitetura. Quero evoluir o proj…
+- **última resposta do Claude:** Vou atuar como arquiteto e discordar onde acho que devo. Três das suas propostas eu acho que **pioram** o sistema, e uma peça crítica está faltando no desenho. --- ## 1 — O que está certo e muda o projeto para melhor **"Um plano é uma composição, não uma image…
+- últimas ações: [Edit] C:\Users\ph_re\Documents\ViralReplicator\ESTADO.md, [Bash] Measure module sizes and find duplicated functions, [Bash] Inspect produce_video main and montage selection, [Bash] Find idle constants and count encode passes, [Bash] Check which features roteiros actually use and verify…, [Bash] Check which roteiro fields are actually read by code
 
 ### `C:\Users\ph_re\Documents\ViralReplicator` — 30/07 23:56
 

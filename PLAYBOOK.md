@@ -144,6 +144,64 @@ Escolha o vídeo de referência pelo **desempenho**, não pelo assunto. Foi copi
 vídeo errado — o de 14 mil views, só porque o assunto batia com o nosso — que o
 estilo saiu escuro e sem gente.
 
+## A camada de direção (`direcao.py`)
+
+O roteiro pode dirigir cada plano. Tudo é opcional — o que faltar, o diretor
+preenche sozinho.
+
+```jsonc
+{
+  "ancora": "Es gibt kein Lebensmittel",
+  "seg": 5.02,
+  "imagem": "...",
+  "direcao": {
+    "energia": 4,                 // 0-5; sem isso vem da duração do plano
+    "camera": "push_in",          // sem isso, escolha automática sem repetir eixo
+    "enfase": ["nunca", "Endothel"]  // palavras que ganham destaque na legenda
+  }
+}
+```
+
+E no nível do roteiro: `"color_script": ["frio", "neutro", "ambar", "claro"]` —
+uma grade por ato. Ato é quebrado por `"transicao": "dissolve"` numa cena.
+
+**Câmeras executáveis:** `static`, `push_in`, `push_out`, `slow_zoom`,
+`fast_zoom`, `crash_zoom`, `pan_left`, `pan_right`, `whip_pan`, `tilt_up`,
+`tilt_down`, `handheld`.
+Aliases que renderizam **igual** (imagem chapada não tem perspectiva para
+mudar): `dolly_in`=`push_in`, `dolly_out`/`pull_back`=`push_out`,
+`truck_*`=`pan_*`, `pedestal_*`=`tilt_*`.
+
+**Grades:** `frio`, `neutro`, `quente`, `ambar`, `verde`, `claro`.
+
+**O que NÃO existe, e por quê:** `orbit`, `drone`, `pov`, `over_shoulder` mudam
+o ponto de vista — isso é prompt de imagem, não movimento. `rack_focus` e
+parallax precisam de mapa de profundidade (fase seguinte). `macro` e os
+enquadramentos (close, wide) são decisão de geração: escreva no prompt.
+
+Pedir qualquer um desses **para o render**, com uma mensagem explicando o
+motivo. Direção ignorada em silêncio é pior que direção ausente, porque dá a
+impressão de ter sido aplicada.
+
+### Regras que o diretor aplica sozinho
+
+- **Nunca dois planos seguidos no mesmo eixo** (profundidade / horizontal /
+  vertical / orgânico), e o sentido não repete num intervalo de três. A versão
+  antiga fazia `MOVIMENTOS[i % 6]` — repetição com período fixo, que é a
+  definição de slideshow.
+- **Energia governa a amplitude.** Sem declaração, ela sai da duração do plano
+  comparada à mediana do vídeo: plano curto é corte rápido, e taxa de corte é
+  energia. Gesto forte (`crash_zoom`, `whip_pan`) é bloqueado em energia ≤ 2 e
+  `static` é bloqueado em energia ≥ 4.
+- **Número, porcentagem, data e unidade viram ênfase na legenda** sem precisar
+  marcar nada.
+- **A cor é por ato**, aplicada dentro do segmento. Grão e vinheta continuam
+  num passe único no fim.
+
+> Cuidado ao escrever expressão de câmera nova: o filtergraph do ffmpeg separa
+> filtros por vírgula, então `min()`, `if()` e `pow()` quebram a cadeia inteira.
+> As curvas de aceleração usam saturação algébrica (`1-1/(1+k*t)`) por isso.
+
 ## O que ainda não está resolvido
 
 - **Rótulo técnico flutuante** (tipo "NO", "LDL" sobre a cena) ainda não implementado.

@@ -25,14 +25,27 @@ O que mudou em relação à primeira montagem, e POR QUÊ:
 5. TRILHA COM DUCKING via sidechaincompress: a música abaixa sozinha quando a
    narração fala. Mesma técnica do mix_bg_music do viral_replicator_video_engine.
 
-6. PASSE DE ACABAMENTO (grade + grão + vinheta) junto com a queima da legenda,
-   num único encode — nada de re-encodar 3 vezes e empilhar perda.
+6. PASSE DE ACABAMENTO (grão + vinheta) junto com a queima da legenda.
+
+   A COR não está mais aqui: desde 31/07 a grade é aplicada por ATO, dentro de
+   cada segmento (ver `direcao.GRADES`). Um vídeo inteiro com uma atmosfera só
+   é o que faz parecer que ninguém dirigiu.
+
+   Sobre a cadeia de encodes — este texto afirmava "um único encode, nada de
+   re-encodar 3 vezes". Era falso, e a auditoria de 31/07 mediu: o segmento sai
+   do `ken_burns` em crf 18, o concat dentro do ato é cópia, o xfade entre atos
+   re-encoda em crf 19 e o acabamento re-encoda de novo. São **2 passes no
+   melhor caso e 3 quando há mais de um ato** — e agora todo vídeo tem mais de
+   um ato, porque o color script depende disso. Reduzir isso com intermediários
+   sem perda está previsto na V3, junto do compositor.
 """
 
 import json
 import re
 import subprocess
 from pathlib import Path
+
+import direcao
 
 RAIZ = Path(__file__).parent
 FFMPEG = "ffmpeg"
@@ -66,6 +79,14 @@ MAX_CHARS_BLOCO = 22
 PAUSA_QUEBRA = 0.6      # pausa na fala que force quebra de grupo
 
 DESTAQUE = r"{\c&H0000FFFF&\t(0,120,\fscx118\fscy118)\t(120,240,\fscx100\fscy100)}"
+# Palavra que carrega o DADO (número, porcentagem, data, unidade) ou que o
+# roteiro marcou em `direcao.enfase`. O canal de referência reforça o número na
+# tela o tempo todo; aqui isso sai na camada vetorial, sem depender da difusão
+# desenhar texto — que é justamente o que ela faz mal.
+DESTAQUE_FORTE = r"{\c&H0000FFFF&\b1\t(0,140,\fscx140\fscy140)\t(140,320,\fscx100\fscy100)}"
+# Mesmo quando não é a palavra corrente, o dado fica em negrito: o olho acha o
+# número antes de a narração chegar nele.
+DADO = r"{\b1}"
 RESET = r"{\r}"
 
 # ── trilha ───────────────────────────────────────────────────────────────
@@ -84,7 +105,11 @@ MUSICA_LUFS = -42
 DUCK = dict(threshold=0.05, ratio=4, attack=15, release=250)
 
 # ── acabamento ───────────────────────────────────────────────────────────
-LOOK = "eq=contrast=1.06:saturation=1.04:gamma=0.98,vignette=PI/5,noise=alls=5:allf=t+u"
+# Só o acabamento fica global. A COR saiu daqui e foi para `direcao.GRADES`,
+# aplicada por ato dentro de cada segmento — um vídeo inteiro com uma atmosfera
+# só é o que faz parecer que ninguém dirigiu. Grão e vinheta continuam num
+# passe único no fim, junto com a queima da legenda, para não empilhar perda.
+LOOK = "vignette=PI/5,noise=alls=5:allf=t+u"
 
 
 def _run(cmd, desc):
@@ -179,25 +204,42 @@ def escrever_ass(audios, dest: Path) -> Path:
     Um evento por palavra em vez da tag \\k porque o suporte a \\k no libass
     varia por versão, e o pop escalado dá leitura melhor que o wipe do karaokê.
     """
+    # Palavras marcadas à mão no roteiro. O conjunto é do vídeo inteiro, não por
+    # cena: se uma palavra merece destaque, merece em toda aparição — e assim a
+    # marcação não precisa ser repetida plano a plano.
+    enfase = set()
+    for cena, *_ in audios:
+        for p in cena.get("planos") or []:
+            for w in (p.get("direcao") or {}).get("enfase") or []:
+                enfase.add(str(w).strip().lower())
+
     grupos = agrupar_palavras(coletar_palavras(audios))
-    eventos = []
+    eventos, n_fortes = [], 0
     for grupo in grupos:
         fim_grupo = grupo[-1]["fim"]
+        fortes = [direcao.merece_enfase(w["txt"], enfase) for w in grupo]
+        n_fortes += sum(fortes)
         for i, alvo in enumerate(grupo):
             ini = alvo["ini"]
             # ativa até a próxima começar — evita piscada entre palavras
             fim = grupo[i + 1]["ini"] if i + 1 < len(grupo) else fim_grupo
             if fim <= ini:
                 fim = ini + 0.05
-            partes = [
-                f"{DESTAQUE}{w['txt'].upper()}{RESET}" if j == i else w["txt"].upper()
-                for j, w in enumerate(grupo)
-            ]
+            partes = []
+            for j, w in enumerate(grupo):
+                txt = w["txt"].upper()
+                if j == i:
+                    partes.append(f"{DESTAQUE_FORTE if fortes[j] else DESTAQUE}{txt}{RESET}")
+                elif fortes[j]:
+                    partes.append(f"{DADO}{txt}{RESET}")
+                else:
+                    partes.append(txt)
             eventos.append(
                 f"Dialogue: 0,{_ts_ass(ini)},{_ts_ass(fim)},Viral,,0,0,0,," + " ".join(partes)
             )
     dest.write_text(CABECALHO_ASS + "\n".join(eventos) + "\n", encoding="utf-8")
-    _p(f"[LEGENDA] {len(grupos)} grupos / {len(eventos)} eventos ASS (maiúsculas + pop)")
+    _p(f"[LEGENDA] {len(grupos)} grupos / {len(eventos)} eventos ASS "
+       f"(maiúsculas + pop, {n_fortes} palavra(s) com ênfase)")
     return dest
 
 
@@ -224,63 +266,48 @@ def escrever_srt(audios, dest: Path) -> Path:
 # ─────────────────────────────────────────────────────────────────────────
 
 # (zoom_final, x_ini→x_fim, y_ini→y_fim) — 6 movimentos que se alternam por cena
-MOVIMENTOS = [
-    ("in", "centro"), ("out", "centro"), ("in", "esq_dir"),
-    ("in", "dir_esq"), ("out", "cima_baixo"), ("in", "baixo_cima"),
-]
+def ken_burns(img: Path, dur: float, saida: Path, camera: str = "push_in",
+              forca: float = 0.085, recorte: float = 1.0, grade: str = "neutro"):
+    """Renderiza um plano estático com a câmera e a grade que o diretor mandou.
 
-
-def ken_burns(img: Path, dur: float, saida: Path, movimento=("in", "centro"), forca=0.085,
-              recorte=1.0):
-    """Zoom/pan lento. `forca` menor que a versão anterior (0.12): movimento
-    perceptível em imagem estática cansa e denuncia o slideshow."""
+    O vocabulário de câmera e as expressões do zoompan vivem em `direcao.py`;
+    aqui só se executa. A grade entra NESTE ponto, e não num passe global no
+    fim, porque cada segmento já re-encoda — colorir por ato sai de graça e é o
+    que dá identidade visual a cada parte do vídeo. O acabamento (grão +
+    vinheta) continua sendo um passe único no final.
+    """
     frames = max(int(dur * FPS), 2)
-    tipo, direcao = movimento
-    z = f"1+{forca}*on/{frames}" if tipo == "in" else f"{1 + forca}-{forca}*on/{frames}"
-    cx, cy = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
-    if direcao == "esq_dir":
-        x = f"(iw-iw/zoom)*on/{frames}"; y = cy
-    elif direcao == "dir_esq":
-        x = f"(iw-iw/zoom)*(1-on/{frames})"; y = cy
-    elif direcao == "cima_baixo":
-        x = cx; y = f"(ih-ih/zoom)*on/{frames}"
-    elif direcao == "baixo_cima":
-        x = cx; y = f"(ih-ih/zoom)*(1-on/{frames})"
-    else:
-        x, y = cx, cy
+    z, x, y = direcao.expressoes(camera, frames, forca)
     # recorte > 1 fecha o enquadramento na mesma imagem (sub-plano mais fechado)
     lado_w = int(LARGURA * 2 / recorte) // 2 * 2
     lado_h = int(ALTURA * 2 / recorte) // 2 * 2
     vf = (
         f"scale={LARGURA * 2}:{ALTURA * 2}:force_original_aspect_ratio=increase,"
         f"crop={lado_w}:{lado_h},"
-        f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={LARGURA}x{ALTURA}:fps={FPS},setsar=1"
+        f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={LARGURA}x{ALTURA}:fps={FPS},"
+        f"{direcao.GRADES.get(grade, direcao.GRADES['neutro'])},setsar=1"
     )
     _run([FFMPEG, "-y", "-loglevel", "error", "-loop", "1", "-i", str(img), "-vf", vf,
           "-t", f"{dur:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
           "-pix_fmt", "yuv420p", str(saida)], f"ken burns {img.name}")
 
 
-def punch_in(img: Path, dur: float, saida: Path, tmp: Path, cortes=None):
+def punch_in(img: Path, dur: float, saida: Path, tmp: Path, cortes=None, grade="neutro"):
     """Pica uma imagem em N sub-planos (geral → médio → close) com corte seco.
-    Usado no hook: plano único de 18s é onde o espectador vaza."""
+    Usado no hook: plano único de 18s é onde o espectador vaza.
+
+    Cada degrau alterna a câmera para o punch não virar uma escada de zooms
+    iguais — a mesma regra de alternância que vale no resto do vídeo.
+    """
     import math
     cortes = cortes or max(3, min(math.ceil(dur / MAX_SEG_PLANO), 5))
     escalas = [1.0, 1.15, 1.32, 1.50, 1.68][:cortes]
+    alternancia = ["push_in", "static", "pan_right", "push_in", "tilt_down"]
     partes, fatia = [], dur / cortes
     for i, esc in enumerate(escalas):
         p = tmp / f"{saida.stem}_pi{i}.mp4"
-        lado_w, lado_h = int(LARGURA * 2 / esc) // 2 * 2, int(ALTURA * 2 / esc) // 2 * 2
-        frames = max(int(fatia * FPS), 2)
-        vf = (
-            f"scale={LARGURA * 2}:{ALTURA * 2}:force_original_aspect_ratio=increase,"
-            f"crop={lado_w}:{lado_h},"
-            f"zoompan=z='1+0.05*on/{frames}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
-            f":d={frames}:s={LARGURA}x{ALTURA}:fps={FPS},setsar=1"
-        )
-        _run([FFMPEG, "-y", "-loglevel", "error", "-loop", "1", "-i", str(img), "-vf", vf,
-              "-t", f"{fatia:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
-              "-pix_fmt", "yuv420p", str(p)], f"punch-in {i}")
+        ken_burns(img, fatia, p, camera=alternancia[i % len(alternancia)],
+                  forca=0.05, recorte=esc, grade=grade)
         partes.append(p)
     concat_seco(partes, saida, tmp)
 
@@ -359,18 +386,23 @@ def cortes_ancorados(cena: dict, palavras: list, dur: float, n: int) -> list:
     return duracoes
 
 
-def multi_plano(planos, dur: float, saida: Path, tmp: Path, offset_mov=0, duracoes=None):
+def multi_plano(imagens, dur: float, saida: Path, tmp: Path, direcoes=None,
+                duracoes=None, grade="neutro"):
     """Divide a cena entre N planos DIFERENTES com corte seco.
 
     É o que separa vídeo automatizado de edição de verdade: dentro de um plano
-    de 20s, imagem única só com zoom denuncia. Cada sub-plano ganha seu próprio
-    movimento, tirado da roda de MOVIMENTOS para não repetir o mesmo gesto.
+    de 20s, imagem única só com zoom denuncia. Cada sub-plano executa a direção
+    que `direcao.dirigir()` já resolveu para ele — inclusive a regra de nunca
+    repetir o eixo do movimento anterior.
     """
-    duracoes = duracoes or [dur / len(planos)] * len(planos)
+    duracoes = duracoes or [dur / len(imagens)] * len(imagens)
+    direcoes = direcoes or [{}] * len(imagens)
     partes = []
-    for i, img in enumerate(planos):
-        mov = MOVIMENTOS[(offset_mov + i) % len(MOVIMENTOS)]
+    for i, img in enumerate(imagens):
         d = duracoes[i]
+        dir_i = direcoes[i] if i < len(direcoes) else {}
+        cam = dir_i.get("camera", "push_in")
+        forca = dir_i.get("forca", 0.085)
         # Plano longo demais vira 2 sub-planos da MESMA imagem, em recortes
         # diferentes (geral -> fechado), com corte seco entre eles. O canal de
         # referência corta a cada ~4s; segurar 12s numa imagem é o que faz o
@@ -378,21 +410,21 @@ def multi_plano(planos, dur: float, saida: Path, tmp: Path, offset_mov=0, duraco
         # nova, que é onde está o custo de GPU.
         if d > MAX_SEG_PLANO:
             metade = d / 2
-            for k, esc in enumerate((1.0, 1.22)):
+            # o segundo pedaço troca de eixo, senão o corte fica invisível
+            segundo = direcao.contraste_de(cam)
+            for k, (esc, c) in enumerate(((1.0, cam), (1.22, segundo))):
                 p = tmp / f"{saida.stem}_mp{i}_{k}.mp4"
-                ken_burns(img, metade, p,
-                          movimento=MOVIMENTOS[(offset_mov + i + k) % len(MOVIMENTOS)],
-                          recorte=esc)
+                ken_burns(img, metade, p, camera=c, forca=forca, recorte=esc, grade=grade)
                 partes.append(p)
         else:
             p = tmp / f"{saida.stem}_mp{i}.mp4"
-            ken_burns(img, d, p, movimento=mov)
+            ken_burns(img, d, p, camera=cam, forca=forca, grade=grade)
             partes.append(p)
     concat_seco(partes, saida, tmp)
 
 
-def segmento_clipe(clip: Path, dur: float, saida: Path, tmp: Path, movimento,
-                   extras=None, duracoes=None):
+def segmento_clipe(clip: Path, dur: float, saida: Path, tmp: Path, direcoes=None,
+                   extras=None, duracoes=None, grade="neutro"):
     """Clipe LTXV em velocidade natural, depois corta para os planos extras da
     cena (se houver) ou continua no último frame do clipe.
 
@@ -402,8 +434,11 @@ def segmento_clipe(clip: Path, dur: float, saida: Path, tmp: Path, movimento,
     """
     from comfy_video import FPS as CLIP_FPS
     dur_clip = 121 / CLIP_FPS
+    # a grade do ato entra também no clipe: sem isso o ato fica com duas cores,
+    # porque as imagens estáticas já saem coloridas do ken_burns
     escala = (f"scale={LARGURA}:{ALTURA}:force_original_aspect_ratio=increase,"
-              f"crop={LARGURA}:{ALTURA},fps={FPS},setsar=1")
+              f"crop={LARGURA}:{ALTURA},fps={FPS},"
+              f"{direcao.GRADES.get(grade, direcao.GRADES['neutro'])},setsar=1")
     if dur <= dur_clip + 0.3:
         _run([FFMPEG, "-y", "-loglevel", "error", "-i", str(clip), "-vf", escala, "-an",
               "-t", f"{dur:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
@@ -424,12 +459,17 @@ def segmento_clipe(clip: Path, dur: float, saida: Path, tmp: Path, movimento,
             sobra = [d for d in duracoes[1:]]
             fator = resto / sum(sobra) if sum(sobra) > 0 else 1.0
             durs_extras = [d * fator for d in sobra]
-        multi_plano(list(extras), resto, b, tmp, offset_mov=1, duracoes=durs_extras)
+        multi_plano(list(extras), resto, b, tmp,
+                    direcoes=(direcoes or [])[1:], duracoes=durs_extras, grade=grade)
     else:
         ult = tmp / f"{saida.stem}_last.png"
+        # o último frame já sai graduado pela `escala`; o ken_burns aplicaria a
+        # grade de novo, então aqui ele recebe a neutra para não dobrar
         _run([FFMPEG, "-y", "-loglevel", "error", "-i", str(clip), "-vf", escala,
               "-update", "1", str(ult)], "ultimo frame")
-        ken_burns(ult, resto, b, movimento=movimento, forca=0.06)
+        seguinte = (direcoes or [{}])[0].get("camera") if direcoes else None
+        ken_burns(ult, resto, b, camera=direcao.contraste_de(seguinte or "push_in"),
+                  forca=0.06, grade="neutro")
     concat_seco([a, b], saida, tmp)
 
 
@@ -499,10 +539,28 @@ def montar(roteiro: dict, audios: list, imagens: dict, clipes: dict, base: Path)
     tmp = base / "tmp_edit"
     tmp.mkdir(parents=True, exist_ok=True)
 
+    # A direção vem antes de qualquer pixel. `validar` para o render se o
+    # roteiro pedir algo que não tem execução — direção ignorada em silêncio é
+    # pior que direção ausente, porque dá a impressão de que foi aplicada.
+    erros = direcao.validar(roteiro)
+    if erros:
+        raise RuntimeError("direção inválida:\n  - " + "\n  - ".join(erros))
+    direcao.dirigir(roteiro)
+
     # cenas que ABREM com dissolve => a cena anterior precisa de folga
     abre_dissolve = {c["n"] for c in roteiro["cenas"] if c.get("transicao") == "dissolve"}
     ns = [c["n"] for c in roteiro["cenas"]]
     precisa_folga = {ns[i] for i in range(len(ns) - 1) if ns[i + 1] in abre_dissolve}
+
+    # o ato de cada cena precisa ser conhecido ANTES de renderizar, porque a
+    # grade entra dentro do segmento
+    ato_da_cena, ato = {}, 0
+    for k, n in enumerate(ns):
+        if n in abre_dissolve and k > 0:
+            ato += 1
+        ato_da_cena[n] = ato
+    grades = direcao.grade_dos_atos(ato + 1, roteiro)
+    _p(f"[DIREÇÃO] {ato + 1} ato(s), color script: {' -> '.join(grades)}")
 
     segmentos = []
     for i, (cena, _wav, dur, palavras) in enumerate(audios):
@@ -511,19 +569,23 @@ def montar(roteiro: dict, audios: list, imagens: dict, clipes: dict, base: Path)
         folga = 1.0 if ultimo else (DISSOLVE if n in precisa_folga else 0.0)
         dur_seg = dur + folga
         seg = tmp / f"seg_{n:02d}.mp4"
+        grade = grades[ato_da_cena.get(n, 0)]
+        dirs = [p.get("direcao", {}) for p in (cena.get("planos") or [])]
         if not seg.exists():
-            mov = MOVIMENTOS[i % len(MOVIMENTOS)]
             planos = imagens.get(n, [])
             durs = cortes_ancorados(cena, palavras, dur_seg, len(planos)) if planos else []
             if cena.get("punch_in") and planos:
-                punch_in(planos[0], dur_seg, seg, tmp)
+                punch_in(planos[0], dur_seg, seg, tmp, grade=grade)
             elif n in clipes:
-                segmento_clipe(clipes[n], dur_seg, seg, tmp, mov,
-                               extras=planos[1:], duracoes=durs)
+                segmento_clipe(clipes[n], dur_seg, seg, tmp, direcoes=dirs,
+                               extras=planos[1:], duracoes=durs, grade=grade)
             elif len(planos) > 1:
-                multi_plano(planos, dur_seg, seg, tmp, i, duracoes=durs)
+                multi_plano(planos, dur_seg, seg, tmp, direcoes=dirs,
+                            duracoes=durs, grade=grade)
             elif planos:
-                ken_burns(planos[0], dur_seg, seg, movimento=mov)
+                d0 = dirs[0] if dirs else {}
+                ken_burns(planos[0], dur_seg, seg, camera=d0.get("camera", "push_in"),
+                          forca=d0.get("forca", 0.085), grade=grade)
             else:
                 raise RuntimeError(f"cena {n} sem imagem nem clipe")
             if len(planos) > 1 and durs:

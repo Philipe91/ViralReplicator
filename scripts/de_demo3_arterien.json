@@ -68,9 +68,14 @@
           "imagem": "an illustrated blood vessel widening open, drawn in soft flat editorial style in the foreground, and far behind it through a large window a person jogging along a green park path in morning light"
         }
       ],
-      "movimento": true
+      "movimento": true,
+      "transicao": "dissolve"
     }
   ],
   "estilo": "explicativo_claro",
-  "musica": "de_thinkscience"
+  "musica": "de_thinkscience",
+  "color_script": [
+    "frio",
+    "ambar"
+  ]
 }
