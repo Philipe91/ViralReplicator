@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/estado.py\" > /dev/null 2>&1 || true",
+            "timeout": 20,
+            "statusMessage": "Salvando ESTADO.md"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/estado.py\" > /dev/null 2>&1 || true",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
