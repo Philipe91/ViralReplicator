@@ -3,4 +3,14 @@ __pycache__/
 .env
 *.db
 playbook_exports/
+output/
 .DS_Store
+
+# permissões pessoais da máquina, não do projeto
+.claude/settings.local.json
+
+# mídia de referência baixada: 113MB reproduzíveis com estudo_frames.py.
+# As legendas .vtt e as análises .json ficam versionadas — elas é que são o estudo.
+estudo/**/*.mp4
+estudo/**/*.wav
+estudo/**/*.m4a
