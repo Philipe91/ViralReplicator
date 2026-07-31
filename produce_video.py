@@ -356,6 +356,69 @@ def _camada_vetorial(cena: dict, indice: int):
     return None
 
 
+def _impressao(arq: Path) -> str:
+    """Identidade barata de um arquivo: tamanho + primeiros 64KB.
+
+    Não é hash do conteúdo inteiro porque take de vídeo pode ter centenas de MB
+    e isto roda a cada etapa de imagens. Tamanho + cabeçalho distingue arquivos
+    diferentes na prática, e se um dia colidir o sintoma é visível (a imagem
+    errada no plano), não silencioso.
+    """
+    import hashlib
+    h = hashlib.sha256()
+    h.update(str(arq.stat().st_size).encode())
+    with arq.open("rb") as f:
+        h.update(f.read(65536))
+    return h.hexdigest()[:10]
+
+
+def gerar_importados(roteiro: dict, dest: Path) -> int:
+    """Copia para o slot do plano o arquivo indicado em `plano["arquivo"]`.
+
+    Serve para material vindo de fora — take extraído por `importar_video.py`,
+    B-roll de banco de imagens, ou qualquer PNG/MP4 escolhido à mão. O caminho é
+    relativo à raiz do projeto.
+
+    Como o arquivo cai no slot com o mesmo padrão de nome que o SDXL usaria, o
+    laço de geração seguinte encontra o plano resolvido e não o enfileira na
+    GPU — exatamente o mesmo mecanismo dos executores vetoriais.
+    """
+    dest.mkdir(parents=True, exist_ok=True)
+    import shutil
+    feitos = 0
+    for cena in roteiro.get("cenas", []):
+        for i, plano in enumerate(cena.get("planos") or [], 1):
+            origem = plano.get("arquivo")
+            if not origem:
+                continue
+            fonte = Path(origem)
+            if not fonte.is_absolute():
+                fonte = RAIZ / fonte
+            if not fonte.exists():
+                raise RuntimeError(
+                    f"cena {cena['n']} plano {i}: arquivo '{origem}' não existe. "
+                    f"Caminho relativo é a partir da raiz do projeto.")
+            ext = fonte.suffix.lower()
+            if ext not in (".png", ".jpg", ".jpeg", ".mp4", ".mov"):
+                raise RuntimeError(f"cena {cena['n']} plano {i}: extensão {ext} não suportada")
+            if ext in (".jpg", ".jpeg"):
+                ext = ".png"      # o resto do pipeline assume png para estático
+            alvo = dest / f"cena_{cena['n']:02d}_p{i}_importado_{_impressao(fonte)}{ext}"
+            for velho in ativos_do_plano(dest, cena["n"], i):
+                if velho != alvo:
+                    velho.unlink()
+            if not alvo.exists():
+                if fonte.suffix.lower() in (".jpg", ".jpeg"):
+                    _run([FFMPEG, "-y", "-loglevel", "error", "-i", str(fonte),
+                          str(alvo)], f"converter {fonte.name}")
+                else:
+                    shutil.copy2(fonte, alvo)
+                feitos += 1
+    if feitos:
+        _p(f"[IMPORTADO] {feitos} arquivo(s) externo(s) ocupando slot de plano")
+    return feitos
+
+
 def gerar_vetores(roteiro: dict, dest: Path) -> int:
     """Desenha em vetor os planos marcados, ANTES do SDXL.
 
@@ -420,7 +483,8 @@ def gerar_imagens(roteiro: dict, dest: Path, duracoes: dict = None,
                 if not novo.exists():
                     velho.rename(novo)
 
-    # vetor primeiro: o que sai daqui já ocupa o slot e não vai para a GPU
+    # o que vem de fora e o vetor ocupam o slot antes; o que sobrar vai à GPU
+    gerar_importados(roteiro, dest)
     gerar_vetores(roteiro, dest)
 
     faltando = []
