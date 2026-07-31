@@ -200,7 +200,8 @@
           ]
         }
       ],
-      "movimento": true
+      "movimento": true,
+      "transicao": "dissolve"
     },
     {
       "n": 4,
@@ -351,7 +352,8 @@
           "imagem": "two opened tins of sardines and mackerel on a light kitchen counter beside a fork, bright daylight, soft editorial illustration"
         }
       ],
-      "movimento": true
+      "movimento": true,
+      "transicao": "dissolve"
     },
     {
       "n": 6,
@@ -640,7 +642,8 @@
           "imagem": "a plate of real whole food beside a small pile of capsules on a light table, side by side, soft editorial illustration"
         }
       ],
-      "movimento": true
+      "movimento": true,
+      "transicao": "dissolve"
     },
     {
       "n": 12,
@@ -707,7 +710,8 @@
           "imagem": "{ela} climbing a flight of stairs in a bright stairwell with a large window, daylight"
         }
       ],
-      "movimento": true
+      "movimento": true,
+      "transicao": "dissolve"
     },
     {
       "n": 13,
@@ -822,7 +826,8 @@
           "imagem": "a wide sunlit landscape of green hills at sunrise with an open path leading forward, soft editorial illustration, no people"
         }
       ],
-      "movimento": true
+      "movimento": true,
+      "transicao": "dissolve"
     }
   ],
   "estilo": "explicativo_claro",

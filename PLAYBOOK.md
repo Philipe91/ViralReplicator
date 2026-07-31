@@ -242,3 +242,27 @@ Dois outros modos de falha vistos na mesma leva:
 **Antes de gerar uma leva, releia cada prompt e pergunte: uma câmera conseguiria
 filmar isto?** Se a resposta for não, o plano é vetorial ou precisa de outro
 objeto.
+
+## Pegadinha: color script é inerte sem quebra de ato
+
+Aconteceu na produção do `de_01_arterien`: o roteiro declarava seis grades e
+nenhuma cena tinha `"transicao": "dissolve"`. Resultado — **1 ato, e o vídeo
+inteiro saiu com a primeira grade**. Nada falhou, nada avisou.
+
+Os dois campos são acoplados e ficam longe um do outro no JSON:
+
+- `color_script` (nível do roteiro) diz QUAIS grades existem;
+- `"transicao": "dissolve"` (nível da cena) diz ONDE um ato termina.
+
+**Verificação antes de montar:** se o log diz `[DIREÇÃO] 1 ato(s)` e o roteiro
+declara mais de uma grade, é erro de quem escreveu — não do editor.
+
+E a grade entra DENTRO do segmento, então corrigir os atos depois obriga a
+apagar `tmp_edit/`: os segmentos em cache carregam a cor errada.
+
+## Duração real x alvo
+
+O `de_01_arterien` tem 14 cenas e fechou em **5min57s**, não nos 8 min do alvo
+da tabela de decisões. Narração de ~6 min pede ~18 cenas nesse ritmo. Não é
+defeito do pipeline — é o roteiro que foi escrito curto. Vale medir antes de
+gerar: `--etapa audio` já imprime o total em minutos.
