@@ -210,3 +210,35 @@ impressão de ter sido aplicada.
   fotográfica**, nunca diagrama preciso.
 - **Wan 2.2 I2V** é o upgrade de qualidade dos clipes, mas é lento na RTX 3060.
   Só vale nos 3-4 momentos-chave, não no volume.
+
+## Prompt de imagem: conceito não vira imagem (medido em 31/07)
+
+Na produção real do `de_01_arterien`, **7 dos 43 prompts SDXL falharam**, todos
+pela mesma causa: descreviam um CONCEITO em vez de um OBJETO. "Macro de membrana
+celular", "corte de fígado", "camada de células" voltaram como manchas verdes
+abstratas — bonitas e sem informação.
+
+A regra já estava escrita aqui e eu mesmo a violei. Então vale reforçá-la com o
+que a correção ensinou, que é mais forte que a regra original:
+
+> Quando o assunto é um **mecanismo invisível**, o concreto não é uma versão mais
+> detalhada do conceito. É **outro objeto**, do mundo que uma câmera alcança.
+
+| batida | conceito que falhou | objeto que funcionou |
+|---|---|---|
+| "quanto um vaso se abre" | corte de tubo com paredes flexionando | mão abrindo uma torneira |
+| "não dá para lavar o que está na parede" | escova dentro de um tubo de vidro | pano na bancada, mancha permanece **dentro** da pedra |
+| "ômega-3 entra na membrana" | macro de membrana celular | macro de filé de salmão com as fibras |
+| "fibra prende ácidos biliares" | corte de fígado | colher erguendo aveia encharcada, viscosa |
+
+Dois outros modos de falha vistos na mesma leva:
+
+- **Quebra de estilo.** Um plano voltou em cartoon vetorial chapado no meio de um
+  vídeo semi-fotográfico. Ancorar com termo fotográfico (`shallow depth of
+  field`, `close view`) trouxe de volta.
+- **Objeto que some.** "Escova dentro de um tubo de vidro" desenhou a escova e
+  não o tubo — mesma família do problema de dois sujeitos no quadro.
+
+**Antes de gerar uma leva, releia cada prompt e pergunte: uma câmera conseguiria
+filmar isto?** Se a resposta for não, o plano é vetorial ou precisa de outro
+objeto.

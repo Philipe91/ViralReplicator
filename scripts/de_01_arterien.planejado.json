@@ -25,28 +25,34 @@
           "fala": "Es gibt kein Lebensmittel, das deine Arterien reinigt. Kein Saft, kein Tee,",
           "seg": 5.02,
           "animar": true,
-          "imagem": ""
+          "imagem": "{ela} standing in a bright kitchen full of plants, large window with morning light, holding a tall glass of green juice and looking at it with polite doubt",
+          "direcao": {
+            "parallax": "lateral"
+          }
         },
         {
           "ancora": "keine Zitronenkur. Was du in",
           "fala": "keine Zitronenkur. Was du in Kochbüchern als Arterienreinigung findest,",
           "seg": 4.66,
           "animar": false,
-          "imagem": ""
+          "imagem": "close view of two hands squeezing a lemon half into a glass jar of water on a light wooden counter, sliced lemons and a teapot beside it, sunny window behind"
         },
         {
           "ancora": "gibt es in deinem Körper",
           "fala": "gibt es in deinem Körper nicht. Und trotzdem sind deine Arterien heute nicht dieselben wie vor einem Jahr.",
           "seg": 5.61,
           "animar": false,
-          "imagem": ""
+          "imagem": "a shelf of detox juice bottles and herbal tea jars in a bright kitchen, soft morning light, clean editorial illustration, nobody in frame"
         },
         {
           "ancora": "Sie verändern sich ständig, in",
           "fala": "Sie verändern sich ständig, in beide Richtungen. Die Frage ist nicht, wie du sie sauber schrubbst. Die Frage ist, in welche Richtung du sie schiebst.",
           "seg": 8.67,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ele} walking away from the camera on a park path that forks in two, one branch open and sunlit and wide, the other narrow and overgrown, tall trees, warm afternoon light",
+          "direcao": {
+            "parallax": "aproxima"
+          }
         }
       ],
       "movimento": true
@@ -60,28 +66,53 @@
           "fala": "Um zu verstehen, worauf deine Arterien reagieren, musst du wissen, was da überhaupt passiert.",
           "seg": 4.94,
           "animar": true,
-          "imagem": ""
+          "imagem": "{ele} sitting at a light wooden table in a bright airy room with plants and big windows, thoughtful, looking slightly off camera, a cup of tea in front of him"
         },
         {
           "ancora": "Die Innenseite deiner Blutgefäße ist",
           "fala": "Die Innenseite deiner Blutgefäße ist mit einer hauchdünnen Zellschicht ausgekleidet. Sie ist eine Zelle dick.",
           "seg": 6.03,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v2_2",
+              "executor": "diagrama",
+              "z": 0,
+              "params": {
+                "tipo": "corte_tubo",
+                "titulo": "Querschnitt: Blutgefäß",
+                "rotulos": [
+                  {
+                    "texto": "Muskelschicht",
+                    "aponta": "musculo"
+                  },
+                  {
+                    "texto": "Endothel — eine Zelle dick",
+                    "aponta": "endotelio",
+                    "destaque": true
+                  },
+                  {
+                    "texto": "Blutstrom",
+                    "aponta": "lumen"
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "Diese Schicht heißt Endothel, und",
           "fala": "Diese Schicht heißt Endothel, und sie ist kein Rohr, sondern ein aktives Organ. Sie entscheidet,",
           "seg": 5.8,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ele} standing in a bright room with plants, one hand resting on his chest, calm and attentive expression, large window with daylight"
         },
         {
           "ancora": "wie weit sich ein Gefäß",
           "fala": "wie weit sich ein Gefäß öffnet, ob Blut gerinnt, und was durch die Wand darf und was nicht.",
           "seg": 4.38,
           "animar": false,
-          "imagem": ""
+          "imagem": "a hand turning a chrome kitchen tap, clear water widening into a strong stream, bright kitchen counter, daylight, shallow depth of field"
         }
       ],
       "movimento": true
@@ -95,28 +126,78 @@
           "fala": "Wenn diese Schicht gereizt ist, wird sie durchlässig. Dann wandern Cholesterinpartikel in die Gefäßwand hinein,",
           "seg": 6.32,
           "animar": true,
-          "imagem": ""
+          "imagem": "extreme macro of an irritated inner vessel surface, cells slightly separated leaving gaps, soft editorial illustration, muted sage and rose palette"
         },
         {
           "ancora": "und dort bleiben sie stecken.",
           "fala": "und dort bleiben sie stecken. Dein Immunsystem schickt Fresszellen los, die diese Partikel aufnehmen.",
           "seg": 5.71,
           "animar": false,
-          "imagem": ""
+          "imagem": "illustrated cross-section of a vessel wall with small round cholesterol particles lodged inside the wall layers, not in the open channel, soft flat editorial style"
         },
         {
           "ancora": "Die Zellen füllen sich, sterben",
           "fala": "Die Zellen füllen sich, sterben ab und bleiben liegen. Aus diesem Rest entsteht über Jahre die Plaque.",
           "seg": 5.57,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v3_3",
+              "executor": "timeline",
+              "z": 0,
+              "params": {
+                "animar": true,
+                "titulo": "So entsteht Plaque",
+                "pontos": [
+                  {
+                    "marco": "Reizung",
+                    "texto": "Die Schicht wird durchlässig"
+                  },
+                  {
+                    "marco": "Einlagerung",
+                    "texto": "Partikel bleiben in der Wand"
+                  },
+                  {
+                    "marco": "Fresszellen",
+                    "texto": "Sie füllen sich und sterben ab"
+                  },
+                  {
+                    "marco": "Jahre",
+                    "texto": "Aus dem Rest wird Plaque",
+                    "destaque": true
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "Sie liegt nicht im Blutstrom",
           "fala": "Sie liegt nicht im Blutstrom wie Dreck in einem Rohr. Sie steckt in der Wand.",
           "seg": 4.33,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v3_4",
+              "executor": "diagrama",
+              "z": 0,
+              "params": {
+                "tipo": "corte_tubo",
+                "titulo": "Plaque sitzt in der WAND",
+                "rotulos": [
+                  {
+                    "texto": "Plaque in der Gefäßwand",
+                    "aponta": "musculo",
+                    "destaque": true
+                  },
+                  {
+                    "texto": "Blutstrom bleibt frei",
+                    "aponta": "lumen"
+                  }
+                ]
+              }
+            }
+          ]
         }
       ],
       "movimento": true
@@ -130,28 +211,73 @@
           "fala": "Deshalb ist das Wort Reinigen so irreführend. Man kann nichts abspülen, was in der Wand sitzt.",
           "seg": 5.37,
           "animar": true,
-          "imagem": ""
+          "imagem": "a hand wiping a light stone kitchen counter with a cloth, a dark stain still visible inside the stone itself, close view, bright daylight"
         },
         {
           "ancora": "Was tatsächlich möglich ist, klingt",
           "fala": "Was tatsächlich möglich ist, klingt langweiliger und ist viel wichtiger: Plaque kann stabil werden.",
           "seg": 5.07,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ela} standing in a bright kitchen full of plants, large window with morning light, arms folded, calm and serious expression"
         },
         {
           "ancora": "Eine stabile Plaque hat eine",
           "fala": "Eine stabile Plaque hat eine dicke, feste Kappe und bleibt, wo sie ist. Eine instabile Plaque hat eine dünne",
           "seg": 6.42,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v4_3",
+              "executor": "diagrama",
+              "z": 0,
+              "params": {
+                "tipo": "corte_tubo",
+                "raio": 300,
+                "titulo": "Stabile Plaque",
+                "rotulos": [
+                  {
+                    "texto": "dicke, feste Kappe",
+                    "aponta": "musculo",
+                    "destaque": true
+                  },
+                  {
+                    "texto": "bleibt, wo sie ist",
+                    "aponta": "lumen"
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "Kappe, reißt auf, und genau",
           "fala": "Kappe, reißt auf, und genau dieser Riss löst die meisten Herzinfarkte aus. Nicht die Größe entscheidet. Die Stabilität entscheidet.",
           "seg": 8.16,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v4_4",
+              "executor": "diagrama",
+              "z": 0,
+              "params": {
+                "tipo": "corte_tubo",
+                "raio": 300,
+                "titulo": "Instabile Plaque",
+                "rotulos": [
+                  {
+                    "texto": "dünne Kappe",
+                    "aponta": "musculo",
+                    "destaque": true
+                  },
+                  {
+                    "texto": "reißt auf — Herzinfarkt",
+                    "aponta": "parede",
+                    "destaque": true
+                  }
+                ]
+              }
+            }
+          ]
         }
       ],
       "movimento": true
@@ -165,28 +291,64 @@
           "fala": "Damit sind wir bei dem, worauf deine Gefäße wirklich reagieren. Baustein eins:",
           "seg": 4.85,
           "animar": true,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v5_1",
+              "executor": "icone",
+              "z": 0,
+              "params": {
+                "animar": true,
+                "titulo": "Sechs Bausteine",
+                "itens": [
+                  {
+                    "forma": "gota",
+                    "rotulo": "Seefisch"
+                  },
+                  {
+                    "forma": "folha",
+                    "rotulo": "Olivenöl"
+                  },
+                  {
+                    "forma": "folha",
+                    "rotulo": "Ballaststoffe"
+                  },
+                  {
+                    "forma": "coracao",
+                    "rotulo": "Nüsse"
+                  },
+                  {
+                    "forma": "folha",
+                    "rotulo": "Nitrat"
+                  },
+                  {
+                    "forma": "chama",
+                    "rotulo": "Fermentiertes"
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "fetter Seefisch. Lachs, Makrele, Hering,",
           "fala": "fetter Seefisch. Lachs, Makrele, Hering, Sardine. Die Omega-3-Fettsäuren",
           "seg": 6.72,
           "animar": false,
-          "imagem": ""
+          "imagem": "fresh salmon fillet, mackerel and herring arranged on a light wooden board with lemon and herbs, bright daylight, soft editorial illustration"
         },
         {
           "ancora": "daraus werden in die Membranen",
           "fala": "daraus werden in die Membranen deiner Zellen eingebaut und verändern, welche Entzündungsbotenstoffe dein Körper daraus herstellt.",
           "seg": 6.38,
           "animar": false,
-          "imagem": ""
+          "imagem": "extreme macro of a raw salmon fillet showing its layered muscle segments and glossy pale fat lines, soft daylight, shallow depth of field"
         },
         {
           "ancora": "Zwei Portionen pro Woche sind",
           "fala": "Zwei Portionen pro Woche sind die übliche Empfehlung. Und ja, Hering und Makrele aus der Dose zählen genauso.",
           "seg": 6.42,
           "animar": false,
-          "imagem": ""
+          "imagem": "two opened tins of sardines and mackerel on a light kitchen counter beside a fork, bright daylight, soft editorial illustration"
         }
       ],
       "movimento": true
@@ -200,28 +362,31 @@
           "fala": "Baustein zwei: Olivenöl. Nicht als Wundermittel, sondern als Ersatz.",
           "seg": 4.68,
           "animar": true,
-          "imagem": ""
+          "imagem": "a dark green bottle of olive oil and a small bowl of oil on a light kitchen counter, olives and a sprig beside it, bright morning light"
         },
         {
           "ancora": "Der Effekt entsteht dadurch, dass",
           "fala": "Der Effekt entsteht dadurch, dass es etwas anderes verdrängt, nämlich feste Fette. In der großen spanischen Ernährungsstudie",
           "seg": 7.08,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ela} pouring olive oil generously over a bowl of vegetables in a bright kitchen full of plants, large window with morning light",
+          "direcao": {
+            "parallax": "respira"
+          }
         },
         {
           "ancora": "war genau das der Unterschied",
           "fala": "war genau das der Unterschied zwischen den Gruppen. Wichtig ist die Menge, nicht der Tropfen zur Dekoration.",
           "seg": 5.86,
           "animar": false,
-          "imagem": ""
+          "imagem": "a block of solid white fat and a bowl of golden oil side by side on a light counter, bright daylight, soft editorial illustration"
         },
         {
           "ancora": "Und natives Olivenöl extra behält",
           "fala": "Und natives Olivenöl extra behält die Begleitstoffe, die beim starken Raffinieren verloren gehen.",
           "seg": 4.77,
           "animar": false,
-          "imagem": ""
+          "imagem": "close view of golden green extra virgin olive oil being poured, light background, soft editorial illustration"
         }
       ],
       "movimento": true
@@ -235,28 +400,59 @@
           "fala": "Baustein drei ist der unterschätzteste von allen: lösliche Ballaststoffe. Haferflocken,",
           "seg": 5.18,
           "animar": true,
-          "imagem": ""
+          "imagem": "a bowl of rolled oats, a bowl of pearl barley, lentils and two apples on a light wooden table, bright daylight, soft editorial illustration"
         },
         {
           "ancora": "Gerste, Hülsenfrüchte, Äpfel. Diese Fasern",
           "fala": "Gerste, Hülsenfrüchte, Äpfel. Diese Fasern binden im Darm Gallensäuren und schleusen sie hinaus.",
           "seg": 5.84,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v7_2",
+              "executor": "grafico",
+              "z": 0,
+              "params": {
+                "animar": true,
+                "tipo": "barras",
+                "titulo": "Ballaststoffe pro 100 g",
+                "unidade": " g",
+                "itens": [
+                  {
+                    "rotulo": "Gerste",
+                    "valor": 17
+                  },
+                  {
+                    "rotulo": "Linsen",
+                    "valor": 11
+                  },
+                  {
+                    "rotulo": "Haferflocken",
+                    "valor": 10,
+                    "destaque": true
+                  },
+                  {
+                    "rotulo": "Apfel",
+                    "valor": 2.4
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "Deine Leber muss dann neue",
           "fala": "Deine Leber muss dann neue Gallensäuren bauen, und dafür holt sie sich Cholesterin aus dem Blut. Das ist kein Trick und",
           "seg": 6.38,
           "animar": false,
-          "imagem": ""
+          "imagem": "a spoon lifting a thick viscous strand of soaked oats from a glass of water on a light kitchen counter, bright daylight, shallow depth of field"
         },
         {
           "ancora": "kein Detox. Das ist Chemie,",
           "fala": "kein Detox. Das ist Chemie, die jeden Tag in dir läuft, ob du davon weißt oder nicht.",
           "seg": 5.12,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ele} eating a bowl of oatmeal at a light wooden table in a bright airy room with plants and big windows, morning light"
         }
       ],
       "movimento": true
@@ -270,28 +466,28 @@
           "fala": "Baustein vier: Nüsse. Eine Handvoll am Tag, ungesalzen. Walnüsse,",
           "seg": 5.71,
           "animar": true,
-          "imagem": ""
+          "imagem": "walnuts, almonds and hazelnuts spilling from a small cloth bag onto a light wooden table, bright daylight, soft editorial illustration"
         },
         {
           "ancora": "Mandeln, Haselnüsse. Sie liefern ungesättigte",
           "fala": "Mandeln, Haselnüsse. Sie liefern ungesättigte Fette, Ballaststoffe und Pflanzensterine gleichzeitig.",
           "seg": 6.4,
           "animar": false,
-          "imagem": ""
+          "imagem": "an open hand holding a small handful of mixed nuts, light background, soft editorial illustration"
         },
         {
           "ancora": "Der häufigste Fehler ist die",
           "fala": "Der häufigste Fehler ist die Menge: dreißig Gramm sind eine Handvoll, keine Schüssel vor dem Fernseher.",
           "seg": 5.06,
           "animar": false,
-          "imagem": ""
+          "imagem": "a small handful of nuts on a plate beside a large overflowing bowl of nuts, side by side comparison on a light table, soft editorial illustration"
         },
         {
           "ancora": "Und geröstet und gesalzen aus",
           "fala": "Und geröstet und gesalzen aus der Tüte ist etwas anderes als eine Handvoll Nüsse.",
           "seg": 4.21,
           "animar": false,
-          "imagem": ""
+          "imagem": "a torn open bag of salted roasted nuts on a couch armrest in a dim living room, television glow, soft editorial illustration"
         }
       ],
       "movimento": true
@@ -305,28 +501,50 @@
           "fala": "Baustein fünf ist der schönste, weil man ihn messen kann. Rucola, Rote Bete,",
           "seg": 5.03,
           "animar": true,
-          "imagem": ""
+          "imagem": "fresh rocket, beetroot with leaves, spinach and chard on a light wooden table, bright daylight, soft editorial illustration"
         },
         {
           "ancora": "Spinat und Mangold enthalten viel",
           "fala": "Spinat und Mangold enthalten viel Nitrat. Bakterien auf deiner Zunge wandeln es um,",
           "seg": 5.34,
           "animar": false,
-          "imagem": ""
+          "imagem": "extreme macro of dark green leafy greens with water droplets, soft daylight, editorial illustration"
         },
         {
           "ancora": "und im Körper entsteht daraus",
           "fala": "und im Körper entsteht daraus Stickstoffmonoxid. Dieses Molekül sagt der Muskelschicht in deinen Gefäßwänden,",
           "seg": 6.26,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v9_3",
+              "executor": "diagrama",
+              "z": 0,
+              "params": {
+                "tipo": "corte_tubo",
+                "raio": 320,
+                "titulo": "Stickstoffmonoxid entspannt die Wand",
+                "rotulos": [
+                  {
+                    "texto": "Muskelschicht entspannt",
+                    "aponta": "musculo",
+                    "destaque": true
+                  },
+                  {
+                    "texto": "Gefäß wird weiter",
+                    "aponta": "lumen"
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "dass sie sich entspannen soll.",
           "fala": "dass sie sich entspannen soll. Die Gefäße werden weiter, der Druck sinkt. Das ist derselbe Mechanismus, den manche Blutdruckmedikamente nutzen.",
           "seg": 8.54,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ela} sitting relaxed on a bench in a green park, calm expression, warm afternoon light"
         }
       ],
       "movimento": true
@@ -340,28 +558,28 @@
           "fala": "Baustein sechs: fermentierte Lebensmittel und die Vielfalt in deinem Darm. Sauerkraut,",
           "seg": 5.27,
           "animar": true,
-          "imagem": ""
+          "imagem": "a jar of sauerkraut, a bottle of kefir and a bowl of yogurt on a light kitchen counter, bright daylight, soft editorial illustration"
         },
         {
           "ancora": "Kefir, Joghurt. Hier will ich",
           "fala": "Kefir, Joghurt. Hier will ich ehrlich sein, weil im Internet viel behauptet wird.",
           "seg": 5.04,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ela} standing in a bright kitchen full of plants, large window with morning light, one hand raised in a careful explaining gesture, honest expression"
         },
         {
           "ancora": "Dass Darmbakterien mit Gefäßgesundheit zusammenhängen,",
           "fala": "Dass Darmbakterien mit Gefäßgesundheit zusammenhängen, ist gut belegt. Dass ein bestimmtes Glas Sauerkraut deine Arterien",
           "seg": 6.79,
           "animar": false,
-          "imagem": ""
+          "imagem": "a wide spread of many different colorful vegetables, grains and legumes arranged on a large light table, bright daylight, soft editorial illustration"
         },
         {
           "ancora": "verändert, ist es nicht. Was",
           "fala": "verändert, ist es nicht. Was verlässlich funktioniert, ist banal: viele verschiedene Pflanzen über die Woche verteilt.",
           "seg": 6.74,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ele} placing several different fresh vegetables into a shopping basket at a bright indoor market stall, daylight, shallow depth of field"
         }
       ],
       "movimento": true
@@ -375,28 +593,51 @@
           "fala": "Jetzt der Teil, den kaum jemand macht: was davon überschätzt wird. Vitamin K2 als Kapsel wird gerade",
           "seg": 6.65,
           "animar": true,
-          "imagem": ""
+          "imagem": "several supplement bottles and loose capsules on a light bathroom counter, bright daylight, soft editorial illustration"
         },
         {
           "ancora": "als Kalziumwächter verkauft. Die Idee",
           "fala": "als Kalziumwächter verkauft. Die Idee ist plausibel, die Studienlage ist dünn.",
           "seg": 4.86,
           "animar": false,
-          "imagem": ""
+          "imagem": "a single supplement bottle standing alone on a light counter, soft shadow, bright daylight, editorial illustration"
         },
         {
           "ancora": "Knoblauchpillen, Detoxsäfte, Apfelessig am Morgen:",
           "fala": "Knoblauchpillen, Detoxsäfte, Apfelessig am Morgen: keine davon räumt Plaque weg.",
           "seg": 4.54,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v11_3",
+              "executor": "icone",
+              "z": 0,
+              "params": {
+                "titulo": "Räumt keine Plaque weg",
+                "itens": [
+                  {
+                    "forma": "proibido",
+                    "rotulo": "Knoblauchpillen"
+                  },
+                  {
+                    "forma": "proibido",
+                    "rotulo": "Detoxsäfte"
+                  },
+                  {
+                    "forma": "proibido",
+                    "rotulo": "Apfelessig"
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "Und Nahrungsergänzung ersetzt hier nichts,",
           "fala": "Und Nahrungsergänzung ersetzt hier nichts, weil der Effekt bei echtem Essen aus dem Zusammenspiel kommt, nicht aus einem einzelnen Stoff im Presslingsformat.",
           "seg": 7.6,
           "animar": false,
-          "imagem": ""
+          "imagem": "a plate of real whole food beside a small pile of capsules on a light table, side by side, soft editorial illustration"
         }
       ],
       "movimento": true
@@ -410,28 +651,60 @@
           "fala": "Und dann gibt es die Dinge, die stärker wirken als jedes Lebensmittel auf dieser Liste. Nicht rauchen steht mit Abstand",
           "seg": 6.38,
           "animar": true,
-          "imagem": ""
+          "imagem": "a single cigarette stubbed out in a white ceramic ashtray on a light table, close view, bright daylight, shallow depth of field"
         },
         {
           "ancora": "an erster Stelle. Danach kommt",
           "fala": "an erster Stelle. Danach kommt Bewegung, und zwar die alltägliche: zügig gehen,",
           "seg": 5.01,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ele} walking briskly up an outdoor staircase in a green park, morning light",
+          "direcao": {
+            "parallax": "lateral"
+          }
         },
         {
           "ancora": "Treppen, Rad. Danach Blutdruck und",
           "fala": "Treppen, Rad. Danach Blutdruck und Schlaf. Wer raucht und Sardinen isst,",
           "seg": 5.34,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v12_3",
+              "executor": "icone",
+              "z": 0,
+              "params": {
+                "animar": true,
+                "titulo": "Stärker als jedes Lebensmittel",
+                "itens": [
+                  {
+                    "forma": "proibido",
+                    "rotulo": "Nicht rauchen",
+                    "destaque": true
+                  },
+                  {
+                    "forma": "haltere",
+                    "rotulo": "Bewegung"
+                  },
+                  {
+                    "forma": "coracao",
+                    "rotulo": "Blutdruck"
+                  },
+                  {
+                    "forma": "lua",
+                    "rotulo": "Schlaf"
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "hat nicht die Hälfte des",
           "fala": "hat nicht die Hälfte des Effekts. Er hat den kleineren Hebel gezogen und den größeren liegen gelassen.",
           "seg": 5.47,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ela} climbing a flight of stairs in a bright stairwell with a large window, daylight"
         }
       ],
       "movimento": true
@@ -445,28 +718,52 @@
           "fala": "Zum Schluss das Praktische. Du kannst nicht spüren, wie deine Arterien aussehen.",
           "seg": 4.83,
           "animar": true,
-          "imagem": ""
+          "imagem": "{ela} sitting in a bright doctors office waiting room with plants, calm, daylight through a large window",
+          "direcao": {
+            "parallax": "respira"
+          }
         },
         {
           "ancora": "Es tut nichts weh, bis",
           "fala": "Es tut nichts weh, bis es zu spät ist. Deshalb sind zwei Zahlen mehr wert als jede Ernährungsliste:",
           "seg": 5.79,
           "animar": false,
-          "imagem": ""
+          "imagem": "close view of a blood pressure cuff on an arm on a light examination table, bright clinical room, soft editorial illustration"
         },
         {
           "ancora": "dein Blutdruck und dein LDL-Wert.",
           "fala": "dein Blutdruck und dein LDL-Wert. Beide bekommst du beim Hausarzt in wenigen Minuten.",
           "seg": 5.02,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v13_3",
+              "executor": "icone",
+              "z": 0,
+              "params": {
+                "titulo": "Zwei Zahlen",
+                "itens": [
+                  {
+                    "forma": "coracao",
+                    "rotulo": "Blutdruck",
+                    "destaque": true
+                  },
+                  {
+                    "forma": "gota",
+                    "rotulo": "LDL-Wert",
+                    "destaque": true
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "Wer diese zwei Zahlen kennt,",
           "fala": "Wer diese zwei Zahlen kennt, trifft bessere Entscheidungen als jemand, der drei Jahre lang Kurkuma trinkt und nie gemessen hat.",
           "seg": 6.54,
           "animar": false,
-          "imagem": ""
+          "imagem": "{ele} talking with a doctor across a light desk in a bright consulting room, both calm, daylight"
         }
       ],
       "movimento": true
@@ -480,31 +777,69 @@
           "fala": "Deine Arterien reagieren nicht auf eine Woche und nicht auf ein einzelnes Lebensmittel. Sie reagieren auf das,",
           "seg": 6.34,
           "animar": true,
-          "imagem": ""
+          "imagem": "{ela} walking along a long open path through green hills, seen from behind, wide view, warm morning light",
+          "direcao": {
+            "parallax": "aproxima"
+          }
         },
         {
           "ancora": "was du über Jahre wiederholst.",
           "fala": "was du über Jahre wiederholst. Das ist die schlechte Nachricht, weil es keine Abkürzung gibt.",
           "seg": 5.13,
           "animar": false,
-          "imagem": ""
+          "camadas": [
+            {
+              "id": "v14_2",
+              "executor": "timeline",
+              "z": 0,
+              "params": {
+                "animar": true,
+                "titulo": "Was zählt, ist die Wiederholung",
+                "pontos": [
+                  {
+                    "marco": "Heute",
+                    "texto": "Eine Mahlzeit ändert nichts"
+                  },
+                  {
+                    "marco": "Ein Jahr",
+                    "texto": "Die Richtung wird sichtbar"
+                  },
+                  {
+                    "marco": "Zehn Jahre",
+                    "texto": "Hier entscheidet es sich",
+                    "destaque": true
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "ancora": "Und es ist die gute",
           "fala": "Und es ist die gute Nachricht, weil du nie an einem Punkt bist, an dem es keinen Unterschied mehr macht. Die Richtung kannst du heute noch ändern.",
           "seg": 7.31,
           "animar": false,
-          "imagem": ""
+          "imagem": "a wide sunlit landscape of green hills at sunrise with an open path leading forward, soft editorial illustration, no people"
         }
       ],
       "movimento": true
     }
   ],
-  "estilo": "medico",
+  "estilo": "explicativo_claro",
   "_plano_de_edicao": {
     "alvo_segundos_por_plano": 4.5,
     "planos": 55,
     "clipes_animados": 14,
     "imagens_estaticas": 41
-  }
+  },
+  "musica": "de_thinkscience",
+  "schema": 3,
+  "color_script": [
+    "frio",
+    "neutro",
+    "neutro",
+    "quente",
+    "ambar",
+    "claro"
+  ]
 }
