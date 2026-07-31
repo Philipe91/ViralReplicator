@@ -45,6 +45,7 @@ import re
 import subprocess
 from pathlib import Path
 
+import composicao
 import direcao
 
 RAIZ = Path(__file__).parent
@@ -535,6 +536,28 @@ def mixar(narracao: Path, musica: Path | None, dur_total: float, saida: Path) ->
 #  MONTAGEM
 # ─────────────────────────────────────────────────────────────────────────
 
+def _guardar_composicoes_suportadas(roteiro: dict) -> None:
+    """Falha alto em pilha que o render ainda não sabe montar.
+
+    Na etapa 2 só existe o executor `imagem_ia`, e o adaptador sempre produz uma
+    pilha trivial — então este caminho é inalcançável pelo uso normal. Ele
+    protege quem escrever `camadas` à mão antes de o executor correspondente ter
+    caminho de render: melhor parar com a explicação do que renderizar
+    silenciosamente sem a camada que o autor pediu.
+    """
+    pendentes = []
+    for cena in roteiro.get("cenas", []):
+        for j, p in enumerate(cena.get("planos") or [], 1):
+            camadas = p.get("camadas") or []
+            if camadas and not composicao.eh_composicao_trivial(camadas):
+                nomes = ", ".join(c.get("executor", "?") for c in camadas)
+                pendentes.append(f"cena {cena.get('n')} plano {j}: [{nomes}]")
+    if pendentes:
+        raise RuntimeError(
+            "composição com múltiplas camadas ainda não tem caminho de render "
+            "(chega com o executor de diagrama, etapa 3):\n  - " + "\n  - ".join(pendentes))
+
+
 def montar(roteiro: dict, audios: list, imagens: dict, clipes: dict, base: Path) -> Path:
     tmp = base / "tmp_edit"
     tmp.mkdir(parents=True, exist_ok=True)
@@ -546,6 +569,15 @@ def montar(roteiro: dict, audios: list, imagens: dict, clipes: dict, base: Path)
     if erros:
         raise RuntimeError("direção inválida:\n  - " + "\n  - ".join(erros))
     direcao.dirigir(roteiro)
+
+    # Composição (V3). Roteiro sem `camadas` é schema 2 e o adaptador sintetiza
+    # a pilha de camada única equivalente ao comportamento de sempre — nenhum
+    # dos planos existentes é migrado nem muda de resultado.
+    erros = composicao.validar(roteiro)
+    if erros:
+        raise RuntimeError("composição inválida:\n  - " + "\n  - ".join(erros))
+    composicao.adaptar(roteiro)
+    _guardar_composicoes_suportadas(roteiro)
 
     # cenas que ABREM com dissolve => a cena anterior precisa de folga
     abre_dissolve = {c["n"] for c in roteiro["cenas"] if c.get("transicao") == "dissolve"}
