@@ -1,0 +1,103 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": { "title": "VRP_CHECKPOINT" },
+    "inputs": { "ckpt_name": "ltxv-2b-0.9.8-distilled.safetensors" }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "_meta": { "title": "VRP_T5" },
+    "inputs": {
+      "clip_name": "t5xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "ltxv",
+      "device": "default"
+    }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "_meta": { "title": "VRP_POSITIVE" },
+    "inputs": { "text": "placeholder", "clip": ["2", 0] }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "_meta": { "title": "VRP_NEGATIVE" },
+    "inputs": { "text": "placeholder", "clip": ["2", 0] }
+  },
+  "5": {
+    "class_type": "LoadImage",
+    "_meta": { "title": "VRP_INPUT_IMAGE" },
+    "inputs": { "image": "example.png" }
+  },
+  "6": {
+    "class_type": "LTXVPreprocess",
+    "_meta": { "title": "VRP_PREPROCESS" },
+    "inputs": { "image": ["5", 0], "img_compression": 35 }
+  },
+  "7": {
+    "class_type": "LTXVImgToVideo",
+    "_meta": { "title": "VRP_LATENT" },
+    "inputs": {
+      "positive": ["3", 0],
+      "negative": ["4", 0],
+      "vae": ["1", 2],
+      "image": ["6", 0],
+      "width": 768,
+      "height": 448,
+      "length": 121,
+      "batch_size": 1,
+      "strength": 1.0
+    }
+  },
+  "8": {
+    "class_type": "LTXVConditioning",
+    "_meta": { "title": "VRP_FRAMERATE" },
+    "inputs": { "positive": ["7", 0], "negative": ["7", 1], "frame_rate": 25.0 }
+  },
+  "9": {
+    "class_type": "LTXVScheduler",
+    "_meta": { "title": "VRP_SCHEDULER" },
+    "inputs": {
+      "steps": 8,
+      "max_shift": 2.05,
+      "base_shift": 0.95,
+      "stretch": true,
+      "terminal": 0.1,
+      "latent": ["7", 2]
+    }
+  },
+  "10": {
+    "class_type": "KSamplerSelect",
+    "_meta": { "title": "VRP_SAMPLER_SELECT" },
+    "inputs": { "sampler_name": "euler" }
+  },
+  "11": {
+    "class_type": "SamplerCustom",
+    "_meta": { "title": "VRP_SAMPLER" },
+    "inputs": {
+      "model": ["1", 0],
+      "add_noise": true,
+      "noise_seed": 0,
+      "cfg": 1.0,
+      "positive": ["8", 0],
+      "negative": ["8", 1],
+      "sampler": ["10", 0],
+      "sigmas": ["9", 0],
+      "latent_image": ["7", 2]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "_meta": { "title": "VRP_DECODE" },
+    "inputs": { "samples": ["11", 0], "vae": ["1", 2] }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "_meta": { "title": "VRP_CREATE_VIDEO" },
+    "inputs": { "images": ["12", 0], "fps": 25.0 }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "_meta": { "title": "VRP_SAVE" },
+    "inputs": { "video": ["13", 0], "filename_prefix": "vrp/clip", "format": "auto", "codec": "auto" }
+  }
+}
