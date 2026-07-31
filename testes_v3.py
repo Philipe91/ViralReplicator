@@ -477,6 +477,74 @@ def test_icone_respeita_zonas_seguras():
         checar(fora == 0, f"{fora} pixels fora da margem lateral segura")
 
 
+# ── motion: revelação progressiva ────────────────────────────────────────
+
+def test_estados_por_lista():
+    import motion
+    p = {"pontos": [1, 2, 3, 4], "titulo": "x"}
+    estados = motion.estados_por_lista(p, "pontos")
+    checar([len(e["pontos"]) for e in estados] == [1, 2, 3, 4],
+           f"esperava revelação 1..4, veio {[len(e['pontos']) for e in estados]}")
+    checar(all(e["titulo"] == "x" for e in estados), "o resto dos params tem que sobreviver")
+    checar(p["pontos"] == [1, 2, 3, 4], "não pode mutar o dicionário original")
+    curto = motion.estados_por_lista({"pontos": [1]}, "pontos")
+    checar(len(curto) == 1, "lista de 1 item não tem o que revelar")
+    checar(len(motion.estados_por_lista({}, "pontos")) == 1, "lista ausente não quebra")
+
+
+def test_animacao_tem_a_duracao_pedida():
+    """O crossfade consome das pontas; sem a folga o total encolhe e a última
+    revelação fica cortada."""
+    import motion
+    import exec_timeline
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        p = _params_tl()
+        estados = motion.estados_por_lista(p, "pontos")
+        pngs = [exec_timeline.desenhar(e, tmp / f"e{i}.png") for i, e in enumerate(estados)]
+        checar(len(pngs) == 4, f"esperava 4 estados, veio {len(pngs)}")
+        saida = motion.animar(pngs, 6.0, tmp / "anim.mp4", tmp, largura=640, altura=360)
+        dur = float(subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=nw=1:nk=1", str(saida)],
+            capture_output=True, text=True).stdout.strip())
+        checar(abs(dur - 6.0) < 0.25, f"esperava ~6,0s, veio {dur:.2f}s")
+
+
+def test_animacao_realmente_muda_ao_longo_do_tempo():
+    """Prova que houve revelação: o primeiro e o último frame diferem."""
+    import motion
+    import exec_timeline
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        estados = motion.estados_por_lista(_params_tl(), "pontos")
+        pngs = [exec_timeline.desenhar(e, tmp / f"e{i}.png") for i, e in enumerate(estados)]
+        saida = motion.animar(pngs, 4.0, tmp / "a.mp4", tmp, largura=640, altura=360)
+
+        def quadro(args):
+            """Hash do quadro INTEIRO. Amostrar um pixel só foi a 1ª versão e
+            deu falso negativo: o ponto escolhido era fundo nos dois estados."""
+            r = subprocess.run(["ffmpeg", "-v", "error", *args, "-i", str(saida),
+                                "-frames:v", "1", "-f", "md5", "-"],
+                               capture_output=True, text=True)
+            return r.stdout.strip()
+
+        inicio, fim = quadro([]), quadro(["-sseof", "-0.4"])
+        checar(inicio and fim, "não consegui extrair os quadros")
+        checar(inicio != fim, "o quadro não mudou entre início e fim — sem revelação")
+
+
+def test_animacao_de_estado_unico_nao_quebra():
+    import motion
+    import exec_timeline
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        png = exec_timeline.desenhar({"pontos": [{"marco": "1945", "texto": "um"}]},
+                                     tmp / "u.png")
+        saida = motion.animar([png], 3.0, tmp / "u.mp4", tmp, largura=320, altura=180)
+        checar(saida.exists(), "estado único deveria gerar vídeo")
+
+
 def main():
     testes = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for t in testes:
