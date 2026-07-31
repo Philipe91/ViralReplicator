@@ -317,6 +317,30 @@ def _e_video(asset: Path) -> bool:
     return Path(asset).suffix.lower() in (".mp4", ".mov", ".webm")
 
 
+def _tentar_parallax(img: Path, dur: float, saida: Path, direcao_plano: dict,
+                     grade: str) -> bool:
+    """Renderiza o plano com parallax, se ele pediu e se der.
+
+    Devolve False quando não dá — e aí o chamador segue com Ken Burns. A
+    degradação é graciosa DE PROPÓSITO: profundidade é melhoria, não requisito.
+    Sem torch, ou sem rede na primeira execução, derrubar o vídeo inteiro por
+    causa de um efeito opcional seria desproporcional.
+    """
+    pedido = direcao_plano.get("parallax")
+    if not pedido or _e_video(img):
+        return False
+    import parallax
+    import profundidade
+    mapa = profundidade.estimar(img)
+    if mapa is None:
+        _p(f"    parallax indisponível em {img.name} — seguindo com Ken Burns")
+        return False
+    trajetoria = pedido if isinstance(pedido, str) else "lateral"
+    parallax.renderizar(img, mapa, dur, saida, trajetoria=trajetoria,
+                        grade=direcao.GRADES.get(grade, direcao.GRADES["neutro"]))
+    return True
+
+
 def punch_in(img: Path, dur: float, saida: Path, tmp: Path, cortes=None, grade="neutro"):
     """Pica uma imagem em N sub-planos (geral → médio → close) com corte seco.
     Usado no hook: plano único de 18s é onde o espectador vaza.
@@ -431,6 +455,10 @@ def multi_plano(imagens, dur: float, saida: Path, tmp: Path, direcoes=None,
         if _e_video(img):
             p = tmp / f"{saida.stem}_mp{i}.mp4"
             plano_pronto(img, d, p, grade=grade)
+            partes.append(p)
+            continue
+        p = tmp / f"{saida.stem}_mp{i}.mp4"
+        if _tentar_parallax(img, d, p, dir_i, grade):
             partes.append(p)
             continue
         # Plano longo demais vira 2 sub-planos da MESMA imagem, em recortes
@@ -724,7 +752,7 @@ def montar(roteiro: dict, audios: list, imagens: dict, clipes: dict, base: Path)
                 d0 = dirs[0] if dirs else {}
                 if _e_video(planos[0]):
                     plano_pronto(planos[0], dur_seg, seg, grade=grade)
-                else:
+                elif not _tentar_parallax(planos[0], dur_seg, seg, d0, grade):
                     ken_burns(planos[0], dur_seg, seg, camera=d0.get("camera", "push_in"),
                               forca=d0.get("forca", 0.085), grade=grade)
             else:

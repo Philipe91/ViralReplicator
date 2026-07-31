@@ -99,3 +99,16 @@ merece ser o último da fila, ou usar imagem estática pré-renderizada por regi
 Nenhuma câmera conserta um plano de 8,7s que mostra a mesma imagem recortada
 duas vezes. O teto da direção é o **número de imagens por minuto**, e isso é
 GPU. Parallax alivia (faz o recorte parecer outro ângulo) mas não elimina.
+
+### Parallax: oclusão não é preenchida
+`parallax.py` usa mapeamento INVERSO, que não deixa buraco mas estica os pixels
+nas bordas de profundidade. A amplitude foi limitada a 2,2% da largura para o
+estiramento ficar abaixo do limiar de percepção. Amplitude maior exigiria
+inpaint das áreas reveladas — trocaria "câmera de verdade" por "borracha
+derretendo" sem isso.
+
+### Custo do parallax: ~11s por plano
+Medido: ~3,8s de profundidade (uma vez, cacheada ao lado da imagem) + ~7s de
+render por plano de 5s a 1080p. Num vídeo de 8 min com 83 planos, aplicar em
+todos custaria ~15 min. É caro o bastante para ser decisão do diretor por plano,
+e não padrão — está desligado por omissão.
