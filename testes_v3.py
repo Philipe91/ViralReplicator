@@ -427,6 +427,56 @@ def test_grafico_rotula_todo_valor():
         checar(escuros > 0, "nenhum rótulo de valor encontrado à direita das barras")
 
 
+# ── executor de ícones ───────────────────────────────────────────────────
+
+def test_icone_desenha_e_e_deterministico():
+    import exec_icone
+    p = {"itens": [{"forma": "folha", "rotulo": "Ballaststoffe"},
+                   {"forma": "gota", "rotulo": "Nitrat", "destaque": True}]}
+    with tempfile.TemporaryDirectory() as d:
+        a = exec_icone.desenhar(p, Path(d) / "a.png")
+        b = exec_icone.desenhar(p, Path(d) / "b.png")
+        checar(a.read_bytes() == b.read_bytes(), "ícones deveriam ser determinísticos")
+
+
+def test_icone_todas_as_formas_desenham():
+    """O dicionário inteiro tem que renderizar — forma quebrada só aparece se
+    alguém a usar, e aí já é tarde."""
+    import exec_icone
+    with tempfile.TemporaryDirectory() as d:
+        for nome in exec_icone.FORMAS:
+            exec_icone.desenhar({"itens": [{"forma": nome, "rotulo": nome}]},
+                                Path(d) / f"{nome}.png")
+        checar(True, "")
+
+
+def test_icone_recusa_forma_desconhecida():
+    """Falhar alto em vez de desenhar quadrado vazio: ícone que não comunica é
+    pior que ícone ausente, porque ocupa a tela fingindo informação."""
+    import exec_icone
+    with tempfile.TemporaryDirectory() as d:
+        try:
+            exec_icone.desenhar({"itens": [{"forma": "foguete"}]}, Path(d) / "x.png")
+            checar(False, "deveria recusar forma inexistente")
+        except ValueError as e:
+            checar("foguete" in str(e), f"mensagem deveria citar a forma: {e}")
+
+
+def test_icone_respeita_zonas_seguras():
+    import exec_icone
+    from PIL import Image
+    p = {"titulo": "T", "itens": [{"forma": f, "rotulo": f} for f in sorted(exec_icone.FORMAS)]}
+    with tempfile.TemporaryDirectory() as d:
+        saida = exec_icone.desenhar(p, Path(d) / "x.png")
+        with Image.open(saida) as bruta:
+            im = bruta.convert("RGB")
+        fora = sum(1
+                   for y in range(0, 1080, 4)
+                   for x in list(range(0, 130, 4)) + list(range(1790, 1920, 4))
+                   if sum(im.getpixel((x, y))) < 500)
+        checar(fora == 0, f"{fora} pixels fora da margem lateral segura")
+
+
 def main():
     testes = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for t in testes:

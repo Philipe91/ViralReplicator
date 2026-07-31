@@ -293,6 +293,7 @@ MODULOS_VETOR = {
     "diagrama": "exec_diagrama",
     "timeline": "exec_timeline",
     "grafico": "exec_grafico",
+    "icone": "exec_icone",
 }
 
 

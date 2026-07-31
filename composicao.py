@@ -152,6 +152,20 @@ registrar(Executor(
               "imagem do plano.",
 ))
 
+# Etapa 6. Serve a batida que ENUMERA ("seis coisas que…"). Enumeração é
+# estrutura, e estrutura se lê numa grade — não numa foto. O rótulo de cada item
+# é texto, que é o que a difusão não escreve.
+registrar(Executor(
+    nome="icone",
+    fonte="vetor",
+    versao=1,
+    aceita_texto=True,
+    usa_gpu=False,
+    custo_seg=0.3,
+    opaco_quadro_cheio=True,
+    descricao="Grade de ícones com rótulo. Substitui a imagem do plano.",
+))
+
 
 # ── construção e adaptação ───────────────────────────────────────────────
 
