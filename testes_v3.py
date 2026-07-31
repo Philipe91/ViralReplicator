@@ -362,6 +362,71 @@ def test_gancho_vetorial_ocupa_o_slot_do_plano():
                "segunda passada deveria ser no-op")
 
 
+# ── executor de gráfico ──────────────────────────────────────────────────
+
+def _params_barras():
+    return {"tipo": "barras", "titulo": "Teste", "unidade": " g", "itens": [
+        {"rotulo": "Leinsamen", "valor": 27.3, "destaque": True},
+        {"rotulo": "Haferflocken", "valor": 10.0},
+        {"rotulo": "Apfel", "valor": 2.4}]}
+
+
+def test_grafico_desenha_e_e_deterministico():
+    import exec_grafico
+    from PIL import Image
+    with tempfile.TemporaryDirectory() as d:
+        a = exec_grafico.desenhar(_params_barras(), Path(d) / "a.png")
+        b = exec_grafico.desenhar(_params_barras(), Path(d) / "b.png")
+        with Image.open(a) as im:
+            checar(im.size == (1920, 1080), f"esperava 1920x1080, veio {im.size}")
+        checar(a.read_bytes() == b.read_bytes(), "gráfico deveria ser determinístico")
+
+
+def test_grafico_nao_cicla_cor_categorica():
+    """Regra da skill de dataviz: hue categórico nunca é ciclado.
+
+    Com mais itens que cores, a 4ª barra repetiria a 1ª e a cor passaria a
+    mentir que duas categorias são a mesma. Acima do limite, o gráfico volta a
+    ser de série única e a identidade fica no rótulo.
+    """
+    import exec_grafico as g
+    muitos = {"por_serie": True}
+    cores = [g._cor_da_barra(i, {}, muitos, 5) for i in range(5)]
+    checar(len(set(cores)) == 1,
+           f"com 5 itens deveria ser série única, veio {len(set(cores))} cores")
+    poucos = [g._cor_da_barra(i, {}, muitos, 3) for i in range(3)]
+    checar(len(set(poucos)) == 3, "com 3 itens cada série tem sua cor fixa")
+    checar(g._cor_da_barra(1, {"destaque": True}, muitos, 3) == g.DESTAQUE,
+           "destaque tem precedência sobre a ordem categórica")
+
+
+def test_grafico_proporcao_limita_a_fracao():
+    """Valor fora de 0-100 não pode desenhar barra maior que o trilho."""
+    import exec_grafico
+    with tempfile.TemporaryDirectory() as d:
+        for v in (-10, 0, 8, 100, 250):
+            exec_grafico.desenhar({"tipo": "proporcao", "valor": v, "unidade": "%"},
+                                  Path(d) / f"p{v}.png")
+        checar(True, "")
+
+
+def test_grafico_rotula_todo_valor():
+    """O aviso de contraste do âmbar é quitado por rótulo visível — então todo
+    valor precisa aparecer escrito, sempre."""
+    import exec_grafico
+    from PIL import Image
+    with tempfile.TemporaryDirectory() as d:
+        saida = exec_grafico.desenhar(_params_barras(), Path(d) / "x.png")
+        with Image.open(saida) as bruta:
+            im = bruta.convert("RGB")
+        # a coluna à direita das barras tem que conter tinta escura (os valores)
+        escuros = sum(1
+                      for y in range(0, 1080, 3)
+                      for x in range(1500, 1770, 3)
+                      if sum(im.getpixel((x, y))) < 400)
+        checar(escuros > 0, "nenhum rótulo de valor encontrado à direita das barras")
+
+
 def main():
     testes = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for t in testes:

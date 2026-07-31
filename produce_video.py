@@ -292,6 +292,7 @@ def planos_da_cena(cena: dict, dur: float) -> int:
 MODULOS_VETOR = {
     "diagrama": "exec_diagrama",
     "timeline": "exec_timeline",
+    "grafico": "exec_grafico",
 }
 
 

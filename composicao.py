@@ -136,6 +136,22 @@ registrar(Executor(
     descricao="Cronologia horizontal com marcos. Substitui a imagem do plano.",
 ))
 
+# Etapa 5. Número é texto. Um "gráfico" pedido ao SDXL volta com barras
+# plausíveis e rótulos ilegíveis — perde exatamente a informação. A paleta de
+# DADOS é outra que a de ilustração e foi validada com o script da skill de
+# dataviz; ver a nota no topo de exec_grafico.py.
+registrar(Executor(
+    nome="grafico",
+    fonte="vetor",
+    versao=1,
+    aceita_texto=True,
+    usa_gpu=False,
+    custo_seg=0.3,
+    opaco_quadro_cheio=True,
+    descricao="Barras horizontais ou número herói de proporção. Substitui a "
+              "imagem do plano.",
+))
+
 
 # ── construção e adaptação ───────────────────────────────────────────────
 
