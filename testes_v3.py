@@ -551,6 +551,71 @@ def test_animacao_de_estado_unico_nao_quebra():
         checar(saida.exists(), "estado único deveria gerar vídeo")
 
 
+# ── sound design ─────────────────────────────────────────────────────────
+
+def test_sfx_respeita_o_pico_alvo():
+    """Nível é ALVO ABSOLUTO, nunca ganho relativo — a lição mais cara do
+    projeto, e ela vale igual para efeito."""
+    import numpy as np
+    import som
+    for tipo in som.EFEITOS:
+        x = som.sintetizar(tipo)
+        pico = 20 * np.log10(max(abs(x).max(), 1e-9))
+        checar(abs(pico - som.PICO_DBFS) < 0.1,
+               f"{tipo} deveria picar em {som.PICO_DBFS} dBFS, veio {pico:.1f}")
+
+
+def test_sfx_e_deterministico():
+    """O ruído usa semente fixa; sem isso o cache seria mentira."""
+    import numpy as np
+    import som
+    checar(np.array_equal(som.sintetizar("whoosh"), som.sintetizar("whoosh")),
+           "duas sínteses do mesmo efeito deveriam ser idênticas")
+
+
+def test_sfx_recusa_efeito_inexistente():
+    import som
+    try:
+        som.sintetizar("explosao")
+        checar(False, "deveria recusar efeito inexistente")
+    except ValueError as e:
+        checar("explosao" in str(e), f"mensagem deveria citar o efeito: {e}")
+
+
+def test_trilha_sfx_posiciona_no_tempo():
+    import wave
+    import numpy as np
+    import som
+    with tempfile.TemporaryDirectory() as d:
+        alvo = som.trilha([{"t": 2.0, "tipo": "impacto"}], 5.0, Path(d) / "s.wav")
+        with wave.open(str(alvo)) as f:
+            n = f.getnframes()
+            dados = np.frombuffer(f.readframes(n), dtype="<i2").astype(float)
+        checar(abs(n / som.HZ - 5.0) < 0.05, f"faixa deveria ter 5s, veio {n/som.HZ:.2f}")
+        antes = abs(dados[: int(1.5 * som.HZ)]).max()
+        depois = abs(dados[int(2.0 * som.HZ): int(2.4 * som.HZ)]).max()
+        checar(antes < 10, f"antes do evento deveria ser silêncio, veio {antes}")
+        checar(depois > 1000, f"no evento deveria haver som, veio {depois}")
+
+
+def test_evento_fora_da_faixa_e_ignorado():
+    """As âncoras mudam quando a narração é regerada; derrubar o render por um
+    efeito 0,2s além do fim seria desproporcional."""
+    import som
+    with tempfile.TemporaryDirectory() as d:
+        som.trilha([{"t": 99.0, "tipo": "whoosh"}, {"t": -3.0, "tipo": "impacto"}],
+                   4.0, Path(d) / "s.wav")
+        checar(True, "")
+
+
+def test_eventos_dos_atos_pula_o_primeiro():
+    """O ato 1 começa em t=0: efeito ali soaria como falha de arquivo."""
+    import som
+    ev = som.eventos_dos_atos([0.0, 20.0, 45.0], 60.0)
+    checar(all(e["t"] > 0 for e in ev), "não pode haver evento em t=0")
+    checar(len(ev) == 4, f"esperava 2 efeitos por quebra x 2 quebras, veio {len(ev)}")
+
+
 def main():
     testes = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for t in testes:

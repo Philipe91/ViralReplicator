@@ -54,6 +54,23 @@ vocabulário por `aceita_camera` / `fonte`. É acoplamento legítimo e previsto 
 revisão de arquitetura — só não cabia na etapa 3, que era "somente o executor
 de diagrama".
 
+### Piso de grave 5,5 dB acima da referência
+Medido em 31/07, janelas de 1s abaixo de 70Hz:
+
+| | mediana | máximo | excursão |
+|---|---|---|---|
+| canal de referência | −27,6 dBFS | −16,2 | **11,4 dB** |
+| nosso | −22,1 dBFS | −17,4 | **4,7 dB** |
+
+O **pico** do nosso impacto está certo (1,2 dB da referência). O que difere é o
+PISO: o sub deles é mais limpo, então o impacto salta 11 dB e o nosso salta 5.
+
+Investigado e **descartado**: não é a música. Testar `highpass=f=90` na trilha
+não mudou a mediana em nada (−22,1 com e sem). A fonte é a VOZ vazando pelo
+highpass de 85Hz, que sendo de 2ª ordem atenua pouco a 70Hz. Resolver exigiria
+mexer no processamento da narração — fora do escopo do sound design e com risco
+de afetar a inteligibilidade, que é o ativo mais importante do canal.
+
 ## Dívida técnica conhecida
 
 ### Cadeia de encodes (2 a 3 passes)

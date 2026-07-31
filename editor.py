@@ -47,6 +47,7 @@ from pathlib import Path
 
 import composicao
 import direcao
+import som
 
 RAIZ = Path(__file__).parent
 FFMPEG = "ffmpeg"
@@ -528,8 +529,27 @@ def achar_musica(subpasta: str = "") -> Path | None:
     return None
 
 
-def mixar(narracao: Path, musica: Path | None, dur_total: float, saida: Path) -> Path:
-    """Narração + trilha com ducking. Sem trilha, só copia a narração."""
+def mixar(narracao: Path, musica: Path | None, dur_total: float, saida: Path,
+          sfx: Path | None = None) -> Path:
+    """Narração + trilha com ducking (+ efeitos, se houver).
+
+    O SFX entra DEPOIS da compressão sidechain, de propósito: a cama abaixa
+    quando a voz entra porque ela é fundo, mas efeito é PONTUAÇÃO — existe no
+    instante exato em que deve ser ouvido e some. Duckar o efeito o mataria
+    justamente onde ele serve.
+    """
+    if musica is None and sfx is not None:
+        # sem trilha mas com efeito: soma direta, sem ducking a aplicar
+        _run([FFMPEG, "-y", "-loglevel", "error", "-i", str(narracao), "-i", str(sfx),
+              "-filter_complex",
+              f"[0:a]aformat=sample_fmts=fltp:sample_rates={AUDIO_HZ}:channel_layouts=stereo[v];"
+              f"[1:a]aformat=sample_fmts=fltp:sample_rates={AUDIO_HZ}:channel_layouts=stereo[s];"
+              f"[v][s]amix=inputs=2:duration=first:normalize=0,"
+              f"alimiter=limit=0.95,loudnorm=I=-14:TP=-1.5:LRA=11[out]",
+              "-map", "[out]", "-ar", str(AUDIO_HZ), "-ac", "2", str(saida)],
+             "mix narracao + efeitos")
+        _p("[SFX] efeitos somados (sem trilha)")
+        return saida
     if musica is None:
         _p("[TRILHA] nenhum arquivo em templates/musica/ — saindo só com narração")
         _run([FFMPEG, "-y", "-loglevel", "error", "-i", str(narracao),
@@ -538,7 +558,14 @@ def mixar(narracao: Path, musica: Path | None, dur_total: float, saida: Path) ->
 
     d = DUCK
     filtro = (
-        # trilha: loop até cobrir o vídeo, normalizada para o alvo fixo da cama
+        # trilha: loop até cobrir o vídeo, normalizada para o alvo fixo da cama.
+        #
+        # NÃO adicionar highpass aqui. Testei em 31/07 achando que a música
+        # ocupava o sub e abafava o impacto, e a medição DESMENTIU: com e sem
+        # o filtro, o grave (<70Hz) do mix final ficou em -22,1 dBFS de mediana,
+        # idêntico. O que ocupa o sub é a VOZ, que vaza pelo highpass de 85Hz —
+        # filtro de 2ª ordem atenua pouco a 70Hz. Filtrar a música não resolve
+        # e só somaria processamento sem efeito.
         f"[1:a]aloop=loop=-1:size=2e9,atrim=0:{dur_total + 1:.2f},"
         f"aformat=sample_fmts=fltp:sample_rates={AUDIO_HZ}:channel_layouts=stereo,"
         f"loudnorm=I={MUSICA_LUFS}:TP=-6:LRA=7[mus];"
@@ -550,13 +577,26 @@ def mixar(narracao: Path, musica: Path | None, dur_total: float, saida: Path) ->
         f":attack={d['attack']}:release={d['release']}[mus_duck];"
         # normalize=0: sem isso o amix divide tudo pelo nº de entradas e derruba
         # a cama de novo. Aqui os níveis já vêm calibrados, então só somamos.
-        f"[voz][mus_duck]amix=inputs=2:duration=first:normalize=0,"
-        f"alimiter=limit=0.95,loudnorm=I=-14:TP=-1.5:LRA=11[out]"
+        f"[voz][mus_duck]amix=inputs=2:duration=first:normalize=0[base]"
     )
-    _run([FFMPEG, "-y", "-loglevel", "error", "-i", str(narracao), "-i", str(musica),
+    entradas = ["-i", str(narracao), "-i", str(musica)]
+    if sfx is not None:
+        entradas += ["-i", str(sfx)]
+        filtro += (
+            f";[2:a]aformat=sample_fmts=fltp:sample_rates={AUDIO_HZ}"
+            f":channel_layouts=stereo[fx];"
+            f"[base][fx]amix=inputs=2:duration=first:normalize=0[somado]"
+        )
+        fonte = "[somado]"
+    else:
+        fonte = "[base]"
+    filtro += f";{fonte}alimiter=limit=0.95,loudnorm=I=-14:TP=-1.5:LRA=11[out]"
+
+    _run([FFMPEG, "-y", "-loglevel", "error", *entradas,
           "-filter_complex", filtro, "-map", "[out]",
           "-ar", str(AUDIO_HZ), "-ac", "2", str(saida)], "mix com ducking")
-    _p(f"[TRILHA] {musica.name} com ducking (sidechaincompress)")
+    _p(f"[TRILHA] {musica.name} com ducking (sidechaincompress)"
+       + (" + efeitos" if sfx is not None else ""))
     return saida
 
 
@@ -584,6 +624,42 @@ def _guardar_composicoes_suportadas(roteiro: dict) -> None:
         raise RuntimeError(
             "composição com múltiplas camadas ainda não tem caminho de render "
             "(chega com o executor de diagrama, etapa 3):\n  - " + "\n  - ".join(pendentes))
+
+
+def _faixa_de_efeitos(roteiro: dict, segmentos: list, atos: list, dur_total: float,
+                      base: Path) -> Path | None:
+    """Constrói a faixa de SFX a partir das quebras de ato e das marcas do roteiro.
+
+    Só o que é calculável a partir de `segmentos`, que existe em todo render —
+    inclusive quando os segmentos vêm do cache. Marca por PLANO exigiria os
+    cortes ancorados, que só são recalculados quando o segmento é regerado, e
+    então o som sumiria num render incremental. Ato e cena bastam por ora.
+
+    `som: false` no roteiro desliga tudo, para quem quiser o silêncio de volta.
+    """
+    if roteiro.get("som") is False:
+        return None
+
+    inicios, acumulado = [], 0.0
+    for ato in atos:
+        inicios.append(acumulado)
+        acumulado += sum(d for _, _, d in ato)
+    eventos = som.eventos_dos_atos(inicios, dur_total)
+
+    # marca explícita por cena: {"som": "riser"} no roteiro
+    por_cena = {c["n"]: c.get("som") for c in roteiro.get("cenas", []) if c.get("som")}
+    if por_cena:
+        t = 0.0
+        for n, _seg, dur in segmentos:
+            if n in por_cena:
+                eventos.append({"t": max(t - 0.2, 0.0), "tipo": por_cena[n]})
+            t += dur
+
+    if not eventos:
+        return None
+    faixa = som.trilha(eventos, dur_total, base / "efeitos.wav")
+    _p(f"[SFX] {len(eventos)} efeito(s) sintetizado(s) — pico {som.PICO_DBFS:g} dBFS, sem duck")
+    return faixa
 
 
 def montar(roteiro: dict, audios: list, imagens: dict, clipes: dict, base: Path) -> Path:
@@ -714,7 +790,8 @@ def montar(roteiro: dict, audios: list, imagens: dict, clipes: dict, base: Path)
 
     audio_final = base / "audio_final.wav"
     if not audio_final.exists():
-        mixar(narracao, achar_musica(roteiro.get("musica", "")), dur_total, audio_final)
+        mixar(narracao, achar_musica(roteiro.get("musica", "")), dur_total, audio_final,
+              sfx=_faixa_de_efeitos(roteiro, segmentos, atos, dur_total, base))
 
     # 4) legenda + acabamento + mux, num único encode
     ass = escrever_ass(audios, base / "legenda.ass")
