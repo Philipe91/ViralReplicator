@@ -1,0 +1,52 @@
+{
+  "id": "de_thinkscience",
+  "nome": "Canal alemão de saúde/ciência (formato Think Science)",
+  "status": "em construção — vídeo 1",
+
+  "mercado": {
+    "idioma": "de-DE",
+    "pais": "Alemanha / DACH",
+    "cpm_referencia_usd": 5.53,
+    "concorrentes_no_formato": 0,
+    "nota": "8 canais alemães aparecem na busca do formato, mas nenhum faz faceless+animação: seguradora, Kurzgesagt, canais de volume antigos e um médico com rosto."
+  },
+
+  "referencia": {
+    "handle": "@ThinkScienceHD",
+    "channel_id": "UCAXvpFXwsm3CyM-fwArWItg",
+    "uploads_playlist": "UUAXvpFXwsm3CyM-fwArWItg",
+    "criado": "2025-11-07",
+    "estudo": "estudo/thinkscience/",
+    "ordem": "cronologica",
+    "aprendizados": {
+      "categoria_de_assunto": "identidade (traço não escolhido) rende 3x instrução — mediana 366k vs 125k em 34 vídeos",
+      "estrutura_do_maior": "catálogo por item, não explicativo linear — o espectador espera o item DELE aparecer",
+      "ritmo_de_corte": "151 cortes em 598s = um a cada ~4s; 37% dos planos abaixo de 5s",
+      "estrutura_do_roteiro": "correlação fraca com views (ppm +0,24, duração +0,29) — não é a alavanca",
+      "curva_inicial": "os 7 primeiros vídeos deles fizeram média de 22k; o hit veio no #6-8"
+    }
+  },
+
+  "producao": {
+    "voz": "de-DE-ConradNeural",
+    "ritmo": "+8%",
+    "estilo": "medico_3d",
+    "duracao_alvo_min": 8,
+    "segundos_por_plano": 4.5,
+    "animar_cada": 4,
+    "cadencia_publicacao": "1 vídeo a cada 2 dias"
+  },
+
+  "riscos": {
+    "regulatorio": "Alemanha tem HWG (lei de publicidade de produtos de saúde) e a moderação alemã do YouTube é mais dura com alegação médica. Evitar ângulos pseudocientíficos (dieta do tipo sanguíneo, 'reverter miopia naturalmente') mesmo quando o canal de referência os usa.",
+    "conteudo_reutilizado": "roteiro sempre original; transcrição só para análise estrutural."
+  },
+
+  "_como_adicionar_outro_canal": [
+    "1. Copiar este arquivo para canais/<novo_id>.json e ajustar mercado, referência e produção.",
+    "2. A voz sai da tabela VOZES em produce_video.py (pt-BR, en-US, es-ES, it-IT, fr-FR, nl-NL, de-DE já mapeados).",
+    "3. O estilo sai de ESTILOS em produce_video.py — adicionar um preset novo se o nicho pedir outra linguagem visual.",
+    "4. Rodar estudo_canal.py nas legendas do novo canal de referência para achar a categoria de assunto que performa.",
+    "5. O resto do pipeline (narração, planejamento por âncora, edição, trilha) não muda."
+  ]
+}
