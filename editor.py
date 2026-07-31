@@ -293,6 +293,29 @@ def ken_burns(img: Path, dur: float, saida: Path, camera: str = "push_in",
           "-pix_fmt", "yuv420p", str(saida)], f"ken burns {img.name}")
 
 
+def plano_pronto(asset: Path, dur: float, saida: Path, grade: str = "neutro"):
+    """Um plano que já É vídeo (vetor animado) entra sem câmera.
+
+    Somar Ken Burns a um segmento que já tem revelação própria dá dois
+    movimentos disputando o quadro. O `tpad` congela o último frame quando a
+    animação for mais curta que a fatia de fala, e o `-t` corta quando for mais
+    longa — as duas coisas acontecem, porque a duração da animação vem do `seg`
+    do roteiro e a do segmento vem das âncoras, que podem divergir por décimos.
+    """
+    vf = (f"scale={LARGURA}:{ALTURA}:force_original_aspect_ratio=increase,"
+          f"crop={LARGURA}:{ALTURA},fps={FPS},"
+          f"tpad=stop_mode=clone:stop_duration=8,"
+          f"{direcao.GRADES.get(grade, direcao.GRADES['neutro'])},setsar=1")
+    _run([FFMPEG, "-y", "-loglevel", "error", "-i", str(asset), "-an",
+          "-vf", vf, "-t", f"{dur:.3f}",
+          "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+          "-pix_fmt", "yuv420p", str(saida)], f"plano pronto {asset.name}")
+
+
+def _e_video(asset: Path) -> bool:
+    return Path(asset).suffix.lower() in (".mp4", ".mov", ".webm")
+
+
 def punch_in(img: Path, dur: float, saida: Path, tmp: Path, cortes=None, grade="neutro"):
     """Pica uma imagem em N sub-planos (geral → médio → close) com corte seco.
     Usado no hook: plano único de 18s é onde o espectador vaza.
@@ -404,6 +427,11 @@ def multi_plano(imagens, dur: float, saida: Path, tmp: Path, direcoes=None,
         dir_i = direcoes[i] if i < len(direcoes) else {}
         cam = dir_i.get("camera", "push_in")
         forca = dir_i.get("forca", 0.085)
+        if _e_video(img):
+            p = tmp / f"{saida.stem}_mp{i}.mp4"
+            plano_pronto(img, d, p, grade=grade)
+            partes.append(p)
+            continue
         # Plano longo demais vira 2 sub-planos da MESMA imagem, em recortes
         # diferentes (geral -> fechado), com corte seco entre eles. O canal de
         # referência corta a cada ~4s; segurar 12s numa imagem é o que faz o
@@ -606,7 +634,9 @@ def montar(roteiro: dict, audios: list, imagens: dict, clipes: dict, base: Path)
         if not seg.exists():
             planos = imagens.get(n, [])
             durs = cortes_ancorados(cena, palavras, dur_seg, len(planos)) if planos else []
-            if cena.get("punch_in") and planos:
+            if planos and len(planos) == 1 and _e_video(planos[0]):
+                plano_pronto(planos[0], dur_seg, seg, grade=grade)
+            elif cena.get("punch_in") and planos and not _e_video(planos[0]):
                 punch_in(planos[0], dur_seg, seg, tmp, grade=grade)
             elif n in clipes:
                 segmento_clipe(clipes[n], dur_seg, seg, tmp, direcoes=dirs,
@@ -616,8 +646,11 @@ def montar(roteiro: dict, audios: list, imagens: dict, clipes: dict, base: Path)
                             duracoes=durs, grade=grade)
             elif planos:
                 d0 = dirs[0] if dirs else {}
-                ken_burns(planos[0], dur_seg, seg, camera=d0.get("camera", "push_in"),
-                          forca=d0.get("forca", 0.085), grade=grade)
+                if _e_video(planos[0]):
+                    plano_pronto(planos[0], dur_seg, seg, grade=grade)
+                else:
+                    ken_burns(planos[0], dur_seg, seg, camera=d0.get("camera", "push_in"),
+                              forca=d0.get("forca", 0.085), grade=grade)
             else:
                 raise RuntimeError(f"cena {n} sem imagem nem clipe")
             if len(planos) > 1 and durs:

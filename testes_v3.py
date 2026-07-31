@@ -483,10 +483,16 @@ def test_estados_por_lista():
     import motion
     p = {"pontos": [1, 2, 3, 4], "titulo": "x"}
     estados = motion.estados_por_lista(p, "pontos")
-    checar([len(e["pontos"]) for e in estados] == [1, 2, 3, 4],
-           f"esperava revelação 1..4, veio {[len(e['pontos']) for e in estados]}")
+    # a lista chega INTEIRA em todo estado; quem varia é `revelados`. É isso que
+    # mantém a geometria estável — a 1ª versão truncava e os marcos mudavam de
+    # posição a cada revelação
+    checar([e["revelados"] for e in estados] == [1, 2, 3, 4],
+           f"esperava revelados 1..4, veio {[e.get('revelados') for e in estados]}")
+    checar(all(len(e["pontos"]) == 4 for e in estados),
+           "a lista não pode ser truncada, senão o layout recalcula")
     checar(all(e["titulo"] == "x" for e in estados), "o resto dos params tem que sobreviver")
-    checar(p["pontos"] == [1, 2, 3, 4], "não pode mutar o dicionário original")
+    checar(p["pontos"] == [1, 2, 3, 4] and "revelados" not in p,
+           "não pode mutar o dicionário original")
     curto = motion.estados_por_lista({"pontos": [1]}, "pontos")
     checar(len(curto) == 1, "lista de 1 item não tem o que revelar")
     checar(len(motion.estados_por_lista({}, "pontos")) == 1, "lista ausente não quebra")

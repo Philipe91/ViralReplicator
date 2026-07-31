@@ -37,7 +37,8 @@ import vetor_base as vb
 from vetor_base import ALTURA, LARGURA, MARGEM_LATERAL, PALETA, RODAPE_PROIBIDO, TOPO_SEGURO
 
 #   v1 -> primeira versão
-VERSAO = 1
+#   v2 -> honra `revelados` (geometria estável na animação)
+VERSAO = 2
 
 
 # ── o dicionário de formas ───────────────────────────────────────────────
@@ -204,7 +205,10 @@ def grade_icones(d, params: dict):
     raio_icone = int(raio_chip * 0.55)
     f_rot = vb.fonte(36, negrito=True)
 
+    visiveis = vb.revelados(params, n)
     for i, item in enumerate(itens):
+        if i >= visiveis:
+            break          # posição na grade já reservada
         col, lin = i % colunas, i // colunas
         # a última linha incompleta fica centralizada, senão sobra um buraco
         nesta_linha = min(colunas, n - lin * colunas)

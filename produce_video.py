@@ -297,6 +297,54 @@ MODULOS_VETOR = {
 }
 
 
+# Campo-lista que cada executor revela progressivamente. É o único ponto em que
+# o pipeline precisa saber a forma interna dos params de um executor — o preço
+# de manter os executores ignorantes sobre animação.
+CAMPO_REVELAVEL = {
+    "timeline": "pontos",
+    "grafico": "itens",
+    "icone": "itens",
+    "diagrama": "rotulos",
+}
+
+
+def ativos_do_plano(dest: Path, cena_n: int, indice: int) -> list:
+    """Arquivos daquele slot, PNG ou MP4.
+
+    Um plano deixou de ser necessariamente uma imagem: vetor animado entrega
+    vídeo. Todo lugar que procurava só `.png` passa por aqui.
+    """
+    achados = list(dest.glob(f"cena_{cena_n:02d}_p{indice}_*.png"))
+    achados += list(dest.glob(f"cena_{cena_n:02d}_p{indice}_*.mp4"))
+    return sorted(achados)
+
+
+def _desenhar_animado(mod, params: dict, cena: dict, indice: int, alvo: Path, dest: Path):
+    """Desenha os estados e encadeia num MP4 com a duração da fala do plano."""
+    import motion
+
+    planos = cena.get("planos") or []
+    seg = float(planos[indice - 1].get("seg") or 5.0) if indice <= len(planos) else 5.0
+    campo = CAMPO_REVELAVEL.get(_nome_do_modulo(mod), "itens")
+
+    base = {k: v for k, v in params.items() if k != "animar"}
+    estados = motion.estados_por_lista(base, campo)
+    tmp = dest / "_tmp_motion"
+    tmp.mkdir(parents=True, exist_ok=True)
+    pngs = [mod.desenhar(e, tmp / f"{alvo.stem}_e{k:02d}.png")
+            for k, e in enumerate(estados)]
+    motion.animar(pngs, seg, alvo, tmp)
+    for p in pngs:
+        p.unlink(missing_ok=True)
+
+
+def _nome_do_modulo(mod) -> str:
+    for nome, caminho in MODULOS_VETOR.items():
+        if mod.__name__ == caminho:
+            return nome
+    return ""
+
+
 def _camada_vetorial(cena: dict, indice: int):
     """(nome do executor, params) da camada vetorial do plano, ou None."""
     planos = cena.get("planos") or []
@@ -331,18 +379,26 @@ def gerar_vetores(roteiro: dict, dest: Path) -> int:
                 continue
             nome, params = achado
             mod = importlib.import_module(MODULOS_VETOR[nome])
-            alvo = dest / f"cena_{cena['n']:02d}_p{i}_{nome}_{mod.chave(params)}.png"
+            # `animar: true` no params troca o PNG por um MP4 com a revelação
+            # progressiva. A duração vem do `seg` do plano, que é a mesma fatia
+            # de fala que a âncora já definiu.
+            anima = bool(params.get("animar"))
+            ext = "mp4" if anima else "png"
+            alvo = dest / f"cena_{cena['n']:02d}_p{i}_{nome}_{mod.chave(params)}.{ext}"
             # Qualquer outro arquivo naquele slot é versão vencida: ou um
             # diagrama de params antigos, ou o PNG do SDXL de quando este plano
             # ainda era imagem gerada. Os dois são regeneráveis, e deixar os
             # dois no disco faria o glob do fim escolher por ordem alfabética.
-            for velho in dest.glob(f"cena_{cena['n']:02d}_p{i}_*.png"):
+            for velho in ativos_do_plano(dest, cena["n"], i):
                 if velho != alvo:
                     velho.unlink()
             if not alvo.exists():
-                mod.desenhar(params, alvo)
+                if anima:
+                    _desenhar_animado(mod, params, cena, i, alvo, dest)
+                else:
+                    mod.desenhar(params, alvo)
                 feitos += 1
-                tipos.append(nome)
+                tipos.append(nome + (" animado" if anima else ""))
     if feitos:
         _p(f"[VETOR] {feitos} desenhado(s) na CPU ({', '.join(sorted(set(tipos)))}) "
            f"— ~0,3s cada, texto legível, sem GPU")
@@ -371,7 +427,7 @@ def gerar_imagens(roteiro: dict, dest: Path, duracoes: dict = None,
     for c in roteiro["cenas"]:
         alvo = planos_da_cena(c, duracoes.get(c["n"], 12.0))
         for p in range(1, alvo + 1):
-            if not list(dest.glob(f"cena_{c['n']:02d}_p{p}_*.png")):
+            if not ativos_do_plano(dest, c["n"], p):
                 faltando.append((c, p))
 
     if not faltando:
@@ -423,7 +479,7 @@ def gerar_imagens(roteiro: dict, dest: Path, duracoes: dict = None,
     for c in roteiro["cenas"]:
         planos = []
         for p in range(1, MAX_PLANOS + 1):
-            achados = sorted(dest.glob(f"cena_{c['n']:02d}_p{p}_*.png"))
+            achados = ativos_do_plano(dest, c["n"], p)
             if achados:
                 planos.append(achados[-1])
         if planos:
@@ -437,7 +493,12 @@ def gerar_imagens(roteiro: dict, dest: Path, duracoes: dict = None,
 def gerar_clipes(roteiro: dict, imagens: dict, dest: Path, segundos=5.0) -> dict:
     """Só nas cenas marcadas movimento=true. As outras usam Ken Burns."""
     dest.mkdir(parents=True, exist_ok=True)
-    alvos = [c for c in roteiro["cenas"] if c.get("movimento") and c["n"] in imagens]
+    # Cena cujo plano 1 já é VÍDEO (vetor animado) não vai para o LTXV: ele
+    # espera uma imagem de partida, e o plano já tem movimento próprio. Somar os
+    # dois daria dois movimentos disputando o mesmo quadro.
+    alvos = [c for c in roteiro["cenas"]
+             if c.get("movimento") and c["n"] in imagens
+             and imagens[c["n"]] and imagens[c["n"]][0].suffix.lower() != ".mp4"]
     pend = [c for c in alvos if not list(dest.glob(f"cena_{c['n']:02d}_*.mp4"))]
     if pend:
         client = ComfyUIClient()

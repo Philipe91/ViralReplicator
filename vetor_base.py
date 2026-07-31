@@ -96,6 +96,18 @@ def desenhar_fundo(d: ImageDraw.ImageDraw):
         d.rectangle([0, y, LARGURA, y + 4], fill=cor)
 
 
+def revelados(params: dict, total: int) -> int:
+    """Quantos itens já apareceram. Sem `revelados`, todos.
+
+    O contrato com `motion.estados_por_lista`: a lista chega SEMPRE inteira, e
+    quem anima manda só até onde pintar. É isso que mantém a geometria estável
+    entre os estados — o item aparece onde já estava, em vez de o layout
+    recalcular e todo mundo pular de lugar.
+    """
+    k = params.get("revelados")
+    return total if k is None else max(0, min(int(k), total))
+
+
 def titulo_do_quadro(d: ImageDraw.ImageDraw, texto: str):
     """Título no rodapé seguro, acima da faixa da legenda."""
     if not texto:

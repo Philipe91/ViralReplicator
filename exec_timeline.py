@@ -9,12 +9,12 @@ posicionado, e texto é exatamente o que a difusão não desenha. Pedir "uma lin
 do tempo mostrando 30 minutos, 2 horas e 6 horas" ao SDXL devolve rabisco no
 lugar dos números — que são justamente a informação.
 
-## Decisão de escopo
+## Revelação progressiva
 
-A timeline é **estática** nesta etapa. Revelação progressiva dos marcos é
-motion graphics, que é a etapa 7 do plano combinado. O movimento aqui vem da
-câmera, como em qualquer outro plano. Anotado no backlog: timeline + revelação
-progressiva é o par natural quando a etapa 7 chegar.
+Desde a etapa 7 a timeline pode ser animada: `"animar": true` nos params faz o
+`motion.py` pedir um estado por marco e encadeá-los. Este módulo continua sem
+saber animar — ele só recebe `revelados: k` e pinta os k primeiros. A lista
+chega sempre inteira, para a geometria não mudar entre os estados.
 """
 
 from __future__ import annotations
@@ -27,7 +27,8 @@ import vetor_base as vb
 from vetor_base import ALTURA, LARGURA, MARGEM_LATERAL, PALETA, RODAPE_PROIBIDO
 
 #   v1 -> primeira versão
-VERSAO = 1
+#   v2 -> honra `revelados` (geometria estável na animação)
+VERSAO = 2
 
 
 def _quebrar(d, texto: str, f, largura_max: int) -> list:
@@ -89,7 +90,10 @@ def linha_horizontal(d, params: dict):
     # descrição pertence a qual ponto
     largura_max = int((slot if n > 1 else (x1 - x0)) * 0.86) or (x1 - x0)
 
+    visiveis = vb.revelados(params, n)
     for i, ponto in enumerate(pontos):
+        if i >= visiveis:
+            break          # posição já reservada; o item só ainda não apareceu
         px = int(x0 + slot * i) if n > 1 else (x0 + x1) // 2
         destaque = bool(ponto.get("destaque"))
         cor = PALETA["destaque"] if destaque else PALETA["traco"]

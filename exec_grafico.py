@@ -53,7 +53,8 @@ import vetor_base as vb
 from vetor_base import ALTURA, LARGURA, MARGEM_LATERAL, PALETA, RODAPE_PROIBIDO, TOPO_SEGURO
 
 #   v1 -> primeira versão
-VERSAO = 1
+#   v2 -> honra `revelados` (geometria estável na animação)
+VERSAO = 2
 
 # Ordem fixa. Ver a nota do topo sobre a validação.
 SERIES = [(42, 125, 184), (193, 85, 60), (217, 166, 60)]
@@ -111,9 +112,16 @@ def barras(d, params: dict):
     passo = disponivel / n
     altura = min(int(passo * 0.56), 78)
 
+    visiveis = vb.revelados(params, n)
     for i, item in enumerate(itens):
         y = int(topo + passo * i + (passo - altura) / 2)
         valor = float(item.get("valor", 0))
+        if i >= visiveis:
+            # o trilho aparece desde o início: ele É a escala, e a escala não
+            # pode mudar durante a revelação, senão as barras já mostradas
+            # passariam a mentir sobre o próprio tamanho
+            d.rounded_rectangle([x_barra, y, x_fim, y + altura], radius=RAIO, fill=TRILHO)
+            continue
         largura = int((x_fim - x_barra) * (abs(valor) / maximo))
         cor = _cor_da_barra(i, item, params, n)
 

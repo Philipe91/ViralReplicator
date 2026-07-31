@@ -115,14 +115,21 @@ def animar(estados: list, dur: float, saida: Path, tmp: Path,
 def estados_por_lista(params: dict, campo: str, minimo: int = 1) -> list:
     """Revelação progressiva dos itens de uma lista.
 
-    Serve timeline (`pontos`), gráfico (`itens`) e ícones (`itens`) com a MESMA
+    Serve timeline (`pontos`), gráfico e ícones (`itens`) com a MESMA
     implementação — nenhum executor precisa saber animar, eles só desenham o que
     receberem. É a razão de a animação morar aqui e não dentro deles.
 
+    **A lista NÃO é truncada.** Todo estado recebe a lista inteira mais um
+    `revelados: k`, e o executor pinta só os k primeiros. A primeira versão
+    truncava, e o defeito apareceu no vídeo: com menos itens o layout
+    recalculava e os marcos MUDAVAM DE POSIÇÃO a cada revelação. Elemento
+    pulando de lugar lê como amador; o que se espera é que ele apareça onde
+    sempre esteve. Geometria estável, portanto, vem da contagem FINAL.
+
     `minimo` existe porque nem toda revelação começa vazia: uma timeline sem
-    nenhum marco é um eixo solto, que não comunica; começar com 1 é mais legível.
+    nenhum marco é um eixo solto, que não comunica.
     """
     itens = params.get(campo) or []
     if len(itens) <= minimo:
         return [params]
-    return [dict(params, **{campo: itens[:k]}) for k in range(minimo, len(itens) + 1)]
+    return [dict(params, revelados=k) for k in range(minimo, len(itens) + 1)]
