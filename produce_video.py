@@ -287,19 +287,27 @@ def planos_da_cena(cena: dict, dur: float) -> int:
     return max(1, min(int(round(dur / SEGUNDOS_POR_PLANO)), MAX_PLANOS))
 
 
-def _params_de_diagrama(cena: dict, indice: int):
-    """Params do diagrama daquele plano, ou None se ele não é um diagrama."""
+# Executor vetorial -> módulo que sabe desenhá-lo. Executor novo entra aqui e
+# em `composicao.EXECUTORES`; nada mais no pipeline precisa saber que ele existe.
+MODULOS_VETOR = {
+    "diagrama": "exec_diagrama",
+    "timeline": "exec_timeline",
+}
+
+
+def _camada_vetorial(cena: dict, indice: int):
+    """(nome do executor, params) da camada vetorial do plano, ou None."""
     planos = cena.get("planos") or []
     if indice > len(planos):
         return None
     for c in planos[indice - 1].get("camadas") or []:
-        if c.get("executor") == "diagrama":
-            return c.get("params") or {}
+        if c.get("executor") in MODULOS_VETOR:
+            return c["executor"], c.get("params") or {}
     return None
 
 
-def gerar_diagramas(roteiro: dict, dest: Path) -> int:
-    """Desenha em vetor os planos marcados como diagrama, ANTES do SDXL.
+def gerar_vetores(roteiro: dict, dest: Path) -> int:
+    """Desenha em vetor os planos marcados, ANTES do SDXL.
 
     Como o arquivo sai com o mesmo padrão de nome que o SDXL usaria
     (`cena_NN_pP_*.png`), o laço de geração seguinte simplesmente encontra o
@@ -310,16 +318,18 @@ def gerar_diagramas(roteiro: dict, dest: Path) -> int:
     a chave; o arquivo antigo daquele plano é apagado e o novo é gerado — cache
     idempotente, mas invalidável, que é o contrato do resto do pipeline.
     """
-    import exec_diagrama
+    import importlib
 
     dest.mkdir(parents=True, exist_ok=True)
-    feitos = 0
+    feitos, tipos = 0, []
     for cena in roteiro.get("cenas", []):
         for i in range(1, len(cena.get("planos") or []) + 1):
-            params = _params_de_diagrama(cena, i)
-            if params is None:
+            achado = _camada_vetorial(cena, i)
+            if achado is None:
                 continue
-            alvo = dest / f"cena_{cena['n']:02d}_p{i}_diagrama_{exec_diagrama.chave(params)}.png"
+            nome, params = achado
+            mod = importlib.import_module(MODULOS_VETOR[nome])
+            alvo = dest / f"cena_{cena['n']:02d}_p{i}_{nome}_{mod.chave(params)}.png"
             # Qualquer outro arquivo naquele slot é versão vencida: ou um
             # diagrama de params antigos, ou o PNG do SDXL de quando este plano
             # ainda era imagem gerada. Os dois são regeneráveis, e deixar os
@@ -328,10 +338,12 @@ def gerar_diagramas(roteiro: dict, dest: Path) -> int:
                 if velho != alvo:
                     velho.unlink()
             if not alvo.exists():
-                exec_diagrama.desenhar(params, alvo)
+                mod.desenhar(params, alvo)
                 feitos += 1
+                tipos.append(nome)
     if feitos:
-        _p(f"[DIAGRAMA] {feitos} desenhado(s) em vetor (CPU, ~0,3s cada, texto legível)")
+        _p(f"[VETOR] {feitos} desenhado(s) na CPU ({', '.join(sorted(set(tipos)))}) "
+           f"— ~0,3s cada, texto legível, sem GPU")
     return feitos
 
 
@@ -351,7 +363,7 @@ def gerar_imagens(roteiro: dict, dest: Path, duracoes: dict = None,
                     velho.rename(novo)
 
     # vetor primeiro: o que sai daqui já ocupa o slot e não vai para a GPU
-    gerar_diagramas(roteiro, dest)
+    gerar_vetores(roteiro, dest)
 
     faltando = []
     for c in roteiro["cenas"]:

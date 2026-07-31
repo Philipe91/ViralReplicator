@@ -121,6 +121,21 @@ registrar(Executor(
               "imagem do plano — não se sobrepõe a ela.",
 ))
 
+# Etapa 4. Cronologia é informação ORDINAL, e ordinal se lê num eixo. Mesma
+# razão do diagrama: o conteúdo é texto posicionado, que é o que a difusão não
+# desenha — pedir "linha do tempo com 30 minutos e 2 horas" ao SDXL devolve
+# rabisco no lugar exato dos números, que são a informação.
+registrar(Executor(
+    nome="timeline",
+    fonte="vetor",
+    versao=1,
+    aceita_texto=True,
+    usa_gpu=False,
+    custo_seg=0.3,
+    opaco_quadro_cheio=True,
+    descricao="Cronologia horizontal com marcos. Substitui a imagem do plano.",
+))
+
 
 # ── construção e adaptação ───────────────────────────────────────────────
 

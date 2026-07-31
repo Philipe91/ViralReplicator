@@ -283,6 +283,85 @@ def test_diagrama_respeita_a_zona_da_legenda():
         checar(escuros == 0, f"{escuros} pixels escuros na zona da legenda")
 
 
+# ── executor de timeline ─────────────────────────────────────────────────
+
+def _params_tl():
+    return {"titulo": "Teste", "pontos": [
+        {"marco": "0 Min", "texto": "Die Mahlzeit ist beendet"},
+        {"marco": "30 Min", "texto": "Fette erreichen das Blut"},
+        {"marco": "2 Std", "texto": "Höchstwert im Blut", "destaque": True},
+        {"marco": "6 Std", "texto": "Werte normalisieren sich"}]}
+
+
+def test_timeline_desenha_e_e_deterministica():
+    import exec_timeline
+    from PIL import Image
+    with tempfile.TemporaryDirectory() as d:
+        a = exec_timeline.desenhar(_params_tl(), Path(d) / "a.png")
+        b = exec_timeline.desenhar(_params_tl(), Path(d) / "b.png")
+        with Image.open(a) as im:
+            checar(im.size == (1920, 1080), f"esperava 1920x1080, veio {im.size}")
+        checar(a.read_bytes() == b.read_bytes(), "timeline deveria ser determinística")
+
+
+def test_timeline_nao_vaza_das_margens():
+    """As pontas do eixo recuam justamente para o texto não sair do quadro."""
+    import exec_timeline
+    from PIL import Image
+    with tempfile.TemporaryDirectory() as d:
+        saida = exec_timeline.desenhar(_params_tl(), Path(d) / "x.png")
+        with Image.open(saida) as bruta:
+            im = bruta.convert("RGB")
+        fora = sum(1
+                   for y in range(0, 1080, 4)
+                   for x in list(range(0, 140, 4)) + list(range(1780, 1920, 4))
+                   if sum(im.getpixel((x, y))) < 500)
+        checar(fora == 0, f"{fora} pixels escuros fora da margem segura")
+
+
+def test_timeline_aguenta_ponto_unico():
+    """Caso de borda: n=1 divide por zero se o slot não for tratado."""
+    import exec_timeline
+    with tempfile.TemporaryDirectory() as d:
+        exec_timeline.desenhar({"pontos": [{"marco": "1945", "texto": "Ein Punkt"}]},
+                               Path(d) / "x.png")
+        checar(True, "")
+
+
+def test_executores_vetoriais_registrados():
+    """Todo módulo do MODULOS_VETOR precisa existir em composicao.EXECUTORES."""
+    import importlib
+    import produce_video
+    for nome, modulo in produce_video.MODULOS_VETOR.items():
+        checar(nome in EXECUTORES, f"'{nome}' não está registrado em composicao")
+        m = importlib.import_module(modulo)
+        for fn in ("desenhar", "chave", "VERSAO"):
+            checar(hasattr(m, fn), f"{modulo} não expõe {fn}")
+
+
+def test_gancho_vetorial_ocupa_o_slot_do_plano():
+    """Integração: o PNG tem que cair no slot que o SDXL usaria, e o nome tem
+    que carregar a chave — é isso que faz o laço seguinte pular a GPU."""
+    import produce_video
+    with tempfile.TemporaryDirectory() as d:
+        dest = Path(d)
+        roteiro = {"id": "t", "cenas": [{"n": 3, "narracao": "x", "planos": [
+            {"ancora": "a", "seg": 4.0},
+            {"ancora": "b", "seg": 4.0,
+             "camadas": [{"id": "t1", "executor": "timeline", "z": 0,
+                          "params": _params_tl()}]},
+        ]}]}
+        feitos = produce_video.gerar_vetores(roteiro, dest)
+        checar(feitos == 1, f"esperava 1 desenho, veio {feitos}")
+        achados = list(dest.glob("cena_03_p2_timeline_*.png"))
+        checar(len(achados) == 1, f"esperava 1 arquivo no slot p2, veio {achados}")
+        checar(not list(dest.glob("cena_03_p1_*.png")),
+               "plano sem camada vetorial não pode gerar arquivo")
+        # rodar de novo não redesenha (idempotência)
+        checar(produce_video.gerar_vetores(roteiro, dest) == 0,
+               "segunda passada deveria ser no-op")
+
+
 def main():
     testes = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for t in testes:

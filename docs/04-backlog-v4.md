@@ -35,6 +35,13 @@ Custo: modelo novo + VRAM concorrendo com o SDXL na 3060.
 
 ## Surgido durante a implementação da V3
 
+### Timeline com revelação progressiva
+A timeline é estática: os marcos aparecem todos de uma vez e o movimento vem da
+câmera. Revelar marco a marco, acompanhando a narração que os cita, é
+visivelmente melhor — e é motion graphics, que é a etapa 7. Par natural quando
+ela chegar. O mesmo vale para gráfico (barra que cresce) e para o diagrama
+(rótulo que entra quando a fala o nomeia).
+
 ### Direção precisa consultar a capacidade do executor
 `composicao.Executor` já declara `aceita_camera`, e nada lê esse campo ainda.
 `direcao.py` escolhe a câmera sem saber a fonte do plano — então um `handheld`
