@@ -106,6 +106,21 @@ registrar(Executor(
     descricao="PNG gerado pelo SDXL. Fundo padrão de um plano.",
 ))
 
+# Etapa 3. Existe porque a difusão erra diagrama: dos 8 planos do de_demo3, 5
+# perderam o corte anatômico pedido. Vetor é exato, custa ~0 e ACEITA TEXTO —
+# que é a capacidade que falta na difusão e que este nicho usa o tempo todo.
+registrar(Executor(
+    nome="diagrama",
+    fonte="vetor",
+    versao=1,
+    aceita_texto=True,
+    usa_gpu=False,
+    custo_seg=0.3,
+    opaco_quadro_cheio=True,
+    descricao="Corte esquemático em vetor, com rótulos legíveis. Substitui a "
+              "imagem do plano — não se sobrepõe a ela.",
+))
+
 
 # ── construção e adaptação ───────────────────────────────────────────────
 

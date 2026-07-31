@@ -287,6 +287,54 @@ def planos_da_cena(cena: dict, dur: float) -> int:
     return max(1, min(int(round(dur / SEGUNDOS_POR_PLANO)), MAX_PLANOS))
 
 
+def _params_de_diagrama(cena: dict, indice: int):
+    """Params do diagrama daquele plano, ou None se ele não é um diagrama."""
+    planos = cena.get("planos") or []
+    if indice > len(planos):
+        return None
+    for c in planos[indice - 1].get("camadas") or []:
+        if c.get("executor") == "diagrama":
+            return c.get("params") or {}
+    return None
+
+
+def gerar_diagramas(roteiro: dict, dest: Path) -> int:
+    """Desenha em vetor os planos marcados como diagrama, ANTES do SDXL.
+
+    Como o arquivo sai com o mesmo padrão de nome que o SDXL usaria
+    (`cena_NN_pP_*.png`), o laço de geração seguinte simplesmente encontra o
+    plano já resolvido e não o enfileira na GPU. É o que torna a integração
+    barata: nenhum outro módulo precisou saber que diagramas existem.
+
+    O nome carrega a chave de `versão + params`. Mudar o desenho ou o texto muda
+    a chave; o arquivo antigo daquele plano é apagado e o novo é gerado — cache
+    idempotente, mas invalidável, que é o contrato do resto do pipeline.
+    """
+    import exec_diagrama
+
+    dest.mkdir(parents=True, exist_ok=True)
+    feitos = 0
+    for cena in roteiro.get("cenas", []):
+        for i in range(1, len(cena.get("planos") or []) + 1):
+            params = _params_de_diagrama(cena, i)
+            if params is None:
+                continue
+            alvo = dest / f"cena_{cena['n']:02d}_p{i}_diagrama_{exec_diagrama.chave(params)}.png"
+            # Qualquer outro arquivo naquele slot é versão vencida: ou um
+            # diagrama de params antigos, ou o PNG do SDXL de quando este plano
+            # ainda era imagem gerada. Os dois são regeneráveis, e deixar os
+            # dois no disco faria o glob do fim escolher por ordem alfabética.
+            for velho in dest.glob(f"cena_{cena['n']:02d}_p{i}_*.png"):
+                if velho != alvo:
+                    velho.unlink()
+            if not alvo.exists():
+                exec_diagrama.desenhar(params, alvo)
+                feitos += 1
+    if feitos:
+        _p(f"[DIAGRAMA] {feitos} desenhado(s) em vetor (CPU, ~0,3s cada, texto legível)")
+    return feitos
+
+
 def gerar_imagens(roteiro: dict, dest: Path, duracoes: dict = None,
                   largura=1344, altura=768) -> dict:
     """Devolve {n_cena: [path_plano1, path_plano2, ...]}."""
@@ -301,6 +349,9 @@ def gerar_imagens(roteiro: dict, dest: Path, duracoes: dict = None,
                                                  f"cena_{c['n']:02d}_p1_", 1)
                 if not novo.exists():
                     velho.rename(novo)
+
+    # vetor primeiro: o que sai daqui já ocupa o slot e não vai para a GPU
+    gerar_diagramas(roteiro, dest)
 
     faltando = []
     for c in roteiro["cenas"]:

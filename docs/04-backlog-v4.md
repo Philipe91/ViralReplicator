@@ -33,6 +33,20 @@ Custo: modelo novo + VRAM concorrendo com o SDXL na 3060.
 
 ---
 
+## Surgido durante a implementação da V3
+
+### Direção precisa consultar a capacidade do executor
+`composicao.Executor` já declara `aceita_camera`, e nada lê esse campo ainda.
+`direcao.py` escolhe a câmera sem saber a fonte do plano — então um `handheld`
+pode cair num diagrama vetorial, onde tremor lê como defeito de render e não
+como câmera. Também é o `push_in` forte que empurra o texto do diagrama para
+perto da legenda (mitigado por margem no desenho, não resolvido na origem).
+
+Encaixe natural: `direcao.dirigir()` recebe a composição já adaptada e filtra o
+vocabulário por `aceita_camera` / `fonte`. É acoplamento legítimo e previsto na
+revisão de arquitetura — só não cabia na etapa 3, que era "somente o executor
+de diagrama".
+
 ## Dívida técnica conhecida
 
 ### Cadeia de encodes (2 a 3 passes)

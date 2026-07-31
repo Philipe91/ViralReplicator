@@ -212,6 +212,77 @@ def test_compositor_empilha_de_verdade():
                "compor sem camadas deveria preservar o stream de vídeo intacto")
 
 
+# ── executor de diagrama ─────────────────────────────────────────────────
+
+def _params_diag():
+    return {"tipo": "corte_tubo", "titulo": "Teste",
+            "rotulos": [{"texto": "Endothel", "aponta": "endotelio"}]}
+
+
+def test_diagrama_desenha_no_tamanho_certo():
+    import exec_diagrama
+    from PIL import Image
+    with tempfile.TemporaryDirectory() as d:
+        saida = exec_diagrama.desenhar(_params_diag(), Path(d) / "x.png")
+        checar(saida.exists(), "diagrama não gerou arquivo")
+        # `with`: Image.open é lazy e mantém o handle aberto — no Windows isso
+        # impede a limpeza do diretório temporário com WinError 32
+        with Image.open(saida) as im:
+            checar(im.size == (1920, 1080), f"esperava 1920x1080, veio {im.size}")
+
+
+def test_diagrama_e_deterministico():
+    """Mesmos params -> bytes idênticos. Sem isso o cache seria mentira."""
+    import exec_diagrama
+    with tempfile.TemporaryDirectory() as d:
+        a = exec_diagrama.desenhar(_params_diag(), Path(d) / "a.png")
+        b = exec_diagrama.desenhar(_params_diag(), Path(d) / "b.png")
+        checar(a.read_bytes() == b.read_bytes(),
+               "dois desenhos com os mesmos params deveriam ser idênticos")
+
+
+def test_diagrama_chave_invalida_por_versao_e_params():
+    import exec_diagrama
+    base = exec_diagrama.chave(_params_diag())
+    outro = dict(_params_diag(), titulo="Outro")
+    checar(base != exec_diagrama.chave(outro), "params diferentes -> chave diferente")
+    original = exec_diagrama.VERSAO
+    try:
+        exec_diagrama.VERSAO = original + 1
+        checar(base != exec_diagrama.chave(_params_diag()),
+               "subir a VERSAO tem que invalidar a chave — foi assim que uma "
+               "revisão de layout ficou invisível no disco")
+    finally:
+        exec_diagrama.VERSAO = original
+
+
+def test_diagrama_rejeita_arquetipo_desconhecido():
+    import exec_diagrama
+    with tempfile.TemporaryDirectory() as d:
+        try:
+            exec_diagrama.desenhar({"tipo": "fluxograma"}, Path(d) / "x.png")
+            checar(False, "deveria recusar arquétipo inexistente")
+        except ValueError as e:
+            checar("fluxograma" in str(e), f"mensagem deveria citar o tipo: {e}")
+
+
+def test_diagrama_respeita_a_zona_da_legenda():
+    """Nada desenhado pode invadir a faixa da legenda queimada."""
+    import exec_diagrama
+    from PIL import Image
+    with tempfile.TemporaryDirectory() as d:
+        saida = exec_diagrama.desenhar(_params_diag(), Path(d) / "x.png")
+        escuros = 0
+        with Image.open(saida) as bruta:
+            im = bruta.convert("RGB")
+        # a faixa inferior só pode ter fundo (o degradê), nada de traço escuro
+        for y in range(1080 - 160, 1080, 8):
+            for x in range(0, 1920, 16):
+                if sum(im.getpixel((x, y))) < 450:
+                    escuros += 1
+        checar(escuros == 0, f"{escuros} pixels escuros na zona da legenda")
+
+
 def main():
     testes = [v for k, v in sorted(globals().items()) if k.startswith("test_")]
     for t in testes:

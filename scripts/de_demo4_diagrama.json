@@ -1,0 +1,108 @@
+{
+  "id": "de_demo4_diagrama",
+  "idioma": "de-DE",
+  "voz": "de-DE-FlorianMultilingualNeural",
+  "ritmo": "+8%",
+  "titulo": "DEMO 4 — executor de diagrama",
+  "nicho": "Saude/ciencia formato Think Science — teste de linguagem visual",
+  "mercado": "Alemanha / DACH (de-DE)",
+  "nota_metodo": "Mesma narracao do demo2 (roteiro ORIGINAL). O que muda e SO a linguagem visual: estilo 'explicativo_claro' modelado no video de 5,75M do canal de referencia (ilustracao editorial clara, luz de dia, pessoas na maioria dos planos), no lugar do 3D escuro interno que veio do video de 14k. Par identico em pt-BR: br_demo3_arterias.",
+  "cenas": [
+    {
+      "n": 1,
+      "narracao": "Es gibt kein Lebensmittel, das deine Arterien reinigt. Kein Saft, kein Tee, keine Zitronenkur. Was du in Kochbüchern als Arterienreinigung findest, gibt es in deinem Körper nicht. Und trotzdem sind deine Arterien heute nicht dieselben wie vor einem Jahr. Sie verändern sich ständig, in beide Richtungen. Die Frage ist nicht, wie du sie sauber schrubbst. Die Frage ist, in welche Richtung du sie schiebst.",
+      "planos": [
+        {
+          "ancora": "Es gibt kein Lebensmittel, das",
+          "seg": 5.02,
+          "animar": true,
+          "imagem": "a friendly woman in her forties with short grey hair, wearing a blue jacket over a white shirt, standing in a bright kitchen full of plants, holding a tall glass of green juice and looking at it with polite doubt, large window with morning light behind her"
+        },
+        {
+          "ancora": "keine Zitronenkur. Was du in",
+          "seg": 4.66,
+          "animar": false,
+          "imagem": "close view of two hands squeezing a lemon half into a glass jar of water on a light wooden kitchen counter, sliced lemons and a teapot beside it, potted herbs and a sunny window in the soft background"
+        },
+        {
+          "ancora": "gibt es in deinem Körper",
+          "seg": 5.61,
+          "animar": false,
+          "imagem": "an illustrated cutaway cross-section of a blood vessel floating in the air beside a friendly woman in her forties with short grey hair in a blue jacket, she gestures toward it, bright living room with plants and a big window, the cutaway drawn in the same soft illustrated style as the room"
+        },
+        {
+          "ancora": "Sie verändern sich ständig, in",
+          "seg": 8.67,
+          "animar": false,
+          "imagem": "a friendly man in his forties with short dark hair and light stubble, wearing a grey-blue sweater, walking away from the camera on a park path that forks in two, one branch open and sunlit and wide, the other narrow and overgrown, tall trees, warm afternoon light"
+        }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 2,
+      "narracao": "Um zu verstehen, worauf deine Arterien reagieren, musst du wissen, was da überhaupt passiert. Die Innenseite deiner Blutgefäße ist mit einer hauchdünnen Zellschicht ausgekleidet. Sie ist eine Zelle dick. Diese Schicht heißt Endothel, und sie ist kein Rohr, sondern ein aktives Organ. Sie entscheidet, wie weit sich ein Gefäß öffnet, ob Blut gerinnt, und was durch die Wand darf und was nicht.",
+      "planos": [
+        {
+          "ancora": "Um zu verstehen, worauf deine",
+          "seg": 4.94,
+          "animar": true,
+          "imagem": "a friendly man in his forties with short dark hair and light stubble, wearing a grey-blue sweater, sitting at a light wooden table in a bright room with plants, a softly glowing illustrated diagram of a branching blood vessel hovering above the table in front of him"
+        },
+        {
+          "ancora": "Die Innenseite deiner Blutgefäße ist",
+          "seg": 6.03,
+          "animar": false,
+          "imagem": "an illustrated cross-section of a blood vessel wall drawn in soft editorial style, the inner surface lined with a single neat row of rounded cells, warm beige and sage green palette, clean flat shapes, bright airy background",
+          "camadas": [
+            {
+              "id": "diag_endotelio",
+              "executor": "diagrama",
+              "z": 0,
+              "params": {
+                "tipo": "corte_tubo",
+                "titulo": "Querschnitt: Blutgefäß",
+                "rotulos": [
+                  {
+                    "texto": "Muskelschicht",
+                    "aponta": "musculo"
+                  },
+                  {
+                    "texto": "Endothel — eine Zelle dick",
+                    "aponta": "endotelio",
+                    "destaque": true
+                  },
+                  {
+                    "texto": "Blutstrom",
+                    "aponta": "lumen"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "ancora": "Diese Schicht heißt Endothel, und",
+          "seg": 5.8,
+          "animar": false,
+          "imagem": "a friendly woman in her forties with short grey hair in a blue jacket standing beside a large illustrated cutaway of a blood vessel that reaches from floor to ceiling in a bright airy room, she looks at it with calm interest, big windows and plants"
+        },
+        {
+          "ancora": "wie weit sich ein Gefäß",
+          "seg": 4.38,
+          "animar": false,
+          "imagem": "an illustrated blood vessel widening open, drawn in soft flat editorial style in the foreground, and far behind it through a large window a person jogging along a green park path in morning light"
+        }
+      ],
+      "movimento": true,
+      "transicao": "dissolve"
+    }
+  ],
+  "estilo": "explicativo_claro",
+  "musica": "de_thinkscience",
+  "color_script": [
+    "frio",
+    "ambar"
+  ],
+  "schema": 3
+}
