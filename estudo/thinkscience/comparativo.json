@@ -1,0 +1,1034 @@
+{
+  "zRMtp04VHLQ": {
+    "arquivo": "zRMtp04VHLQ.en.vtt",
+    "duracao_seg": 598.5,
+    "duracao_min": 9.98,
+    "palavras": 1408,
+    "palavras_por_minuto": 141.1,
+    "frases": 91,
+    "palavras_por_frase": 15.5,
+    "perguntas_total": 0,
+    "densidade_voce_por_100pal": 0.8,
+    "viradas_de_assunto": 7,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 107,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 59.9,
+        "frases": 11,
+        "palavras": 172,
+        "ppm": 172.4,
+        "perguntas": 0,
+        "voce_por_100pal": 2.3,
+        "viradas": [
+          0.2
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 59.9,
+        "fim": 119.7,
+        "frases": 9,
+        "palavras": 149,
+        "ppm": 149.4,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          67.8,
+          114.2
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 119.7,
+        "fim": 179.6,
+        "frases": 9,
+        "palavras": 140,
+        "ppm": 140.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 4,
+        "ini": 179.6,
+        "fim": 239.4,
+        "frases": 9,
+        "palavras": 147,
+        "ppm": 147.4,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          228.9
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 239.4,
+        "fim": 299.3,
+        "frases": 11,
+        "palavras": 128,
+        "ppm": 128.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          261.8,
+          298.4
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 299.3,
+        "fim": 359.1,
+        "frases": 8,
+        "palavras": 132,
+        "ppm": 132.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 359.1,
+        "fim": 419.0,
+        "frases": 9,
+        "palavras": 135,
+        "ppm": 135.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          414.4
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 419.0,
+        "fim": 478.8,
+        "frases": 11,
+        "palavras": 141,
+        "ppm": 141.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 478.8,
+        "fim": 538.7,
+        "frases": 6,
+        "palavras": 131,
+        "ppm": 131.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.8,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 538.7,
+        "fim": 598.5,
+        "frases": 8,
+        "palavras": 133,
+        "ppm": 133.3,
+        "perguntas": 0,
+        "voce_por_100pal": 4.5,
+        "viradas": []
+      }
+    ]
+  },
+  "l5hGdLTAsg8": {
+    "arquivo": "l5hGdLTAsg8.en.vtt",
+    "duracao_seg": 841.9,
+    "duracao_min": 14.03,
+    "palavras": 1697,
+    "palavras_por_minuto": 120.9,
+    "frases": 157,
+    "palavras_por_frase": 10.8,
+    "perguntas_total": 3,
+    "densidade_voce_por_100pal": 3.6,
+    "viradas_de_assunto": 16,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 85,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 84.2,
+        "frases": 20,
+        "palavras": 222,
+        "ppm": 158.2,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": [
+          30.8,
+          65.9,
+          67.6
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 84.2,
+        "fim": 168.4,
+        "frases": 16,
+        "palavras": 175,
+        "ppm": 124.7,
+        "perguntas": 1,
+        "voce_por_100pal": 6.3,
+        "viradas": [
+          126.5,
+          133.6,
+          142.8,
+          165.1
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 168.4,
+        "fim": 252.6,
+        "frases": 16,
+        "palavras": 182,
+        "ppm": 129.7,
+        "perguntas": 0,
+        "voce_por_100pal": 3.8,
+        "viradas": [
+          211.9
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 252.6,
+        "fim": 336.8,
+        "frases": 14,
+        "palavras": 184,
+        "ppm": 131.1,
+        "perguntas": 0,
+        "voce_por_100pal": 1.6,
+        "viradas": [
+          287.9,
+          320.5
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 336.8,
+        "fim": 421.0,
+        "frases": 15,
+        "palavras": 157,
+        "ppm": 111.9,
+        "perguntas": 1,
+        "voce_por_100pal": 3.8,
+        "viradas": [
+          394.5
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 421.0,
+        "fim": 505.2,
+        "frases": 15,
+        "palavras": 186,
+        "ppm": 132.6,
+        "perguntas": 0,
+        "voce_por_100pal": 2.7,
+        "viradas": [
+          478.8
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 505.2,
+        "fim": 589.3,
+        "frases": 16,
+        "palavras": 121,
+        "ppm": 86.2,
+        "perguntas": 0,
+        "voce_por_100pal": 1.7,
+        "viradas": [
+          568.4
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 589.3,
+        "fim": 673.5,
+        "frases": 15,
+        "palavras": 141,
+        "ppm": 100.5,
+        "perguntas": 0,
+        "voce_por_100pal": 2.8,
+        "viradas": [
+          636.4,
+          663.9
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 673.5,
+        "fim": 757.7,
+        "frases": 15,
+        "palavras": 166,
+        "ppm": 118.3,
+        "perguntas": 1,
+        "voce_por_100pal": 2.4,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 757.7,
+        "fim": 841.9,
+        "frases": 15,
+        "palavras": 163,
+        "ppm": 116.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          762.7
+        ]
+      }
+    ]
+  },
+  "kq1U99QtujU": {
+    "arquivo": "kq1U99QtujU.en.vtt",
+    "duracao_seg": 536.8,
+    "duracao_min": 8.95,
+    "palavras": 1129,
+    "palavras_por_minuto": 126.2,
+    "frases": 137,
+    "palavras_por_frase": 8.2,
+    "perguntas_total": 5,
+    "densidade_voce_por_100pal": 6.3,
+    "viradas_de_assunto": 7,
+    "gancho_30s": {
+      "frases": 8,
+      "palavras": 81,
+      "perguntas": 4
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 53.7,
+        "frases": 13,
+        "palavras": 136,
+        "ppm": 152.0,
+        "perguntas": 4,
+        "voce_por_100pal": 8.1,
+        "viradas": [
+          7.4
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 53.7,
+        "fim": 107.4,
+        "frases": 17,
+        "palavras": 120,
+        "ppm": 134.1,
+        "perguntas": 0,
+        "voce_por_100pal": 5.0,
+        "viradas": []
+      },
+      {
+        "bloco": 3,
+        "ini": 107.4,
+        "fim": 161.0,
+        "frases": 14,
+        "palavras": 124,
+        "ppm": 138.6,
+        "perguntas": 0,
+        "voce_por_100pal": 7.3,
+        "viradas": [
+          132.6
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 161.0,
+        "fim": 214.7,
+        "frases": 12,
+        "palavras": 108,
+        "ppm": 120.7,
+        "perguntas": 0,
+        "voce_por_100pal": 9.3,
+        "viradas": [
+          214.0
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 214.7,
+        "fim": 268.4,
+        "frases": 14,
+        "palavras": 110,
+        "ppm": 123.0,
+        "perguntas": 0,
+        "voce_por_100pal": 5.5,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 268.4,
+        "fim": 322.1,
+        "frases": 11,
+        "palavras": 114,
+        "ppm": 127.4,
+        "perguntas": 0,
+        "voce_por_100pal": 2.6,
+        "viradas": [
+          302.3
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 322.1,
+        "fim": 375.7,
+        "frases": 13,
+        "palavras": 92,
+        "ppm": 102.8,
+        "perguntas": 0,
+        "voce_por_100pal": 3.3,
+        "viradas": [
+          365.0
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 375.7,
+        "fim": 429.4,
+        "frases": 15,
+        "palavras": 116,
+        "ppm": 129.7,
+        "perguntas": 1,
+        "voce_por_100pal": 9.5,
+        "viradas": [
+          428.0
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 429.4,
+        "fim": 483.1,
+        "frases": 13,
+        "palavras": 101,
+        "ppm": 112.9,
+        "perguntas": 0,
+        "voce_por_100pal": 3.0,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 483.1,
+        "fim": 536.8,
+        "frases": 15,
+        "palavras": 109,
+        "ppm": 121.8,
+        "perguntas": 0,
+        "voce_por_100pal": 8.3,
+        "viradas": [
+          498.2
+        ]
+      }
+    ]
+  },
+  "SnWbe1P1l3s": {
+    "arquivo": "SnWbe1P1l3s.en.vtt",
+    "duracao_seg": 785.5,
+    "duracao_min": 13.09,
+    "palavras": 1691,
+    "palavras_por_minuto": 129.2,
+    "frases": 115,
+    "palavras_por_frase": 14.7,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 1.1,
+    "viradas_de_assunto": 10,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 82,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 78.6,
+        "frases": 14,
+        "palavras": 182,
+        "ppm": 139.0,
+        "perguntas": 0,
+        "voce_por_100pal": 3.3,
+        "viradas": [
+          17.6,
+          35.4
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 78.6,
+        "fim": 157.1,
+        "frases": 15,
+        "palavras": 189,
+        "ppm": 144.4,
+        "perguntas": 0,
+        "voce_por_100pal": 2.6,
+        "viradas": [
+          83.6,
+          111.5,
+          156.9
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 157.1,
+        "fim": 235.7,
+        "frases": 11,
+        "palavras": 150,
+        "ppm": 114.6,
+        "perguntas": 1,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          166.6
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 235.7,
+        "fim": 314.2,
+        "frases": 10,
+        "palavras": 176,
+        "ppm": 134.4,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 5,
+        "ini": 314.2,
+        "fim": 392.8,
+        "frases": 14,
+        "palavras": 182,
+        "ppm": 139.0,
+        "perguntas": 1,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          347.4,
+          352.3
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 392.8,
+        "fim": 471.3,
+        "frases": 11,
+        "palavras": 156,
+        "ppm": 119.2,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 471.3,
+        "fim": 549.9,
+        "frases": 12,
+        "palavras": 179,
+        "ppm": 136.7,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 549.9,
+        "fim": 628.4,
+        "frases": 10,
+        "palavras": 169,
+        "ppm": 129.1,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 628.4,
+        "fim": 707.0,
+        "frases": 9,
+        "palavras": 154,
+        "ppm": 117.6,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          641.3
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 707.0,
+        "fim": 785.5,
+        "frases": 9,
+        "palavras": 154,
+        "ppm": 117.6,
+        "perguntas": 0,
+        "voce_por_100pal": 4.5,
+        "viradas": [
+          768.3
+        ]
+      }
+    ]
+  },
+  "cmGaIm7D2ac": {
+    "arquivo": "cmGaIm7D2ac.en.vtt",
+    "duracao_seg": 917.3,
+    "duracao_min": 15.29,
+    "palavras": 2288,
+    "palavras_por_minuto": 149.7,
+    "frases": 133,
+    "palavras_por_frase": 17.2,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 6.7,
+    "viradas_de_assunto": 16,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 109,
+      "perguntas": 1
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 91.7,
+        "frases": 15,
+        "palavras": 259,
+        "ppm": 169.4,
+        "perguntas": 1,
+        "voce_por_100pal": 8.9,
+        "viradas": []
+      },
+      {
+        "bloco": 2,
+        "ini": 91.7,
+        "fim": 183.5,
+        "frases": 15,
+        "palavras": 248,
+        "ppm": 162.2,
+        "perguntas": 0,
+        "voce_por_100pal": 8.1,
+        "viradas": [
+          94.1,
+          143.1,
+          155.5
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 183.5,
+        "fim": 275.2,
+        "frases": 11,
+        "palavras": 231,
+        "ppm": 151.1,
+        "perguntas": 0,
+        "voce_por_100pal": 7.8,
+        "viradas": [
+          212.3,
+          264.4
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 275.2,
+        "fim": 366.9,
+        "frases": 15,
+        "palavras": 233,
+        "ppm": 152.4,
+        "perguntas": 0,
+        "voce_por_100pal": 4.7,
+        "viradas": [
+          291.2,
+          310.0,
+          323.2,
+          350.8
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 366.9,
+        "fim": 458.7,
+        "frases": 14,
+        "palavras": 216,
+        "ppm": 141.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.6,
+        "viradas": [
+          392.0,
+          439.2
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 458.7,
+        "fim": 550.4,
+        "frases": 10,
+        "palavras": 222,
+        "ppm": 145.2,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": [
+          540.7
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 550.4,
+        "fim": 642.1,
+        "frases": 12,
+        "palavras": 197,
+        "ppm": 128.9,
+        "perguntas": 1,
+        "voce_por_100pal": 4.6,
+        "viradas": [
+          605.5
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 642.1,
+        "fim": 733.9,
+        "frases": 15,
+        "palavras": 232,
+        "ppm": 151.7,
+        "perguntas": 0,
+        "voce_por_100pal": 6.9,
+        "viradas": [
+          680.1,
+          691.4,
+          706.2
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 733.9,
+        "fim": 825.6,
+        "frases": 10,
+        "palavras": 228,
+        "ppm": 149.1,
+        "perguntas": 0,
+        "voce_por_100pal": 3.5,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 825.6,
+        "fim": 917.3,
+        "frases": 16,
+        "palavras": 223,
+        "ppm": 145.9,
+        "perguntas": 0,
+        "voce_por_100pal": 12.6,
+        "viradas": []
+      }
+    ]
+  },
+  "cB0zMr1y5l4": {
+    "arquivo": "cB0zMr1y5l4.en.vtt",
+    "duracao_seg": 616.4,
+    "duracao_min": 10.27,
+    "palavras": 1584,
+    "palavras_por_minuto": 154.2,
+    "frases": 189,
+    "palavras_por_frase": 8.4,
+    "perguntas_total": 4,
+    "densidade_voce_por_100pal": 7.0,
+    "viradas_de_assunto": 10,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 103,
+      "perguntas": 2
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 61.6,
+        "frases": 14,
+        "palavras": 198,
+        "ppm": 192.7,
+        "perguntas": 2,
+        "voce_por_100pal": 5.6,
+        "viradas": [
+          50.1
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 61.6,
+        "fim": 123.3,
+        "frases": 18,
+        "palavras": 153,
+        "ppm": 148.9,
+        "perguntas": 1,
+        "voce_por_100pal": 5.9,
+        "viradas": [
+          64.9
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 123.3,
+        "fim": 184.9,
+        "frases": 18,
+        "palavras": 159,
+        "ppm": 154.8,
+        "perguntas": 0,
+        "voce_por_100pal": 5.0,
+        "viradas": [
+          181.0
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 184.9,
+        "fim": 246.5,
+        "frases": 20,
+        "palavras": 149,
+        "ppm": 145.0,
+        "perguntas": 1,
+        "voce_por_100pal": 8.1,
+        "viradas": [
+          229.1
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 246.5,
+        "fim": 308.2,
+        "frases": 16,
+        "palavras": 142,
+        "ppm": 138.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.3,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 308.2,
+        "fim": 369.8,
+        "frases": 21,
+        "palavras": 138,
+        "ppm": 134.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.8,
+        "viradas": [
+          337.4
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 369.8,
+        "fim": 431.5,
+        "frases": 17,
+        "palavras": 140,
+        "ppm": 136.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.0,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 431.5,
+        "fim": 493.1,
+        "frases": 23,
+        "palavras": 156,
+        "ppm": 151.9,
+        "perguntas": 0,
+        "voce_por_100pal": 9.0,
+        "viradas": [
+          436.8,
+          465.4,
+          465.4,
+          468.6
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 493.1,
+        "fim": 554.7,
+        "frases": 25,
+        "palavras": 178,
+        "ppm": 173.3,
+        "perguntas": 0,
+        "voce_por_100pal": 10.1,
+        "viradas": [
+          498.1
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 554.7,
+        "fim": 616.4,
+        "frases": 17,
+        "palavras": 171,
+        "ppm": 166.5,
+        "perguntas": 0,
+        "voce_por_100pal": 8.8,
+        "viradas": []
+      }
+    ]
+  },
+  "DVlhy4-MRtg": {
+    "arquivo": "DVlhy4-MRtg.en.vtt",
+    "duracao_seg": 735.3,
+    "duracao_min": 12.25,
+    "palavras": 2078,
+    "palavras_por_minuto": 169.6,
+    "frases": 222,
+    "palavras_por_frase": 9.4,
+    "perguntas_total": 5,
+    "densidade_voce_por_100pal": 7.4,
+    "viradas_de_assunto": 14,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 96,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 73.5,
+        "frases": 17,
+        "palavras": 220,
+        "ppm": 179.5,
+        "perguntas": 0,
+        "voce_por_100pal": 8.2,
+        "viradas": [
+          12.4,
+          29.0,
+          55.0
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 73.5,
+        "fim": 147.1,
+        "frases": 22,
+        "palavras": 203,
+        "ppm": 165.7,
+        "perguntas": 0,
+        "voce_por_100pal": 5.4,
+        "viradas": [
+          128.5
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 147.1,
+        "fim": 220.6,
+        "frases": 25,
+        "palavras": 215,
+        "ppm": 175.4,
+        "perguntas": 0,
+        "voce_por_100pal": 7.9,
+        "viradas": [
+          191.6,
+          199.8
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 220.6,
+        "fim": 294.1,
+        "frases": 23,
+        "palavras": 208,
+        "ppm": 169.7,
+        "perguntas": 1,
+        "voce_por_100pal": 8.2,
+        "viradas": []
+      },
+      {
+        "bloco": 5,
+        "ini": 294.1,
+        "fim": 367.6,
+        "frases": 25,
+        "palavras": 213,
+        "ppm": 173.8,
+        "perguntas": 2,
+        "voce_por_100pal": 2.8,
+        "viradas": [
+          316.3,
+          341.7
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 367.6,
+        "fim": 441.2,
+        "frases": 21,
+        "palavras": 211,
+        "ppm": 172.2,
+        "perguntas": 1,
+        "voce_por_100pal": 4.7,
+        "viradas": [
+          406.5,
+          425.2
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 441.2,
+        "fim": 514.7,
+        "frases": 25,
+        "palavras": 216,
+        "ppm": 176.3,
+        "perguntas": 0,
+        "voce_por_100pal": 9.7,
+        "viradas": [
+          482.2,
+          510.3
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 514.7,
+        "fim": 588.2,
+        "frases": 24,
+        "palavras": 202,
+        "ppm": 164.8,
+        "perguntas": 0,
+        "voce_por_100pal": 8.4,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 588.2,
+        "fim": 661.8,
+        "frases": 22,
+        "palavras": 212,
+        "ppm": 173.0,
+        "perguntas": 0,
+        "voce_por_100pal": 10.8,
+        "viradas": [
+          614.1
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 661.8,
+        "fim": 735.3,
+        "frases": 18,
+        "palavras": 181,
+        "ppm": 147.7,
+        "perguntas": 1,
+        "voce_por_100pal": 7.7,
+        "viradas": [
+          701.4
+        ]
+      }
+    ]
+  }
+}

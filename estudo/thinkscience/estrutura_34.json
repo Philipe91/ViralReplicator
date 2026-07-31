@@ -1,0 +1,5177 @@
+[
+  {
+    "arquivo": "zRMtp04VHLQ.en.vtt",
+    "duracao_seg": 598.5,
+    "duracao_min": 9.98,
+    "palavras": 1408,
+    "palavras_por_minuto": 141.1,
+    "frases": 91,
+    "palavras_por_frase": 15.5,
+    "perguntas_total": 0,
+    "densidade_voce_por_100pal": 0.8,
+    "viradas_de_assunto": 7,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 107,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 59.9,
+        "frases": 11,
+        "palavras": 172,
+        "ppm": 172.4,
+        "perguntas": 0,
+        "voce_por_100pal": 2.3,
+        "viradas": [
+          0.2
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 59.9,
+        "fim": 119.7,
+        "frases": 9,
+        "palavras": 149,
+        "ppm": 149.4,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          67.8,
+          114.2
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 119.7,
+        "fim": 179.6,
+        "frases": 9,
+        "palavras": 140,
+        "ppm": 140.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 4,
+        "ini": 179.6,
+        "fim": 239.4,
+        "frases": 9,
+        "palavras": 147,
+        "ppm": 147.4,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          228.9
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 239.4,
+        "fim": 299.3,
+        "frases": 11,
+        "palavras": 128,
+        "ppm": 128.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          261.8,
+          298.4
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 299.3,
+        "fim": 359.1,
+        "frases": 8,
+        "palavras": 132,
+        "ppm": 132.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 359.1,
+        "fim": 419.0,
+        "frases": 9,
+        "palavras": 135,
+        "ppm": 135.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          414.4
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 419.0,
+        "fim": 478.8,
+        "frases": 11,
+        "palavras": 141,
+        "ppm": 141.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 478.8,
+        "fim": 538.7,
+        "frases": 6,
+        "palavras": 131,
+        "ppm": 131.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.8,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 538.7,
+        "fim": 598.5,
+        "frases": 8,
+        "palavras": 133,
+        "ppm": 133.3,
+        "perguntas": 0,
+        "voce_por_100pal": 4.5,
+        "viradas": []
+      }
+    ],
+    "views": 14168,
+    "titulo": "The Best Meal to Clean Your Arteries - Science Says",
+    "data": "2025-11-12"
+  },
+  {
+    "arquivo": "l5hGdLTAsg8.en.vtt",
+    "duracao_seg": 841.9,
+    "duracao_min": 14.03,
+    "palavras": 1697,
+    "palavras_por_minuto": 120.9,
+    "frases": 157,
+    "palavras_por_frase": 10.8,
+    "perguntas_total": 3,
+    "densidade_voce_por_100pal": 3.6,
+    "viradas_de_assunto": 16,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 85,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 84.2,
+        "frases": 20,
+        "palavras": 222,
+        "ppm": 158.2,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": [
+          30.8,
+          65.9,
+          67.6
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 84.2,
+        "fim": 168.4,
+        "frases": 16,
+        "palavras": 175,
+        "ppm": 124.7,
+        "perguntas": 1,
+        "voce_por_100pal": 6.3,
+        "viradas": [
+          126.5,
+          133.6,
+          142.8,
+          165.1
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 168.4,
+        "fim": 252.6,
+        "frases": 16,
+        "palavras": 182,
+        "ppm": 129.7,
+        "perguntas": 0,
+        "voce_por_100pal": 3.8,
+        "viradas": [
+          211.9
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 252.6,
+        "fim": 336.8,
+        "frases": 14,
+        "palavras": 184,
+        "ppm": 131.1,
+        "perguntas": 0,
+        "voce_por_100pal": 1.6,
+        "viradas": [
+          287.9,
+          320.5
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 336.8,
+        "fim": 421.0,
+        "frases": 15,
+        "palavras": 157,
+        "ppm": 111.9,
+        "perguntas": 1,
+        "voce_por_100pal": 3.8,
+        "viradas": [
+          394.5
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 421.0,
+        "fim": 505.2,
+        "frases": 15,
+        "palavras": 186,
+        "ppm": 132.6,
+        "perguntas": 0,
+        "voce_por_100pal": 2.7,
+        "viradas": [
+          478.8
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 505.2,
+        "fim": 589.3,
+        "frases": 16,
+        "palavras": 121,
+        "ppm": 86.2,
+        "perguntas": 0,
+        "voce_por_100pal": 1.7,
+        "viradas": [
+          568.4
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 589.3,
+        "fim": 673.5,
+        "frases": 15,
+        "palavras": 141,
+        "ppm": 100.5,
+        "perguntas": 0,
+        "voce_por_100pal": 2.8,
+        "viradas": [
+          636.4,
+          663.9
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 673.5,
+        "fim": 757.7,
+        "frases": 15,
+        "palavras": 166,
+        "ppm": 118.3,
+        "perguntas": 1,
+        "voce_por_100pal": 2.4,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 757.7,
+        "fim": 841.9,
+        "frases": 15,
+        "palavras": 163,
+        "ppm": 116.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          762.7
+        ]
+      }
+    ],
+    "views": 21340,
+    "titulo": "How Vitamins REALLY Work? Every Vitamin Explained",
+    "data": "2025-11-28"
+  },
+  {
+    "arquivo": "kq1U99QtujU.en.vtt",
+    "duracao_seg": 536.8,
+    "duracao_min": 8.95,
+    "palavras": 1129,
+    "palavras_por_minuto": 126.2,
+    "frases": 137,
+    "palavras_por_frase": 8.2,
+    "perguntas_total": 5,
+    "densidade_voce_por_100pal": 6.3,
+    "viradas_de_assunto": 7,
+    "gancho_30s": {
+      "frases": 8,
+      "palavras": 81,
+      "perguntas": 4
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 53.7,
+        "frases": 13,
+        "palavras": 136,
+        "ppm": 152.0,
+        "perguntas": 4,
+        "voce_por_100pal": 8.1,
+        "viradas": [
+          7.4
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 53.7,
+        "fim": 107.4,
+        "frases": 17,
+        "palavras": 120,
+        "ppm": 134.1,
+        "perguntas": 0,
+        "voce_por_100pal": 5.0,
+        "viradas": []
+      },
+      {
+        "bloco": 3,
+        "ini": 107.4,
+        "fim": 161.0,
+        "frases": 14,
+        "palavras": 124,
+        "ppm": 138.6,
+        "perguntas": 0,
+        "voce_por_100pal": 7.3,
+        "viradas": [
+          132.6
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 161.0,
+        "fim": 214.7,
+        "frases": 12,
+        "palavras": 108,
+        "ppm": 120.7,
+        "perguntas": 0,
+        "voce_por_100pal": 9.3,
+        "viradas": [
+          214.0
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 214.7,
+        "fim": 268.4,
+        "frases": 14,
+        "palavras": 110,
+        "ppm": 123.0,
+        "perguntas": 0,
+        "voce_por_100pal": 5.5,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 268.4,
+        "fim": 322.1,
+        "frases": 11,
+        "palavras": 114,
+        "ppm": 127.4,
+        "perguntas": 0,
+        "voce_por_100pal": 2.6,
+        "viradas": [
+          302.3
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 322.1,
+        "fim": 375.7,
+        "frases": 13,
+        "palavras": 92,
+        "ppm": 102.8,
+        "perguntas": 0,
+        "voce_por_100pal": 3.3,
+        "viradas": [
+          365.0
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 375.7,
+        "fim": 429.4,
+        "frases": 15,
+        "palavras": 116,
+        "ppm": 129.7,
+        "perguntas": 1,
+        "voce_por_100pal": 9.5,
+        "viradas": [
+          428.0
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 429.4,
+        "fim": 483.1,
+        "frases": 13,
+        "palavras": 101,
+        "ppm": 112.9,
+        "perguntas": 0,
+        "voce_por_100pal": 3.0,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 483.1,
+        "fim": 536.8,
+        "frases": 15,
+        "palavras": 109,
+        "ppm": 121.8,
+        "perguntas": 0,
+        "voce_por_100pal": 8.3,
+        "viradas": [
+          498.2
+        ]
+      }
+    ],
+    "views": 3071,
+    "titulo": "What Your Period Blood Color Says About You (Normal vs. Dangerous)",
+    "data": "2025-12-13"
+  },
+  {
+    "arquivo": "zb_WCfTcINQ.en.vtt",
+    "duracao_seg": 672.2,
+    "duracao_min": 11.2,
+    "palavras": 1530,
+    "palavras_por_minuto": 136.6,
+    "frases": 172,
+    "palavras_por_frase": 8.9,
+    "perguntas_total": 3,
+    "densidade_voce_por_100pal": 6.0,
+    "viradas_de_assunto": 16,
+    "gancho_30s": {
+      "frases": 4,
+      "palavras": 77,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 67.2,
+        "frases": 13,
+        "palavras": 174,
+        "ppm": 155.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.2,
+        "viradas": [
+          32.0,
+          44.4,
+          63.9
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 67.2,
+        "fim": 134.4,
+        "frases": 20,
+        "palavras": 149,
+        "ppm": 133.0,
+        "perguntas": 1,
+        "voce_por_100pal": 5.4,
+        "viradas": [
+          82.1,
+          86.6
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 134.4,
+        "fim": 201.7,
+        "frases": 13,
+        "palavras": 167,
+        "ppm": 149.1,
+        "perguntas": 0,
+        "voce_por_100pal": 6.0,
+        "viradas": [
+          136.6,
+          159.4,
+          179.4,
+          184.9
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 201.7,
+        "fim": 268.9,
+        "frases": 15,
+        "palavras": 162,
+        "ppm": 144.6,
+        "perguntas": 0,
+        "voce_por_100pal": 5.6,
+        "viradas": [
+          205.4,
+          224.4,
+          229.7,
+          236.6
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 268.9,
+        "fim": 336.1,
+        "frases": 17,
+        "palavras": 150,
+        "ppm": 133.9,
+        "perguntas": 1,
+        "voce_por_100pal": 3.3,
+        "viradas": [
+          302.2,
+          315.3
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 336.1,
+        "fim": 403.3,
+        "frases": 16,
+        "palavras": 160,
+        "ppm": 142.8,
+        "perguntas": 0,
+        "voce_por_100pal": 10.0,
+        "viradas": [
+          339.0
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 403.3,
+        "fim": 470.6,
+        "frases": 23,
+        "palavras": 140,
+        "ppm": 125.0,
+        "perguntas": 0,
+        "voce_por_100pal": 1.4,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 470.6,
+        "fim": 537.8,
+        "frases": 21,
+        "palavras": 134,
+        "ppm": 119.6,
+        "perguntas": 0,
+        "voce_por_100pal": 3.0,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 537.8,
+        "fim": 605.0,
+        "frases": 18,
+        "palavras": 166,
+        "ppm": 148.2,
+        "perguntas": 1,
+        "voce_por_100pal": 10.8,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 605.0,
+        "fim": 672.2,
+        "frases": 16,
+        "palavras": 128,
+        "ppm": 114.2,
+        "perguntas": 0,
+        "voce_por_100pal": 8.6,
+        "viradas": []
+      }
+    ],
+    "views": 63951,
+    "titulo": "The #1 Cancer-Causing Food for YOUR Blood Type - Avoid These Foods",
+    "data": "2025-12-15"
+  },
+  {
+    "arquivo": "lBRgLSrM0gk.en.vtt",
+    "duracao_seg": 754.4,
+    "duracao_min": 12.57,
+    "palavras": 1660,
+    "palavras_por_minuto": 132.0,
+    "frases": 129,
+    "palavras_por_frase": 12.9,
+    "perguntas_total": 3,
+    "densidade_voce_por_100pal": 3.3,
+    "viradas_de_assunto": 18,
+    "gancho_30s": {
+      "frases": 5,
+      "palavras": 101,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 75.4,
+        "frases": 12,
+        "palavras": 200,
+        "ppm": 159.1,
+        "perguntas": 0,
+        "voce_por_100pal": 3.0,
+        "viradas": [
+          18.3,
+          52.3
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 75.4,
+        "fim": 150.9,
+        "frases": 15,
+        "palavras": 162,
+        "ppm": 128.8,
+        "perguntas": 0,
+        "voce_por_100pal": 2.5,
+        "viradas": [
+          79.0,
+          82.2,
+          145.5
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 150.9,
+        "fim": 226.3,
+        "frases": 13,
+        "palavras": 168,
+        "ppm": 133.6,
+        "perguntas": 0,
+        "voce_por_100pal": 3.6,
+        "viradas": [
+          158.2,
+          186.6
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 226.3,
+        "fim": 301.8,
+        "frases": 13,
+        "palavras": 152,
+        "ppm": 120.9,
+        "perguntas": 0,
+        "voce_por_100pal": 1.3,
+        "viradas": [
+          271.8,
+          277.4
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 301.8,
+        "fim": 377.2,
+        "frases": 14,
+        "palavras": 179,
+        "ppm": 142.4,
+        "perguntas": 0,
+        "voce_por_100pal": 2.8,
+        "viradas": [
+          301.9
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 377.2,
+        "fim": 452.6,
+        "frases": 13,
+        "palavras": 173,
+        "ppm": 137.6,
+        "perguntas": 0,
+        "voce_por_100pal": 2.3,
+        "viradas": [
+          407.4
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 452.6,
+        "fim": 528.1,
+        "frases": 10,
+        "palavras": 163,
+        "ppm": 129.6,
+        "perguntas": 0,
+        "voce_por_100pal": 8.0,
+        "viradas": [
+          468.2,
+          502.2
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 528.1,
+        "fim": 603.5,
+        "frases": 15,
+        "palavras": 154,
+        "ppm": 122.5,
+        "perguntas": 0,
+        "voce_por_100pal": 0.6,
+        "viradas": [
+          578.0,
+          603.4
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 603.5,
+        "fim": 679.0,
+        "frases": 10,
+        "palavras": 166,
+        "ppm": 132.0,
+        "perguntas": 0,
+        "voce_por_100pal": 4.2,
+        "viradas": [
+          628.1,
+          652.6
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 679.0,
+        "fim": 754.4,
+        "frases": 14,
+        "palavras": 143,
+        "ppm": 113.7,
+        "perguntas": 3,
+        "voce_por_100pal": 4.9,
+        "viradas": [
+          726.5
+        ]
+      }
+    ],
+    "views": 8946,
+    "titulo": "How to Reverse Poor Eyesight Naturally! + Top 3 Eye Exercises To Improve Vision",
+    "data": "2025-12-16"
+  },
+  {
+    "arquivo": "SnWbe1P1l3s.en.vtt",
+    "duracao_seg": 785.5,
+    "duracao_min": 13.09,
+    "palavras": 1691,
+    "palavras_por_minuto": 129.2,
+    "frases": 115,
+    "palavras_por_frase": 14.7,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 1.1,
+    "viradas_de_assunto": 10,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 82,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 78.6,
+        "frases": 14,
+        "palavras": 182,
+        "ppm": 139.0,
+        "perguntas": 0,
+        "voce_por_100pal": 3.3,
+        "viradas": [
+          17.6,
+          35.4
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 78.6,
+        "fim": 157.1,
+        "frases": 15,
+        "palavras": 189,
+        "ppm": 144.4,
+        "perguntas": 0,
+        "voce_por_100pal": 2.6,
+        "viradas": [
+          83.6,
+          111.5,
+          156.9
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 157.1,
+        "fim": 235.7,
+        "frases": 11,
+        "palavras": 150,
+        "ppm": 114.6,
+        "perguntas": 1,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          166.6
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 235.7,
+        "fim": 314.2,
+        "frases": 10,
+        "palavras": 176,
+        "ppm": 134.4,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 5,
+        "ini": 314.2,
+        "fim": 392.8,
+        "frases": 14,
+        "palavras": 182,
+        "ppm": 139.0,
+        "perguntas": 1,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          347.4,
+          352.3
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 392.8,
+        "fim": 471.3,
+        "frases": 11,
+        "palavras": 156,
+        "ppm": 119.2,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 471.3,
+        "fim": 549.9,
+        "frases": 12,
+        "palavras": 179,
+        "ppm": 136.7,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 549.9,
+        "fim": 628.4,
+        "frases": 10,
+        "palavras": 169,
+        "ppm": 129.1,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 628.4,
+        "fim": 707.0,
+        "frases": 9,
+        "palavras": 154,
+        "ppm": 117.6,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          641.3
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 707.0,
+        "fim": 785.5,
+        "frases": 9,
+        "palavras": 154,
+        "ppm": 117.6,
+        "perguntas": 0,
+        "voce_por_100pal": 4.5,
+        "viradas": [
+          768.3
+        ]
+      }
+    ],
+    "views": 5751637,
+    "titulo": "What's Your Eye Color REALLY Saying About You?",
+    "data": "2025-12-20"
+  },
+  {
+    "arquivo": "cmGaIm7D2ac.en.vtt",
+    "duracao_seg": 917.3,
+    "duracao_min": 15.29,
+    "palavras": 2288,
+    "palavras_por_minuto": 149.7,
+    "frases": 133,
+    "palavras_por_frase": 17.2,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 6.7,
+    "viradas_de_assunto": 16,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 109,
+      "perguntas": 1
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 91.7,
+        "frases": 15,
+        "palavras": 259,
+        "ppm": 169.4,
+        "perguntas": 1,
+        "voce_por_100pal": 8.9,
+        "viradas": []
+      },
+      {
+        "bloco": 2,
+        "ini": 91.7,
+        "fim": 183.5,
+        "frases": 15,
+        "palavras": 248,
+        "ppm": 162.2,
+        "perguntas": 0,
+        "voce_por_100pal": 8.1,
+        "viradas": [
+          94.1,
+          143.1,
+          155.5
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 183.5,
+        "fim": 275.2,
+        "frases": 11,
+        "palavras": 231,
+        "ppm": 151.1,
+        "perguntas": 0,
+        "voce_por_100pal": 7.8,
+        "viradas": [
+          212.3,
+          264.4
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 275.2,
+        "fim": 366.9,
+        "frases": 15,
+        "palavras": 233,
+        "ppm": 152.4,
+        "perguntas": 0,
+        "voce_por_100pal": 4.7,
+        "viradas": [
+          291.2,
+          310.0,
+          323.2,
+          350.8
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 366.9,
+        "fim": 458.7,
+        "frases": 14,
+        "palavras": 216,
+        "ppm": 141.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.6,
+        "viradas": [
+          392.0,
+          439.2
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 458.7,
+        "fim": 550.4,
+        "frases": 10,
+        "palavras": 222,
+        "ppm": 145.2,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": [
+          540.7
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 550.4,
+        "fim": 642.1,
+        "frases": 12,
+        "palavras": 197,
+        "ppm": 128.9,
+        "perguntas": 1,
+        "voce_por_100pal": 4.6,
+        "viradas": [
+          605.5
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 642.1,
+        "fim": 733.9,
+        "frases": 15,
+        "palavras": 232,
+        "ppm": 151.7,
+        "perguntas": 0,
+        "voce_por_100pal": 6.9,
+        "viradas": [
+          680.1,
+          691.4,
+          706.2
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 733.9,
+        "fim": 825.6,
+        "frases": 10,
+        "palavras": 228,
+        "ppm": 149.1,
+        "perguntas": 0,
+        "voce_por_100pal": 3.5,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 825.6,
+        "fim": 917.3,
+        "frases": 16,
+        "palavras": 223,
+        "ppm": 145.9,
+        "perguntas": 0,
+        "voce_por_100pal": 12.6,
+        "viradas": []
+      }
+    ],
+    "views": 1385440,
+    "titulo": "Your Blood Type is Deciding How You Die (The Science)",
+    "data": "2025-12-20"
+  },
+  {
+    "arquivo": "OazN4nXUgr8.en.vtt",
+    "duracao_seg": 693.8,
+    "duracao_min": 11.56,
+    "palavras": 1681,
+    "palavras_por_minuto": 145.4,
+    "frases": 97,
+    "palavras_por_frase": 17.3,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 6.0,
+    "viradas_de_assunto": 8,
+    "gancho_30s": {
+      "frases": 5,
+      "palavras": 82,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 69.4,
+        "frases": 10,
+        "palavras": 191,
+        "ppm": 165.2,
+        "perguntas": 0,
+        "voce_por_100pal": 5.2,
+        "viradas": [
+          13.0,
+          61.8
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 69.4,
+        "fim": 138.8,
+        "frases": 9,
+        "palavras": 189,
+        "ppm": 163.4,
+        "perguntas": 0,
+        "voce_por_100pal": 6.3,
+        "viradas": []
+      },
+      {
+        "bloco": 3,
+        "ini": 138.8,
+        "fim": 208.2,
+        "frases": 10,
+        "palavras": 171,
+        "ppm": 147.9,
+        "perguntas": 1,
+        "voce_por_100pal": 6.4,
+        "viradas": [
+          153.3,
+          176.8
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 208.2,
+        "fim": 277.5,
+        "frases": 10,
+        "palavras": 173,
+        "ppm": 149.6,
+        "perguntas": 1,
+        "voce_por_100pal": 7.5,
+        "viradas": [
+          255.0
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 277.5,
+        "fim": 346.9,
+        "frases": 11,
+        "palavras": 167,
+        "ppm": 144.4,
+        "perguntas": 0,
+        "voce_por_100pal": 7.2,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 346.9,
+        "fim": 416.3,
+        "frases": 9,
+        "palavras": 170,
+        "ppm": 147.0,
+        "perguntas": 0,
+        "voce_por_100pal": 6.5,
+        "viradas": [
+          397.8
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 416.3,
+        "fim": 485.7,
+        "frases": 10,
+        "palavras": 159,
+        "ppm": 137.5,
+        "perguntas": 0,
+        "voce_por_100pal": 6.9,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 485.7,
+        "fim": 555.1,
+        "frases": 10,
+        "palavras": 145,
+        "ppm": 125.4,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 555.1,
+        "fim": 624.5,
+        "frases": 10,
+        "palavras": 168,
+        "ppm": 145.3,
+        "perguntas": 0,
+        "voce_por_100pal": 3.0,
+        "viradas": [
+          556.5
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 624.5,
+        "fim": 693.8,
+        "frases": 8,
+        "palavras": 148,
+        "ppm": 128.0,
+        "perguntas": 0,
+        "voce_por_100pal": 6.8,
+        "viradas": [
+          635.0
+        ]
+      }
+    ],
+    "views": 132545,
+    "titulo": "Top Neurologist Reveals Early Warning Signs of Dementia",
+    "data": "2025-12-22"
+  },
+  {
+    "arquivo": "T8YaIe4pfIc.en.vtt",
+    "duracao_seg": 584.4,
+    "duracao_min": 9.74,
+    "palavras": 1254,
+    "palavras_por_minuto": 128.8,
+    "frases": 86,
+    "palavras_por_frase": 14.6,
+    "perguntas_total": 0,
+    "densidade_voce_por_100pal": 0.7,
+    "viradas_de_assunto": 14,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 79,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 58.4,
+        "frases": 11,
+        "palavras": 142,
+        "ppm": 145.8,
+        "perguntas": 0,
+        "voce_por_100pal": 0.7,
+        "viradas": [
+          10.3,
+          10.3,
+          26.0,
+          33.5,
+          35.8
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 58.4,
+        "fim": 116.9,
+        "frases": 7,
+        "palavras": 134,
+        "ppm": 137.6,
+        "perguntas": 0,
+        "voce_por_100pal": 0.7,
+        "viradas": [
+          109.5
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 116.9,
+        "fim": 175.3,
+        "frases": 7,
+        "palavras": 120,
+        "ppm": 123.2,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 4,
+        "ini": 175.3,
+        "fim": 233.7,
+        "frases": 6,
+        "palavras": 115,
+        "ppm": 118.1,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          176.6,
+          202.6
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 233.7,
+        "fim": 292.2,
+        "frases": 11,
+        "palavras": 124,
+        "ppm": 127.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          235.0
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 292.2,
+        "fim": 350.6,
+        "frases": 7,
+        "palavras": 117,
+        "ppm": 120.1,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          293.8
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 350.6,
+        "fim": 409.1,
+        "frases": 10,
+        "palavras": 143,
+        "ppm": 146.8,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          351.8,
+          395.0
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 409.1,
+        "fim": 467.5,
+        "frases": 8,
+        "palavras": 129,
+        "ppm": 132.5,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          438.6
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 467.5,
+        "fim": 525.9,
+        "frases": 8,
+        "palavras": 110,
+        "ppm": 112.9,
+        "perguntas": 0,
+        "voce_por_100pal": 0.9,
+        "viradas": [
+          473.9
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 525.9,
+        "fim": 584.4,
+        "frases": 11,
+        "palavras": 120,
+        "ppm": 123.2,
+        "perguntas": 0,
+        "voce_por_100pal": 5.0,
+        "viradas": []
+      }
+    ],
+    "views": 146224,
+    "titulo": "List of 10 Worst Foods According to Science",
+    "data": "2025-12-23"
+  },
+  {
+    "arquivo": "hWSGUNcG00w.en.vtt",
+    "duracao_seg": 836.5,
+    "duracao_min": 13.94,
+    "palavras": 1773,
+    "palavras_por_minuto": 127.2,
+    "frases": 122,
+    "palavras_por_frase": 14.5,
+    "perguntas_total": 0,
+    "densidade_voce_por_100pal": 0.5,
+    "viradas_de_assunto": 24,
+    "gancho_30s": {
+      "frases": 8,
+      "palavras": 89,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 83.7,
+        "frases": 15,
+        "palavras": 208,
+        "ppm": 149.2,
+        "perguntas": 0,
+        "voce_por_100pal": 1.9,
+        "viradas": [
+          11.7,
+          50.9
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 83.7,
+        "fim": 167.3,
+        "frases": 10,
+        "palavras": 155,
+        "ppm": 111.2,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          106.4,
+          123.5,
+          134.4
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 167.3,
+        "fim": 251.0,
+        "frases": 11,
+        "palavras": 193,
+        "ppm": 138.4,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          209.0,
+          213.0,
+          234.3
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 251.0,
+        "fim": 334.6,
+        "frases": 15,
+        "palavras": 181,
+        "ppm": 129.8,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          278.0,
+          280.5,
+          321.5
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 334.6,
+        "fim": 418.3,
+        "frases": 12,
+        "palavras": 175,
+        "ppm": 125.5,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          379.3,
+          390.4
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 418.3,
+        "fim": 501.9,
+        "frases": 14,
+        "palavras": 176,
+        "ppm": 126.2,
+        "perguntas": 0,
+        "voce_por_100pal": 0.6,
+        "viradas": [
+          464.6,
+          479.8,
+          487.6,
+          490.8
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 501.9,
+        "fim": 585.6,
+        "frases": 10,
+        "palavras": 173,
+        "ppm": 124.1,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          539.0,
+          582.4
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 585.6,
+        "fim": 669.2,
+        "frases": 12,
+        "palavras": 185,
+        "ppm": 132.7,
+        "perguntas": 0,
+        "voce_por_100pal": 0.5,
+        "viradas": [
+          595.5,
+          601.8,
+          662.1
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 669.2,
+        "fim": 752.9,
+        "frases": 9,
+        "palavras": 157,
+        "ppm": 112.6,
+        "perguntas": 0,
+        "voce_por_100pal": 0.6,
+        "viradas": [
+          701.0
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 752.9,
+        "fim": 836.5,
+        "frases": 14,
+        "palavras": 170,
+        "ppm": 121.9,
+        "perguntas": 0,
+        "voce_por_100pal": 1.2,
+        "viradas": [
+          754.4
+        ]
+      }
+    ],
+    "views": 358818,
+    "titulo": "What Your Skin Color Really Says About You",
+    "data": "2025-12-24"
+  },
+  {
+    "arquivo": "OAI0cjqV_OU.en.vtt",
+    "duracao_seg": 763.4,
+    "duracao_min": 12.72,
+    "palavras": 1723,
+    "palavras_por_minuto": 135.4,
+    "frases": 145,
+    "palavras_por_frase": 11.9,
+    "perguntas_total": 8,
+    "densidade_voce_por_100pal": 3.4,
+    "viradas_de_assunto": 5,
+    "gancho_30s": {
+      "frases": 9,
+      "palavras": 86,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 76.3,
+        "frases": 16,
+        "palavras": 191,
+        "ppm": 150.1,
+        "perguntas": 1,
+        "voce_por_100pal": 1.0,
+        "viradas": []
+      },
+      {
+        "bloco": 2,
+        "ini": 76.3,
+        "fim": 152.7,
+        "frases": 12,
+        "palavras": 181,
+        "ppm": 142.3,
+        "perguntas": 0,
+        "voce_por_100pal": 0.6,
+        "viradas": []
+      },
+      {
+        "bloco": 3,
+        "ini": 152.7,
+        "fim": 229.0,
+        "frases": 15,
+        "palavras": 143,
+        "ppm": 112.4,
+        "perguntas": 1,
+        "voce_por_100pal": 0.7,
+        "viradas": [
+          206.2
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 229.0,
+        "fim": 305.3,
+        "frases": 12,
+        "palavras": 171,
+        "ppm": 134.4,
+        "perguntas": 0,
+        "voce_por_100pal": 5.3,
+        "viradas": [
+          296.0
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 305.3,
+        "fim": 381.7,
+        "frases": 17,
+        "palavras": 172,
+        "ppm": 135.2,
+        "perguntas": 1,
+        "voce_por_100pal": 3.5,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 381.7,
+        "fim": 458.0,
+        "frases": 14,
+        "palavras": 162,
+        "ppm": 127.3,
+        "perguntas": 0,
+        "voce_por_100pal": 3.7,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 458.0,
+        "fim": 534.4,
+        "frases": 12,
+        "palavras": 173,
+        "ppm": 136.0,
+        "perguntas": 0,
+        "voce_por_100pal": 2.9,
+        "viradas": [
+          507.0
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 534.4,
+        "fim": 610.7,
+        "frases": 15,
+        "palavras": 168,
+        "ppm": 132.0,
+        "perguntas": 1,
+        "voce_por_100pal": 2.4,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 610.7,
+        "fim": 687.0,
+        "frases": 17,
+        "palavras": 172,
+        "ppm": 135.2,
+        "perguntas": 4,
+        "voce_por_100pal": 6.4,
+        "viradas": [
+          682.6
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 687.0,
+        "fim": 763.4,
+        "frases": 15,
+        "palavras": 190,
+        "ppm": 149.3,
+        "perguntas": 0,
+        "voce_por_100pal": 7.4,
+        "viradas": [
+          734.8
+        ]
+      }
+    ],
+    "views": 374056,
+    "titulo": "Pros and Cons of Your Brown Eye Color Type",
+    "data": "2025-12-25"
+  },
+  {
+    "arquivo": "tHDn8x3Pzhs.en.vtt",
+    "duracao_seg": 754.3,
+    "duracao_min": 12.57,
+    "palavras": 1900,
+    "palavras_por_minuto": 151.1,
+    "frases": 181,
+    "palavras_por_frase": 10.5,
+    "perguntas_total": 6,
+    "densidade_voce_por_100pal": 8.3,
+    "viradas_de_assunto": 15,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 95,
+      "perguntas": 1
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 75.4,
+        "frases": 17,
+        "palavras": 228,
+        "ppm": 181.4,
+        "perguntas": 1,
+        "voce_por_100pal": 7.9,
+        "viradas": [
+          23.7,
+          51.6,
+          54.8
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 75.4,
+        "fim": 150.9,
+        "frases": 17,
+        "palavras": 167,
+        "ppm": 132.8,
+        "perguntas": 1,
+        "voce_por_100pal": 9.6,
+        "viradas": [
+          94.2,
+          134.8
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 150.9,
+        "fim": 226.3,
+        "frases": 23,
+        "palavras": 213,
+        "ppm": 169.4,
+        "perguntas": 2,
+        "voce_por_100pal": 7.5,
+        "viradas": [
+          150.9,
+          160.6,
+          179.8,
+          201.4
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 226.3,
+        "fim": 301.7,
+        "frases": 19,
+        "palavras": 193,
+        "ppm": 153.5,
+        "perguntas": 0,
+        "voce_por_100pal": 7.3,
+        "viradas": []
+      },
+      {
+        "bloco": 5,
+        "ini": 301.7,
+        "fim": 377.2,
+        "frases": 15,
+        "palavras": 184,
+        "ppm": 146.4,
+        "perguntas": 0,
+        "voce_por_100pal": 7.6,
+        "viradas": [
+          339.5
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 377.2,
+        "fim": 452.6,
+        "frases": 19,
+        "palavras": 185,
+        "ppm": 147.2,
+        "perguntas": 0,
+        "voce_por_100pal": 10.3,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 452.6,
+        "fim": 528.0,
+        "frases": 20,
+        "palavras": 182,
+        "ppm": 144.8,
+        "perguntas": 1,
+        "voce_por_100pal": 8.2,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 528.0,
+        "fim": 603.5,
+        "frases": 18,
+        "palavras": 176,
+        "ppm": 140.0,
+        "perguntas": 0,
+        "voce_por_100pal": 8.5,
+        "viradas": [
+          586.3,
+          592.6
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 603.5,
+        "fim": 678.9,
+        "frases": 18,
+        "palavras": 181,
+        "ppm": 144.0,
+        "perguntas": 0,
+        "voce_por_100pal": 9.9,
+        "viradas": [
+          604.2,
+          670.8
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 678.9,
+        "fim": 754.3,
+        "frases": 15,
+        "palavras": 194,
+        "ppm": 154.3,
+        "perguntas": 1,
+        "voce_por_100pal": 6.7,
+        "viradas": [
+          711.8
+        ]
+      }
+    ],
+    "views": 8796,
+    "titulo": "What Happens When You Quit Bread For 30 Days",
+    "data": "2025-12-27"
+  },
+  {
+    "arquivo": "YqWWfn6kkEc.en.vtt",
+    "duracao_seg": 895.0,
+    "duracao_min": 14.92,
+    "palavras": 2122,
+    "palavras_por_minuto": 142.3,
+    "frases": 164,
+    "palavras_por_frase": 12.9,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 4.9,
+    "viradas_de_assunto": 21,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 72,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 89.5,
+        "frases": 17,
+        "palavras": 225,
+        "ppm": 150.8,
+        "perguntas": 0,
+        "voce_por_100pal": 4.9,
+        "viradas": [
+          8.0,
+          56.8,
+          80.0,
+          82.4
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 89.5,
+        "fim": 179.0,
+        "frases": 16,
+        "palavras": 216,
+        "ppm": 144.8,
+        "perguntas": 0,
+        "voce_por_100pal": 6.5,
+        "viradas": [
+          114.9,
+          162.4
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 179.0,
+        "fim": 268.5,
+        "frases": 16,
+        "palavras": 196,
+        "ppm": 131.4,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": [
+          197.9,
+          232.3
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 268.5,
+        "fim": 358.0,
+        "frases": 15,
+        "palavras": 233,
+        "ppm": 156.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.4,
+        "viradas": [
+          280.0,
+          318.7,
+          348.9
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 358.0,
+        "fim": 447.5,
+        "frases": 16,
+        "palavras": 220,
+        "ppm": 147.5,
+        "perguntas": 0,
+        "voce_por_100pal": 3.6,
+        "viradas": [
+          372.5
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 447.5,
+        "fim": 537.0,
+        "frases": 17,
+        "palavras": 210,
+        "ppm": 140.8,
+        "perguntas": 0,
+        "voce_por_100pal": 1.9,
+        "viradas": [
+          451.9,
+          487.6,
+          528.6
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 537.0,
+        "fim": 626.5,
+        "frases": 19,
+        "palavras": 208,
+        "ppm": 139.4,
+        "perguntas": 0,
+        "voce_por_100pal": 4.3,
+        "viradas": [
+          603.9
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 626.5,
+        "fim": 716.0,
+        "frases": 15,
+        "palavras": 201,
+        "ppm": 134.8,
+        "perguntas": 0,
+        "voce_por_100pal": 6.5,
+        "viradas": [
+          628.5,
+          680.6,
+          697.0
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 716.0,
+        "fim": 805.5,
+        "frases": 17,
+        "palavras": 205,
+        "ppm": 137.4,
+        "perguntas": 0,
+        "voce_por_100pal": 2.0,
+        "viradas": [
+          778.9
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 805.5,
+        "fim": 895.0,
+        "frases": 16,
+        "palavras": 208,
+        "ppm": 139.4,
+        "perguntas": 2,
+        "voce_por_100pal": 8.2,
+        "viradas": [
+          815.5
+        ]
+      }
+    ],
+    "views": 552650,
+    "titulo": "The #1 WORST Food for Your Kidneys",
+    "data": "2025-12-28"
+  },
+  {
+    "arquivo": "LF4kYzv52fQ.en.vtt",
+    "duracao_seg": 862.5,
+    "duracao_min": 14.38,
+    "palavras": 2021,
+    "palavras_por_minuto": 140.6,
+    "frases": 164,
+    "palavras_por_frase": 12.3,
+    "perguntas_total": 3,
+    "densidade_voce_por_100pal": 7.1,
+    "viradas_de_assunto": 9,
+    "gancho_30s": {
+      "frases": 4,
+      "palavras": 112,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 86.3,
+        "frases": 12,
+        "palavras": 235,
+        "ppm": 163.5,
+        "perguntas": 0,
+        "voce_por_100pal": 6.8,
+        "viradas": [
+          68.6
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 86.3,
+        "fim": 172.5,
+        "frases": 15,
+        "palavras": 197,
+        "ppm": 137.0,
+        "perguntas": 0,
+        "voce_por_100pal": 8.6,
+        "viradas": [
+          108.5,
+          116.0
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 172.5,
+        "fim": 258.8,
+        "frases": 14,
+        "palavras": 201,
+        "ppm": 139.8,
+        "perguntas": 0,
+        "voce_por_100pal": 5.5,
+        "viradas": [
+          178.3
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 258.8,
+        "fim": 345.0,
+        "frases": 17,
+        "palavras": 184,
+        "ppm": 128.0,
+        "perguntas": 0,
+        "voce_por_100pal": 8.2,
+        "viradas": []
+      },
+      {
+        "bloco": 5,
+        "ini": 345.0,
+        "fim": 431.3,
+        "frases": 20,
+        "palavras": 231,
+        "ppm": 160.7,
+        "perguntas": 0,
+        "voce_por_100pal": 5.2,
+        "viradas": [
+          358.4,
+          395.5
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 431.3,
+        "fim": 517.5,
+        "frases": 17,
+        "palavras": 206,
+        "ppm": 143.3,
+        "perguntas": 0,
+        "voce_por_100pal": 6.8,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 517.5,
+        "fim": 603.8,
+        "frases": 16,
+        "palavras": 205,
+        "ppm": 142.6,
+        "perguntas": 0,
+        "voce_por_100pal": 7.3,
+        "viradas": [
+          566.6
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 603.8,
+        "fim": 690.0,
+        "frases": 16,
+        "palavras": 174,
+        "ppm": 121.0,
+        "perguntas": 1,
+        "voce_por_100pal": 4.0,
+        "viradas": [
+          642.0
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 690.0,
+        "fim": 776.3,
+        "frases": 18,
+        "palavras": 194,
+        "ppm": 135.0,
+        "perguntas": 0,
+        "voce_por_100pal": 7.7,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 776.3,
+        "fim": 862.5,
+        "frases": 19,
+        "palavras": 194,
+        "ppm": 135.0,
+        "perguntas": 2,
+        "voce_por_100pal": 10.8,
+        "viradas": [
+          800.8
+        ]
+      }
+    ],
+    "views": 279495,
+    "titulo": "What Happens when You Eat 5 Eggs A Day For 1 Month",
+    "data": "2025-12-29"
+  },
+  {
+    "arquivo": "BrCCYsfb2M0.en.vtt",
+    "duracao_seg": 480.1,
+    "duracao_min": 8.0,
+    "palavras": 1218,
+    "palavras_por_minuto": 152.2,
+    "frases": 145,
+    "palavras_por_frase": 8.4,
+    "perguntas_total": 5,
+    "densidade_voce_por_100pal": 8.0,
+    "viradas_de_assunto": 8,
+    "gancho_30s": {
+      "frases": 8,
+      "palavras": 105,
+      "perguntas": 1
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 48.0,
+        "frases": 14,
+        "palavras": 143,
+        "ppm": 178.7,
+        "perguntas": 2,
+        "voce_por_100pal": 3.5,
+        "viradas": [
+          5.0,
+          29.8,
+          37.7
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 48.0,
+        "fim": 96.0,
+        "frases": 18,
+        "palavras": 144,
+        "ppm": 180.0,
+        "perguntas": 0,
+        "voce_por_100pal": 7.6,
+        "viradas": [
+          48.1,
+          89.4
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 96.0,
+        "fim": 144.0,
+        "frases": 15,
+        "palavras": 110,
+        "ppm": 137.5,
+        "perguntas": 1,
+        "voce_por_100pal": 8.2,
+        "viradas": []
+      },
+      {
+        "bloco": 4,
+        "ini": 144.0,
+        "fim": 192.0,
+        "frases": 14,
+        "palavras": 125,
+        "ppm": 156.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.4,
+        "viradas": [
+          149.0,
+          190.9
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 192.0,
+        "fim": 240.0,
+        "frases": 16,
+        "palavras": 123,
+        "ppm": 153.7,
+        "perguntas": 1,
+        "voce_por_100pal": 6.5,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 240.0,
+        "fim": 288.0,
+        "frases": 12,
+        "palavras": 111,
+        "ppm": 138.7,
+        "perguntas": 1,
+        "voce_por_100pal": 9.0,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 288.0,
+        "fim": 336.1,
+        "frases": 13,
+        "palavras": 115,
+        "ppm": 143.7,
+        "perguntas": 0,
+        "voce_por_100pal": 8.7,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 336.1,
+        "fim": 384.1,
+        "frases": 16,
+        "palavras": 129,
+        "ppm": 161.2,
+        "perguntas": 0,
+        "voce_por_100pal": 10.1,
+        "viradas": [
+          379.4
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 384.1,
+        "fim": 432.1,
+        "frases": 15,
+        "palavras": 113,
+        "ppm": 141.2,
+        "perguntas": 0,
+        "voce_por_100pal": 11.5,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 432.1,
+        "fim": 480.1,
+        "frases": 12,
+        "palavras": 107,
+        "ppm": 133.7,
+        "perguntas": 0,
+        "voce_por_100pal": 9.3,
+        "viradas": []
+      }
+    ],
+    "views": 90543,
+    "titulo": "What Happens To Your Kidneys After 30 Days Without Sugar  (Day by Day)",
+    "data": "2026-01-06"
+  },
+  {
+    "arquivo": "tWjxZZI0fdI.en.vtt",
+    "duracao_seg": 691.6,
+    "duracao_min": 11.53,
+    "palavras": 1738,
+    "palavras_por_minuto": 150.8,
+    "frases": 176,
+    "palavras_por_frase": 9.9,
+    "perguntas_total": 9,
+    "densidade_voce_por_100pal": 5.8,
+    "viradas_de_assunto": 17,
+    "gancho_30s": {
+      "frases": 8,
+      "palavras": 89,
+      "perguntas": 3
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 69.2,
+        "frases": 18,
+        "palavras": 200,
+        "ppm": 173.5,
+        "perguntas": 3,
+        "voce_por_100pal": 4.0,
+        "viradas": [
+          14.0,
+          46.8,
+          52.4
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 69.2,
+        "fim": 138.3,
+        "frases": 12,
+        "palavras": 170,
+        "ppm": 147.5,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": []
+      },
+      {
+        "bloco": 3,
+        "ini": 138.3,
+        "fim": 207.5,
+        "frases": 19,
+        "palavras": 157,
+        "ppm": 136.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.4,
+        "viradas": [
+          172.2,
+          197.1
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 207.5,
+        "fim": 276.6,
+        "frases": 17,
+        "palavras": 163,
+        "ppm": 141.4,
+        "perguntas": 0,
+        "voce_por_100pal": 3.7,
+        "viradas": [
+          237.4,
+          261.0
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 276.6,
+        "fim": 345.8,
+        "frases": 15,
+        "palavras": 178,
+        "ppm": 154.4,
+        "perguntas": 0,
+        "voce_por_100pal": 6.2,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 345.8,
+        "fim": 415.0,
+        "frases": 15,
+        "palavras": 165,
+        "ppm": 143.1,
+        "perguntas": 0,
+        "voce_por_100pal": 7.9,
+        "viradas": [
+          412.2
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 415.0,
+        "fim": 484.1,
+        "frases": 17,
+        "palavras": 192,
+        "ppm": 166.6,
+        "perguntas": 0,
+        "voce_por_100pal": 10.9,
+        "viradas": [
+          438.8,
+          464.3,
+          466.4
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 484.1,
+        "fim": 553.3,
+        "frases": 18,
+        "palavras": 164,
+        "ppm": 142.3,
+        "perguntas": 1,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          521.3
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 553.3,
+        "fim": 622.4,
+        "frases": 18,
+        "palavras": 170,
+        "ppm": 147.5,
+        "perguntas": 0,
+        "voce_por_100pal": 1.8,
+        "viradas": [
+          582.8,
+          588.1
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 622.4,
+        "fim": 691.6,
+        "frases": 27,
+        "palavras": 180,
+        "ppm": 156.2,
+        "perguntas": 5,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          623.5,
+          626.0,
+          663.4
+        ]
+      }
+    ],
+    "views": 841814,
+    "titulo": "What Your Belly Shape Reveals About Your Health",
+    "data": "2026-01-22"
+  },
+  {
+    "arquivo": "cB0zMr1y5l4.en.vtt",
+    "duracao_seg": 616.4,
+    "duracao_min": 10.27,
+    "palavras": 1584,
+    "palavras_por_minuto": 154.2,
+    "frases": 189,
+    "palavras_por_frase": 8.4,
+    "perguntas_total": 4,
+    "densidade_voce_por_100pal": 7.0,
+    "viradas_de_assunto": 10,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 103,
+      "perguntas": 2
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 61.6,
+        "frases": 14,
+        "palavras": 198,
+        "ppm": 192.7,
+        "perguntas": 2,
+        "voce_por_100pal": 5.6,
+        "viradas": [
+          50.1
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 61.6,
+        "fim": 123.3,
+        "frases": 18,
+        "palavras": 153,
+        "ppm": 148.9,
+        "perguntas": 1,
+        "voce_por_100pal": 5.9,
+        "viradas": [
+          64.9
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 123.3,
+        "fim": 184.9,
+        "frases": 18,
+        "palavras": 159,
+        "ppm": 154.8,
+        "perguntas": 0,
+        "voce_por_100pal": 5.0,
+        "viradas": [
+          181.0
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 184.9,
+        "fim": 246.5,
+        "frases": 20,
+        "palavras": 149,
+        "ppm": 145.0,
+        "perguntas": 1,
+        "voce_por_100pal": 8.1,
+        "viradas": [
+          229.1
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 246.5,
+        "fim": 308.2,
+        "frases": 16,
+        "palavras": 142,
+        "ppm": 138.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.3,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 308.2,
+        "fim": 369.8,
+        "frases": 21,
+        "palavras": 138,
+        "ppm": 134.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.8,
+        "viradas": [
+          337.4
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 369.8,
+        "fim": 431.5,
+        "frases": 17,
+        "palavras": 140,
+        "ppm": 136.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.0,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 431.5,
+        "fim": 493.1,
+        "frases": 23,
+        "palavras": 156,
+        "ppm": 151.9,
+        "perguntas": 0,
+        "voce_por_100pal": 9.0,
+        "viradas": [
+          436.8,
+          465.4,
+          465.4,
+          468.6
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 493.1,
+        "fim": 554.7,
+        "frases": 25,
+        "palavras": 178,
+        "ppm": 173.3,
+        "perguntas": 0,
+        "voce_por_100pal": 10.1,
+        "viradas": [
+          498.1
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 554.7,
+        "fim": 616.4,
+        "frases": 17,
+        "palavras": 171,
+        "ppm": 166.5,
+        "perguntas": 0,
+        "voce_por_100pal": 8.8,
+        "viradas": []
+      }
+    ],
+    "views": 1423189,
+    "titulo": "10 Things That Change When You Start Walking Daily",
+    "data": "2026-01-27"
+  },
+  {
+    "arquivo": "DVlhy4-MRtg.en.vtt",
+    "duracao_seg": 735.3,
+    "duracao_min": 12.25,
+    "palavras": 2078,
+    "palavras_por_minuto": 169.6,
+    "frases": 222,
+    "palavras_por_frase": 9.4,
+    "perguntas_total": 5,
+    "densidade_voce_por_100pal": 7.4,
+    "viradas_de_assunto": 14,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 96,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 73.5,
+        "frases": 17,
+        "palavras": 220,
+        "ppm": 179.5,
+        "perguntas": 0,
+        "voce_por_100pal": 8.2,
+        "viradas": [
+          12.4,
+          29.0,
+          55.0
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 73.5,
+        "fim": 147.1,
+        "frases": 22,
+        "palavras": 203,
+        "ppm": 165.7,
+        "perguntas": 0,
+        "voce_por_100pal": 5.4,
+        "viradas": [
+          128.5
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 147.1,
+        "fim": 220.6,
+        "frases": 25,
+        "palavras": 215,
+        "ppm": 175.4,
+        "perguntas": 0,
+        "voce_por_100pal": 7.9,
+        "viradas": [
+          191.6,
+          199.8
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 220.6,
+        "fim": 294.1,
+        "frases": 23,
+        "palavras": 208,
+        "ppm": 169.7,
+        "perguntas": 1,
+        "voce_por_100pal": 8.2,
+        "viradas": []
+      },
+      {
+        "bloco": 5,
+        "ini": 294.1,
+        "fim": 367.6,
+        "frases": 25,
+        "palavras": 213,
+        "ppm": 173.8,
+        "perguntas": 2,
+        "voce_por_100pal": 2.8,
+        "viradas": [
+          316.3,
+          341.7
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 367.6,
+        "fim": 441.2,
+        "frases": 21,
+        "palavras": 211,
+        "ppm": 172.2,
+        "perguntas": 1,
+        "voce_por_100pal": 4.7,
+        "viradas": [
+          406.5,
+          425.2
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 441.2,
+        "fim": 514.7,
+        "frases": 25,
+        "palavras": 216,
+        "ppm": 176.3,
+        "perguntas": 0,
+        "voce_por_100pal": 9.7,
+        "viradas": [
+          482.2,
+          510.3
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 514.7,
+        "fim": 588.2,
+        "frases": 24,
+        "palavras": 202,
+        "ppm": 164.8,
+        "perguntas": 0,
+        "voce_por_100pal": 8.4,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 588.2,
+        "fim": 661.8,
+        "frases": 22,
+        "palavras": 212,
+        "ppm": 173.0,
+        "perguntas": 0,
+        "voce_por_100pal": 10.8,
+        "viradas": [
+          614.1
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 661.8,
+        "fim": 735.3,
+        "frases": 18,
+        "palavras": 181,
+        "ppm": 147.7,
+        "perguntas": 1,
+        "voce_por_100pal": 7.7,
+        "viradas": [
+          701.4
+        ]
+      }
+    ],
+    "views": 5651450,
+    "titulo": "What Happens To Your Body When You Eat Once A Day (Hour By Hour)",
+    "data": "2026-01-29"
+  },
+  {
+    "arquivo": "HV1z9N9Um-M.en.vtt",
+    "duracao_seg": 580.4,
+    "duracao_min": 9.67,
+    "palavras": 1592,
+    "palavras_por_minuto": 164.6,
+    "frases": 142,
+    "palavras_por_frase": 11.2,
+    "perguntas_total": 6,
+    "densidade_voce_por_100pal": 3.0,
+    "viradas_de_assunto": 13,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 113,
+      "perguntas": 1
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 58.0,
+        "frases": 10,
+        "palavras": 183,
+        "ppm": 189.2,
+        "perguntas": 1,
+        "voce_por_100pal": 4.4,
+        "viradas": []
+      },
+      {
+        "bloco": 2,
+        "ini": 58.0,
+        "fim": 116.1,
+        "frases": 14,
+        "palavras": 176,
+        "ppm": 181.9,
+        "perguntas": 1,
+        "voce_por_100pal": 2.3,
+        "viradas": [
+          59.7,
+          102.5
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 116.1,
+        "fim": 174.1,
+        "frases": 13,
+        "palavras": 153,
+        "ppm": 158.2,
+        "perguntas": 0,
+        "voce_por_100pal": 0.7,
+        "viradas": [
+          169.6
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 174.1,
+        "fim": 232.2,
+        "frases": 13,
+        "palavras": 156,
+        "ppm": 161.3,
+        "perguntas": 2,
+        "voce_por_100pal": 1.9,
+        "viradas": [
+          228.0
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 232.2,
+        "fim": 290.2,
+        "frases": 16,
+        "palavras": 182,
+        "ppm": 188.1,
+        "perguntas": 0,
+        "voce_por_100pal": 3.3,
+        "viradas": [
+          235.1
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 290.2,
+        "fim": 348.3,
+        "frases": 19,
+        "palavras": 154,
+        "ppm": 159.2,
+        "perguntas": 1,
+        "voce_por_100pal": 0.6,
+        "viradas": [
+          323.4,
+          334.8,
+          339.2
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 348.3,
+        "fim": 406.3,
+        "frases": 14,
+        "palavras": 161,
+        "ppm": 166.4,
+        "perguntas": 0,
+        "voce_por_100pal": 3.1,
+        "viradas": [
+          354.1
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 406.3,
+        "fim": 464.4,
+        "frases": 14,
+        "palavras": 168,
+        "ppm": 173.7,
+        "perguntas": 1,
+        "voce_por_100pal": 4.8,
+        "viradas": [
+          420.0,
+          429.8
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 464.4,
+        "fim": 522.4,
+        "frases": 13,
+        "palavras": 127,
+        "ppm": 131.3,
+        "perguntas": 0,
+        "voce_por_100pal": 2.4,
+        "viradas": [
+          519.6
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 522.4,
+        "fim": 580.4,
+        "frases": 16,
+        "palavras": 133,
+        "ppm": 137.5,
+        "perguntas": 0,
+        "voce_por_100pal": 6.0,
+        "viradas": [
+          525.2
+        ]
+      }
+    ],
+    "views": 1513467,
+    "titulo": "Why Healthy People Have Heart Attacks: Prevention Tips",
+    "data": "2026-01-31"
+  },
+  {
+    "arquivo": "CZlFXbYLr7w.en.vtt",
+    "duracao_seg": 849.9,
+    "duracao_min": 14.17,
+    "palavras": 2398,
+    "palavras_por_minuto": 169.3,
+    "frases": 223,
+    "palavras_por_frase": 10.8,
+    "perguntas_total": 5,
+    "densidade_voce_por_100pal": 7.2,
+    "viradas_de_assunto": 17,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 111,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 85.0,
+        "frases": 17,
+        "palavras": 266,
+        "ppm": 187.8,
+        "perguntas": 0,
+        "voce_por_100pal": 7.5,
+        "viradas": [
+          14.3,
+          61.4
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 85.0,
+        "fim": 170.0,
+        "frases": 23,
+        "palavras": 246,
+        "ppm": 173.7,
+        "perguntas": 1,
+        "voce_por_100pal": 4.5,
+        "viradas": [
+          97.5,
+          140.2
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 170.0,
+        "fim": 255.0,
+        "frases": 16,
+        "palavras": 224,
+        "ppm": 158.1,
+        "perguntas": 0,
+        "voce_por_100pal": 6.7,
+        "viradas": [
+          171.5,
+          187.8,
+          212.9,
+          222.0,
+          231.2
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 255.0,
+        "fim": 340.0,
+        "frases": 21,
+        "palavras": 257,
+        "ppm": 181.4,
+        "perguntas": 0,
+        "voce_por_100pal": 8.9,
+        "viradas": [
+          303.8
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 340.0,
+        "fim": 425.0,
+        "frases": 25,
+        "palavras": 221,
+        "ppm": 156.0,
+        "perguntas": 1,
+        "voce_por_100pal": 8.1,
+        "viradas": [
+          357.2,
+          385.4
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 425.0,
+        "fim": 510.0,
+        "frases": 22,
+        "palavras": 245,
+        "ppm": 173.0,
+        "perguntas": 2,
+        "voce_por_100pal": 6.9,
+        "viradas": [
+          459.8,
+          472.2
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 510.0,
+        "fim": 594.9,
+        "frases": 25,
+        "palavras": 255,
+        "ppm": 180.0,
+        "perguntas": 1,
+        "voce_por_100pal": 5.1,
+        "viradas": [
+          592.5
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 594.9,
+        "fim": 679.9,
+        "frases": 25,
+        "palavras": 233,
+        "ppm": 164.5,
+        "perguntas": 0,
+        "voce_por_100pal": 7.7,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 679.9,
+        "fim": 764.9,
+        "frases": 23,
+        "palavras": 233,
+        "ppm": 164.5,
+        "perguntas": 0,
+        "voce_por_100pal": 7.7,
+        "viradas": [
+          756.1
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 764.9,
+        "fim": 849.9,
+        "frases": 26,
+        "palavras": 226,
+        "ppm": 159.5,
+        "perguntas": 0,
+        "voce_por_100pal": 8.4,
+        "viradas": [
+          835.4
+        ]
+      }
+    ],
+    "views": 1364068,
+    "titulo": "How To Force Your Body To Melt Visceral Fat With Zero Cortisol",
+    "data": "2026-02-09"
+  },
+  {
+    "arquivo": "n-v0E1oDvBs.en.vtt",
+    "duracao_seg": 654.8,
+    "duracao_min": 10.91,
+    "palavras": 1826,
+    "palavras_por_minuto": 167.3,
+    "frases": 148,
+    "palavras_por_frase": 12.3,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 6.4,
+    "viradas_de_assunto": 16,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 86,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 65.5,
+        "frases": 13,
+        "palavras": 197,
+        "ppm": 180.5,
+        "perguntas": 0,
+        "voce_por_100pal": 5.1,
+        "viradas": [
+          5.2
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 65.5,
+        "fim": 131.0,
+        "frases": 17,
+        "palavras": 178,
+        "ppm": 163.1,
+        "perguntas": 0,
+        "voce_por_100pal": 2.2,
+        "viradas": [
+          91.9,
+          130.6
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 131.0,
+        "fim": 196.4,
+        "frases": 11,
+        "palavras": 183,
+        "ppm": 167.7,
+        "perguntas": 0,
+        "voce_por_100pal": 2.7,
+        "viradas": [
+          160.5,
+          176.9
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 196.4,
+        "fim": 261.9,
+        "frases": 15,
+        "palavras": 187,
+        "ppm": 171.4,
+        "perguntas": 0,
+        "voce_por_100pal": 8.0,
+        "viradas": [
+          220.8
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 261.9,
+        "fim": 327.4,
+        "frases": 16,
+        "palavras": 174,
+        "ppm": 159.4,
+        "perguntas": 0,
+        "voce_por_100pal": 5.7,
+        "viradas": [
+          300.7,
+          312.8,
+          320.0
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 327.4,
+        "fim": 392.9,
+        "frases": 16,
+        "palavras": 191,
+        "ppm": 175.0,
+        "perguntas": 1,
+        "voce_por_100pal": 9.9,
+        "viradas": [
+          354.2,
+          373.9
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 392.9,
+        "fim": 458.3,
+        "frases": 13,
+        "palavras": 176,
+        "ppm": 161.3,
+        "perguntas": 0,
+        "voce_por_100pal": 6.8,
+        "viradas": [
+          409.2,
+          429.6
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 458.3,
+        "fim": 523.8,
+        "frases": 13,
+        "palavras": 156,
+        "ppm": 143.0,
+        "perguntas": 1,
+        "voce_por_100pal": 7.7,
+        "viradas": [
+          513.6
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 523.8,
+        "fim": 589.3,
+        "frases": 16,
+        "palavras": 210,
+        "ppm": 192.4,
+        "perguntas": 0,
+        "voce_por_100pal": 7.1,
+        "viradas": [
+          528.3
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 589.3,
+        "fim": 654.8,
+        "frases": 18,
+        "palavras": 177,
+        "ppm": 162.2,
+        "perguntas": 0,
+        "voce_por_100pal": 8.5,
+        "viradas": [
+          635.4
+        ]
+      }
+    ],
+    "views": 108627,
+    "titulo": "What Happens to Your Testosterone When You Walk 8000 Steps Daily",
+    "data": "2026-02-15"
+  },
+  {
+    "arquivo": "JOFFXRz4TO0.en.vtt",
+    "duracao_seg": 774.8,
+    "duracao_min": 12.91,
+    "palavras": 2138,
+    "palavras_por_minuto": 165.6,
+    "frases": 168,
+    "palavras_por_frase": 12.7,
+    "perguntas_total": 5,
+    "densidade_voce_por_100pal": 5.6,
+    "viradas_de_assunto": 13,
+    "gancho_30s": {
+      "frases": 7,
+      "palavras": 94,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 77.5,
+        "frases": 16,
+        "palavras": 212,
+        "ppm": 164.2,
+        "perguntas": 0,
+        "voce_por_100pal": 4.7,
+        "viradas": [
+          13.6
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 77.5,
+        "fim": 155.0,
+        "frases": 26,
+        "palavras": 249,
+        "ppm": 192.8,
+        "perguntas": 1,
+        "voce_por_100pal": 4.4,
+        "viradas": [
+          98.8,
+          151.2
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 155.0,
+        "fim": 232.5,
+        "frases": 16,
+        "palavras": 216,
+        "ppm": 167.3,
+        "perguntas": 1,
+        "voce_por_100pal": 5.6,
+        "viradas": [
+          161.6
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 232.5,
+        "fim": 309.9,
+        "frases": 17,
+        "palavras": 243,
+        "ppm": 188.2,
+        "perguntas": 1,
+        "voce_por_100pal": 5.3,
+        "viradas": [
+          296.4
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 309.9,
+        "fim": 387.4,
+        "frases": 14,
+        "palavras": 161,
+        "ppm": 124.7,
+        "perguntas": 0,
+        "voce_por_100pal": 2.5,
+        "viradas": [
+          366.8
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 387.4,
+        "fim": 464.9,
+        "frases": 15,
+        "palavras": 218,
+        "ppm": 168.8,
+        "perguntas": 1,
+        "voce_por_100pal": 5.0,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 464.9,
+        "fim": 542.4,
+        "frases": 17,
+        "palavras": 219,
+        "ppm": 169.6,
+        "perguntas": 1,
+        "voce_por_100pal": 5.5,
+        "viradas": [
+          496.8,
+          510.4,
+          510.4
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 542.4,
+        "fim": 619.9,
+        "frases": 18,
+        "palavras": 216,
+        "ppm": 167.3,
+        "perguntas": 0,
+        "voce_por_100pal": 6.0,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 619.9,
+        "fim": 697.4,
+        "frases": 12,
+        "palavras": 200,
+        "ppm": 154.9,
+        "perguntas": 0,
+        "voce_por_100pal": 8.0,
+        "viradas": [
+          635.4,
+          656.8,
+          677.7
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 697.4,
+        "fim": 774.8,
+        "frases": 17,
+        "palavras": 209,
+        "ppm": 161.8,
+        "perguntas": 0,
+        "voce_por_100pal": 8.6,
+        "viradas": [
+          745.0
+        ]
+      }
+    ],
+    "views": 116993,
+    "titulo": "Which Fasting Length is BEST for Fat Loss 12h 16h or 36h",
+    "data": "2026-02-17"
+  },
+  {
+    "arquivo": "uLIaguZXZOw.en.vtt",
+    "duracao_seg": 715.9,
+    "duracao_min": 11.93,
+    "palavras": 2055,
+    "palavras_por_minuto": 172.2,
+    "frases": 137,
+    "palavras_por_frase": 15.0,
+    "perguntas_total": 7,
+    "densidade_voce_por_100pal": 1.4,
+    "viradas_de_assunto": 15,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 89,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 71.6,
+        "frases": 12,
+        "palavras": 212,
+        "ppm": 177.7,
+        "perguntas": 0,
+        "voce_por_100pal": 2.4,
+        "viradas": [
+          24.7,
+          53.8,
+          62.7,
+          69.5
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 71.6,
+        "fim": 143.2,
+        "frases": 14,
+        "palavras": 215,
+        "ppm": 180.2,
+        "perguntas": 0,
+        "voce_por_100pal": 0.9,
+        "viradas": []
+      },
+      {
+        "bloco": 3,
+        "ini": 143.2,
+        "fim": 214.8,
+        "frases": 12,
+        "palavras": 168,
+        "ppm": 140.8,
+        "perguntas": 0,
+        "voce_por_100pal": 0.6,
+        "viradas": [
+          159.2
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 214.8,
+        "fim": 286.4,
+        "frases": 12,
+        "palavras": 189,
+        "ppm": 158.4,
+        "perguntas": 0,
+        "voce_por_100pal": 1.1,
+        "viradas": [
+          268.9
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 286.4,
+        "fim": 358.0,
+        "frases": 16,
+        "palavras": 204,
+        "ppm": 171.0,
+        "perguntas": 2,
+        "voce_por_100pal": 1.0,
+        "viradas": [
+          323.7,
+          330.7,
+          341.1
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 358.0,
+        "fim": 429.6,
+        "frases": 12,
+        "palavras": 220,
+        "ppm": 184.4,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          415.2
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 429.6,
+        "fim": 501.1,
+        "frases": 16,
+        "palavras": 211,
+        "ppm": 176.8,
+        "perguntas": 1,
+        "voce_por_100pal": 0.9,
+        "viradas": [
+          491.7
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 501.1,
+        "fim": 572.7,
+        "frases": 15,
+        "palavras": 228,
+        "ppm": 191.1,
+        "perguntas": 0,
+        "voce_por_100pal": 1.3,
+        "viradas": [
+          504.8
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 572.7,
+        "fim": 644.3,
+        "frases": 12,
+        "palavras": 194,
+        "ppm": 162.6,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          586.8
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 644.3,
+        "fim": 715.9,
+        "frases": 16,
+        "palavras": 215,
+        "ppm": 180.2,
+        "perguntas": 4,
+        "voce_por_100pal": 5.1,
+        "viradas": [
+          660.2,
+          680.7
+        ]
+      }
+    ],
+    "views": 236315,
+    "titulo": "Every Green Eye Color Explained & Their Advantages",
+    "data": "2026-02-18"
+  },
+  {
+    "arquivo": "DlQZq9gdyFw.en.vtt",
+    "duracao_seg": 666.2,
+    "duracao_min": 11.1,
+    "palavras": 1637,
+    "palavras_por_minuto": 147.4,
+    "frases": 115,
+    "palavras_por_frase": 14.2,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 6.7,
+    "viradas_de_assunto": 8,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 83,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 66.6,
+        "frases": 13,
+        "palavras": 184,
+        "ppm": 165.7,
+        "perguntas": 0,
+        "voce_por_100pal": 4.3,
+        "viradas": [
+          7.4
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 66.6,
+        "fim": 133.2,
+        "frases": 11,
+        "palavras": 164,
+        "ppm": 147.7,
+        "perguntas": 0,
+        "voce_por_100pal": 8.5,
+        "viradas": [
+          70.0,
+          88.0
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 133.2,
+        "fim": 199.9,
+        "frases": 12,
+        "palavras": 162,
+        "ppm": 145.9,
+        "perguntas": 1,
+        "voce_por_100pal": 5.6,
+        "viradas": [
+          175.5
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 199.9,
+        "fim": 266.5,
+        "frases": 11,
+        "palavras": 160,
+        "ppm": 144.1,
+        "perguntas": 0,
+        "voce_por_100pal": 8.1,
+        "viradas": [
+          214.1,
+          254.5
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 266.5,
+        "fim": 333.1,
+        "frases": 12,
+        "palavras": 168,
+        "ppm": 151.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.4,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 333.1,
+        "fim": 399.7,
+        "frases": 11,
+        "palavras": 172,
+        "ppm": 154.9,
+        "perguntas": 0,
+        "voce_por_100pal": 5.2,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 399.7,
+        "fim": 466.4,
+        "frases": 10,
+        "palavras": 152,
+        "ppm": 136.9,
+        "perguntas": 0,
+        "voce_por_100pal": 7.2,
+        "viradas": [
+          425.9
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 466.4,
+        "fim": 533.0,
+        "frases": 12,
+        "palavras": 169,
+        "ppm": 152.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.5,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 533.0,
+        "fim": 599.6,
+        "frases": 11,
+        "palavras": 152,
+        "ppm": 136.9,
+        "perguntas": 0,
+        "voce_por_100pal": 7.2,
+        "viradas": [
+          597.9
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 599.6,
+        "fim": 666.2,
+        "frases": 12,
+        "palavras": 154,
+        "ppm": 138.7,
+        "perguntas": 1,
+        "voce_por_100pal": 9.7,
+        "viradas": []
+      }
+    ],
+    "views": 34791,
+    "titulo": "The 15 Miracle Benefits of Eating One Meal A Day",
+    "data": "2026-03-22"
+  },
+  {
+    "arquivo": "F31ErEAoXnc.en.vtt",
+    "duracao_seg": 803.7,
+    "duracao_min": 13.39,
+    "palavras": 2156,
+    "palavras_por_minuto": 161.0,
+    "frases": 179,
+    "palavras_por_frase": 12.0,
+    "perguntas_total": 1,
+    "densidade_voce_por_100pal": 4.0,
+    "viradas_de_assunto": 10,
+    "gancho_30s": {
+      "frases": 8,
+      "palavras": 130,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 80.4,
+        "frases": 15,
+        "palavras": 234,
+        "ppm": 174.7,
+        "perguntas": 0,
+        "voce_por_100pal": 6.8,
+        "viradas": [
+          45.8
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 80.4,
+        "fim": 160.7,
+        "frases": 16,
+        "palavras": 204,
+        "ppm": 152.3,
+        "perguntas": 0,
+        "voce_por_100pal": 2.0,
+        "viradas": [
+          107.0
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 160.7,
+        "fim": 241.1,
+        "frases": 19,
+        "palavras": 211,
+        "ppm": 157.5,
+        "perguntas": 0,
+        "voce_por_100pal": 2.4,
+        "viradas": [
+          173.8,
+          213.3
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 241.1,
+        "fim": 321.5,
+        "frases": 19,
+        "palavras": 224,
+        "ppm": 167.2,
+        "perguntas": 1,
+        "voce_por_100pal": 3.1,
+        "viradas": [
+          279.7,
+          320.5
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 321.5,
+        "fim": 401.8,
+        "frases": 17,
+        "palavras": 222,
+        "ppm": 165.7,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": [
+          336.6
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 401.8,
+        "fim": 482.2,
+        "frases": 21,
+        "palavras": 217,
+        "ppm": 162.0,
+        "perguntas": 0,
+        "voce_por_100pal": 4.6,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 482.2,
+        "fim": 562.6,
+        "frases": 16,
+        "palavras": 194,
+        "ppm": 144.8,
+        "perguntas": 0,
+        "voce_por_100pal": 7.2,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 562.6,
+        "fim": 642.9,
+        "frases": 17,
+        "palavras": 222,
+        "ppm": 165.7,
+        "perguntas": 0,
+        "voce_por_100pal": 1.4,
+        "viradas": [
+          589.1,
+          614.1
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 642.9,
+        "fim": 723.3,
+        "frases": 19,
+        "palavras": 217,
+        "ppm": 162.0,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 723.3,
+        "fim": 803.7,
+        "frases": 20,
+        "palavras": 217,
+        "ppm": 162.0,
+        "perguntas": 0,
+        "voce_por_100pal": 4.1,
+        "viradas": [
+          758.0
+        ]
+      }
+    ],
+    "views": 1823109,
+    "titulo": "Gut Detox: How To Repair & Clean Your Gut Naturally",
+    "data": "2026-03-25"
+  },
+  {
+    "arquivo": "2gjE-zK2cTg.en.vtt",
+    "duracao_seg": 616.8,
+    "duracao_min": 10.28,
+    "palavras": 1600,
+    "palavras_por_minuto": 155.6,
+    "frases": 95,
+    "palavras_por_frase": 16.8,
+    "perguntas_total": 3,
+    "densidade_voce_por_100pal": 6.2,
+    "viradas_de_assunto": 7,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 107,
+      "perguntas": 1
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 61.7,
+        "frases": 9,
+        "palavras": 199,
+        "ppm": 193.6,
+        "perguntas": 1,
+        "voce_por_100pal": 7.5,
+        "viradas": [
+          25.6
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 61.7,
+        "fim": 123.4,
+        "frases": 9,
+        "palavras": 163,
+        "ppm": 158.6,
+        "perguntas": 0,
+        "voce_por_100pal": 10.4,
+        "viradas": []
+      },
+      {
+        "bloco": 3,
+        "ini": 123.4,
+        "fim": 185.1,
+        "frases": 11,
+        "palavras": 149,
+        "ppm": 144.9,
+        "perguntas": 0,
+        "voce_por_100pal": 6.0,
+        "viradas": [
+          129.7
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 185.1,
+        "fim": 246.7,
+        "frases": 7,
+        "palavras": 153,
+        "ppm": 148.8,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": [
+          235.1
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 246.7,
+        "fim": 308.4,
+        "frases": 9,
+        "palavras": 148,
+        "ppm": 144.0,
+        "perguntas": 1,
+        "voce_por_100pal": 6.1,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 308.4,
+        "fim": 370.1,
+        "frases": 9,
+        "palavras": 153,
+        "ppm": 148.8,
+        "perguntas": 0,
+        "voce_por_100pal": 3.9,
+        "viradas": [
+          334.7
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 370.1,
+        "fim": 431.8,
+        "frases": 10,
+        "palavras": 163,
+        "ppm": 158.6,
+        "perguntas": 0,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          382.0
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 431.8,
+        "fim": 493.5,
+        "frases": 11,
+        "palavras": 172,
+        "ppm": 167.3,
+        "perguntas": 0,
+        "voce_por_100pal": 7.6,
+        "viradas": [
+          435.1,
+          461.0
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 493.5,
+        "fim": 555.2,
+        "frases": 10,
+        "palavras": 141,
+        "ppm": 137.2,
+        "perguntas": 0,
+        "voce_por_100pal": 5.7,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 555.2,
+        "fim": 616.8,
+        "frases": 10,
+        "palavras": 159,
+        "ppm": 154.7,
+        "perguntas": 1,
+        "voce_por_100pal": 7.5,
+        "viradas": []
+      }
+    ],
+    "views": 797002,
+    "titulo": "How Fasted Walking Forces Your Body to Burn Stubborn Belly Fat",
+    "data": "2026-04-17"
+  },
+  {
+    "arquivo": "YkqZ4EbKLl0.en.vtt",
+    "duracao_seg": 647.2,
+    "duracao_min": 10.79,
+    "palavras": 1671,
+    "palavras_por_minuto": 154.9,
+    "frases": 134,
+    "palavras_por_frase": 12.5,
+    "perguntas_total": 5,
+    "densidade_voce_por_100pal": 5.5,
+    "viradas_de_assunto": 10,
+    "gancho_30s": {
+      "frases": 3,
+      "palavras": 92,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 64.7,
+        "frases": 8,
+        "palavras": 182,
+        "ppm": 168.7,
+        "perguntas": 0,
+        "voce_por_100pal": 8.8,
+        "viradas": [
+          33.2
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 64.7,
+        "fim": 129.4,
+        "frases": 16,
+        "palavras": 163,
+        "ppm": 151.1,
+        "perguntas": 0,
+        "voce_por_100pal": 5.5,
+        "viradas": [
+          88.3
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 129.4,
+        "fim": 194.2,
+        "frases": 14,
+        "palavras": 182,
+        "ppm": 168.7,
+        "perguntas": 0,
+        "voce_por_100pal": 6.6,
+        "viradas": [
+          172.0
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 194.2,
+        "fim": 258.9,
+        "frases": 10,
+        "palavras": 147,
+        "ppm": 136.3,
+        "perguntas": 0,
+        "voce_por_100pal": 4.8,
+        "viradas": []
+      },
+      {
+        "bloco": 5,
+        "ini": 258.9,
+        "fim": 323.6,
+        "frases": 16,
+        "palavras": 168,
+        "ppm": 155.7,
+        "perguntas": 0,
+        "voce_por_100pal": 4.8,
+        "viradas": [
+          290.8
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 323.6,
+        "fim": 388.3,
+        "frases": 11,
+        "palavras": 169,
+        "ppm": 156.7,
+        "perguntas": 0,
+        "voce_por_100pal": 1.8,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 388.3,
+        "fim": 453.1,
+        "frases": 13,
+        "palavras": 156,
+        "ppm": 144.6,
+        "perguntas": 0,
+        "voce_por_100pal": 2.6,
+        "viradas": [
+          412.6
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 453.1,
+        "fim": 517.8,
+        "frases": 14,
+        "palavras": 165,
+        "ppm": 153.0,
+        "perguntas": 0,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          479.6
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 517.8,
+        "fim": 582.5,
+        "frases": 16,
+        "palavras": 175,
+        "ppm": 162.2,
+        "perguntas": 0,
+        "voce_por_100pal": 7.4,
+        "viradas": [
+          538.7,
+          550.4
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 582.5,
+        "fim": 647.2,
+        "frases": 16,
+        "palavras": 164,
+        "ppm": 152.0,
+        "perguntas": 5,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          586.0,
+          619.9
+        ]
+      }
+    ],
+    "views": 154694,
+    "titulo": "What Really Happened to Your Liver on Intermittent Fasting",
+    "data": "2026-04-30"
+  },
+  {
+    "arquivo": "2dcRAW0okt4.en.vtt",
+    "duracao_seg": 606.6,
+    "duracao_min": 10.11,
+    "palavras": 1683,
+    "palavras_por_minuto": 166.5,
+    "frases": 113,
+    "palavras_por_frase": 14.9,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 7.7,
+    "viradas_de_assunto": 9,
+    "gancho_30s": {
+      "frases": 4,
+      "palavras": 82,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 60.7,
+        "frases": 8,
+        "palavras": 164,
+        "ppm": 162.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          3.0
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 60.7,
+        "fim": 121.3,
+        "frases": 12,
+        "palavras": 167,
+        "ppm": 165.2,
+        "perguntas": 1,
+        "voce_por_100pal": 7.8,
+        "viradas": [
+          77.6,
+          96.2,
+          99.9
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 121.3,
+        "fim": 182.0,
+        "frases": 12,
+        "palavras": 186,
+        "ppm": 184.0,
+        "perguntas": 0,
+        "voce_por_100pal": 7.0,
+        "viradas": []
+      },
+      {
+        "bloco": 4,
+        "ini": 182.0,
+        "fim": 242.6,
+        "frases": 11,
+        "palavras": 176,
+        "ppm": 174.1,
+        "perguntas": 0,
+        "voce_por_100pal": 8.0,
+        "viradas": [
+          187.7,
+          208.6,
+          226.8
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 242.6,
+        "fim": 303.3,
+        "frases": 10,
+        "palavras": 156,
+        "ppm": 154.3,
+        "perguntas": 0,
+        "voce_por_100pal": 9.0,
+        "viradas": [
+          297.8
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 303.3,
+        "fim": 363.9,
+        "frases": 11,
+        "palavras": 157,
+        "ppm": 155.3,
+        "perguntas": 0,
+        "voce_por_100pal": 7.0,
+        "viradas": [
+          304.8
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 363.9,
+        "fim": 424.6,
+        "frases": 10,
+        "palavras": 182,
+        "ppm": 180.0,
+        "perguntas": 0,
+        "voce_por_100pal": 8.2,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 424.6,
+        "fim": 485.2,
+        "frases": 15,
+        "palavras": 163,
+        "ppm": 161.2,
+        "perguntas": 0,
+        "voce_por_100pal": 6.1,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 485.2,
+        "fim": 545.9,
+        "frases": 13,
+        "palavras": 170,
+        "ppm": 168.2,
+        "perguntas": 0,
+        "voce_por_100pal": 7.6,
+        "viradas": []
+      },
+      {
+        "bloco": 10,
+        "ini": 545.9,
+        "fim": 606.6,
+        "frases": 11,
+        "palavras": 166,
+        "ppm": 164.2,
+        "perguntas": 1,
+        "voce_por_100pal": 9.6,
+        "viradas": []
+      }
+    ],
+    "views": 104669,
+    "titulo": "How To Reverse A Fatty Liver & Drop Visceral Belly Fat In 10 Days",
+    "data": "2026-05-06"
+  },
+  {
+    "arquivo": "Y3la6aBrF4I.en.vtt",
+    "duracao_seg": 708.6,
+    "duracao_min": 11.81,
+    "palavras": 1995,
+    "palavras_por_minuto": 168.9,
+    "frases": 135,
+    "palavras_por_frase": 14.8,
+    "perguntas_total": 0,
+    "densidade_voce_por_100pal": 4.5,
+    "viradas_de_assunto": 10,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 104,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 70.9,
+        "frases": 16,
+        "palavras": 230,
+        "ppm": 194.8,
+        "perguntas": 0,
+        "voce_por_100pal": 7.4,
+        "viradas": [
+          12.7,
+          19.2,
+          63.5
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 70.9,
+        "fim": 141.7,
+        "frases": 11,
+        "palavras": 196,
+        "ppm": 166.0,
+        "perguntas": 0,
+        "voce_por_100pal": 3.6,
+        "viradas": [
+          83.9
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 141.7,
+        "fim": 212.6,
+        "frases": 14,
+        "palavras": 206,
+        "ppm": 174.4,
+        "perguntas": 0,
+        "voce_por_100pal": 3.4,
+        "viradas": [
+          193.6
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 212.6,
+        "fim": 283.4,
+        "frases": 17,
+        "palavras": 198,
+        "ppm": 167.7,
+        "perguntas": 0,
+        "voce_por_100pal": 4.5,
+        "viradas": []
+      },
+      {
+        "bloco": 5,
+        "ini": 283.4,
+        "fim": 354.3,
+        "frases": 12,
+        "palavras": 209,
+        "ppm": 177.0,
+        "perguntas": 0,
+        "voce_por_100pal": 2.4,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 354.3,
+        "fim": 425.2,
+        "frases": 12,
+        "palavras": 195,
+        "ppm": 165.1,
+        "perguntas": 0,
+        "voce_por_100pal": 3.6,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 425.2,
+        "fim": 496.0,
+        "frases": 14,
+        "palavras": 192,
+        "ppm": 162.6,
+        "perguntas": 0,
+        "voce_por_100pal": 3.6,
+        "viradas": [
+          491.5
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 496.0,
+        "fim": 566.9,
+        "frases": 10,
+        "palavras": 173,
+        "ppm": 146.5,
+        "perguntas": 0,
+        "voce_por_100pal": 2.9,
+        "viradas": [
+          546.9
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 566.9,
+        "fim": 637.7,
+        "frases": 17,
+        "palavras": 204,
+        "ppm": 172.7,
+        "perguntas": 0,
+        "voce_por_100pal": 5.4,
+        "viradas": [
+          567.4,
+          617.7
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 637.7,
+        "fim": 708.6,
+        "frases": 12,
+        "palavras": 192,
+        "ppm": 162.6,
+        "perguntas": 0,
+        "voce_por_100pal": 7.8,
+        "viradas": [
+          651.4
+        ]
+      }
+    ],
+    "views": 609721,
+    "titulo": "All 6 Levels Of Fasting Explained: Hour by Hour ",
+    "data": "2026-05-09"
+  },
+  {
+    "arquivo": "OHaFK1I1KqI.en.vtt",
+    "duracao_seg": 785.2,
+    "duracao_min": 13.09,
+    "palavras": 2043,
+    "palavras_por_minuto": 156.1,
+    "frases": 120,
+    "palavras_por_frase": 17.0,
+    "perguntas_total": 3,
+    "densidade_voce_por_100pal": 5.0,
+    "viradas_de_assunto": 6,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 91,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 78.5,
+        "frases": 13,
+        "palavras": 219,
+        "ppm": 167.3,
+        "perguntas": 0,
+        "voce_por_100pal": 2.3,
+        "viradas": [
+          22.8
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 78.5,
+        "fim": 157.0,
+        "frases": 16,
+        "palavras": 206,
+        "ppm": 157.4,
+        "perguntas": 1,
+        "voce_por_100pal": 6.3,
+        "viradas": [
+          79.5
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 157.0,
+        "fim": 235.6,
+        "frases": 11,
+        "palavras": 215,
+        "ppm": 164.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.1,
+        "viradas": []
+      },
+      {
+        "bloco": 4,
+        "ini": 235.6,
+        "fim": 314.1,
+        "frases": 10,
+        "palavras": 196,
+        "ppm": 149.8,
+        "perguntas": 0,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          277.4
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 314.1,
+        "fim": 392.6,
+        "frases": 12,
+        "palavras": 196,
+        "ppm": 149.8,
+        "perguntas": 0,
+        "voce_por_100pal": 2.6,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 392.6,
+        "fim": 471.1,
+        "frases": 13,
+        "palavras": 209,
+        "ppm": 159.7,
+        "perguntas": 0,
+        "voce_por_100pal": 1.4,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 471.1,
+        "fim": 549.6,
+        "frases": 11,
+        "palavras": 194,
+        "ppm": 148.2,
+        "perguntas": 0,
+        "voce_por_100pal": 5.2,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 549.6,
+        "fim": 628.2,
+        "frases": 13,
+        "palavras": 204,
+        "ppm": 155.9,
+        "perguntas": 1,
+        "voce_por_100pal": 7.8,
+        "viradas": [
+          554.1,
+          606.9
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 628.2,
+        "fim": 706.7,
+        "frases": 12,
+        "palavras": 205,
+        "ppm": 156.6,
+        "perguntas": 0,
+        "voce_por_100pal": 7.3,
+        "viradas": [
+          699.6
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 706.7,
+        "fim": 785.2,
+        "frases": 9,
+        "palavras": 199,
+        "ppm": 152.1,
+        "perguntas": 1,
+        "voce_por_100pal": 6.5,
+        "viradas": []
+      }
+    ],
+    "views": 31077,
+    "titulo": "OMAD vs 2 Meals: Which One Is Better Or Dangerous?",
+    "data": "2026-06-04"
+  },
+  {
+    "arquivo": "PoHC24gq7Tg.en.vtt",
+    "duracao_seg": 834.3,
+    "duracao_min": 13.9,
+    "palavras": 2173,
+    "palavras_por_minuto": 156.3,
+    "frases": 120,
+    "palavras_por_frase": 18.1,
+    "perguntas_total": 1,
+    "densidade_voce_por_100pal": 4.3,
+    "viradas_de_assunto": 13,
+    "gancho_30s": {
+      "frases": 6,
+      "palavras": 105,
+      "perguntas": 1
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 83.4,
+        "frases": 14,
+        "palavras": 258,
+        "ppm": 185.5,
+        "perguntas": 1,
+        "voce_por_100pal": 3.5,
+        "viradas": [
+          9.9,
+          27.6,
+          54.8
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 83.4,
+        "fim": 166.9,
+        "frases": 11,
+        "palavras": 221,
+        "ppm": 158.9,
+        "perguntas": 0,
+        "voce_por_100pal": 5.0,
+        "viradas": [
+          90.0
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 166.9,
+        "fim": 250.3,
+        "frases": 10,
+        "palavras": 203,
+        "ppm": 146.0,
+        "perguntas": 0,
+        "voce_por_100pal": 4.4,
+        "viradas": []
+      },
+      {
+        "bloco": 4,
+        "ini": 250.3,
+        "fim": 333.7,
+        "frases": 12,
+        "palavras": 235,
+        "ppm": 169.0,
+        "perguntas": 0,
+        "voce_por_100pal": 5.5,
+        "viradas": [
+          267.7
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 333.7,
+        "fim": 417.1,
+        "frases": 15,
+        "palavras": 200,
+        "ppm": 143.8,
+        "perguntas": 0,
+        "voce_por_100pal": 3.0,
+        "viradas": [
+          350.7,
+          376.4
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 417.1,
+        "fim": 500.6,
+        "frases": 16,
+        "palavras": 215,
+        "ppm": 154.6,
+        "perguntas": 0,
+        "voce_por_100pal": 2.3,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 500.6,
+        "fim": 584.0,
+        "frases": 14,
+        "palavras": 216,
+        "ppm": 155.3,
+        "perguntas": 0,
+        "voce_por_100pal": 5.1,
+        "viradas": [
+          532.0,
+          548.7,
+          580.9
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 584.0,
+        "fim": 667.4,
+        "frases": 11,
+        "palavras": 230,
+        "ppm": 165.4,
+        "perguntas": 0,
+        "voce_por_100pal": 3.0,
+        "viradas": [
+          651.7
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 667.4,
+        "fim": 750.9,
+        "frases": 9,
+        "palavras": 199,
+        "ppm": 143.1,
+        "perguntas": 0,
+        "voce_por_100pal": 4.0,
+        "viradas": [
+          723.4
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 750.9,
+        "fim": 834.3,
+        "frases": 8,
+        "palavras": 196,
+        "ppm": 141.0,
+        "perguntas": 0,
+        "voce_por_100pal": 7.7,
+        "viradas": [
+          806.9
+        ]
+      }
+    ],
+    "views": 206269,
+    "titulo": "8 Miraculous Things Happen When You Eat Boiled Eggs Everyday",
+    "data": "2026-06-21"
+  },
+  {
+    "arquivo": "ioDdPn9FxUo.en.vtt",
+    "duracao_seg": 768.2,
+    "duracao_min": 12.8,
+    "palavras": 2106,
+    "palavras_por_minuto": 164.5,
+    "frases": 159,
+    "palavras_por_frase": 13.2,
+    "perguntas_total": 4,
+    "densidade_voce_por_100pal": 5.5,
+    "viradas_de_assunto": 25,
+    "gancho_30s": {
+      "frases": 10,
+      "palavras": 103,
+      "perguntas": 1
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 76.8,
+        "frases": 18,
+        "palavras": 238,
+        "ppm": 185.9,
+        "perguntas": 1,
+        "voce_por_100pal": 7.6,
+        "viradas": [
+          10.3,
+          18.8,
+          59.6
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 76.8,
+        "fim": 153.6,
+        "frases": 15,
+        "palavras": 209,
+        "ppm": 163.2,
+        "perguntas": 0,
+        "voce_por_100pal": 5.7,
+        "viradas": [
+          98.2,
+          117.3
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 153.6,
+        "fim": 230.5,
+        "frases": 15,
+        "palavras": 209,
+        "ppm": 163.2,
+        "perguntas": 1,
+        "voce_por_100pal": 3.8,
+        "viradas": [
+          160.3,
+          180.7,
+          202.8
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 230.5,
+        "fim": 307.3,
+        "frases": 18,
+        "palavras": 213,
+        "ppm": 166.4,
+        "perguntas": 0,
+        "voce_por_100pal": 6.1,
+        "viradas": [
+          249.8,
+          260.3,
+          293.6
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 307.3,
+        "fim": 384.1,
+        "frases": 17,
+        "palavras": 220,
+        "ppm": 171.8,
+        "perguntas": 0,
+        "voce_por_100pal": 6.8,
+        "viradas": [
+          315.6,
+          323.8,
+          353.3,
+          373.8
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 384.1,
+        "fim": 460.9,
+        "frases": 13,
+        "palavras": 206,
+        "ppm": 160.9,
+        "perguntas": 0,
+        "voce_por_100pal": 3.9,
+        "viradas": [
+          445.0
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 460.9,
+        "fim": 537.7,
+        "frases": 19,
+        "palavras": 229,
+        "ppm": 178.9,
+        "perguntas": 0,
+        "voce_por_100pal": 7.9,
+        "viradas": [
+          466.6,
+          471.8,
+          503.1,
+          510.2,
+          527.0
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 537.7,
+        "fim": 614.6,
+        "frases": 10,
+        "palavras": 181,
+        "ppm": 141.4,
+        "perguntas": 0,
+        "voce_por_100pal": 1.7,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 614.6,
+        "fim": 691.4,
+        "frases": 16,
+        "palavras": 203,
+        "ppm": 158.6,
+        "perguntas": 0,
+        "voce_por_100pal": 3.4,
+        "viradas": [
+          627.1,
+          647.5
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 691.4,
+        "fim": 768.2,
+        "frases": 18,
+        "palavras": 200,
+        "ppm": 156.2,
+        "perguntas": 2,
+        "voce_por_100pal": 7.0,
+        "viradas": [
+          729.2,
+          750.7
+        ]
+      }
+    ],
+    "views": 7709,
+    "titulo": "How To Reverse Biological Age  (Science Explained)",
+    "data": "2026-07-08"
+  },
+  {
+    "arquivo": "mXvT2xX_y_4.en.vtt",
+    "duracao_seg": 868.5,
+    "duracao_min": 14.47,
+    "palavras": 2179,
+    "palavras_por_minuto": 150.5,
+    "frases": 142,
+    "palavras_por_frase": 15.3,
+    "perguntas_total": 8,
+    "densidade_voce_por_100pal": 2.0,
+    "viradas_de_assunto": 17,
+    "gancho_30s": {
+      "frases": 4,
+      "palavras": 100,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 86.8,
+        "frases": 9,
+        "palavras": 224,
+        "ppm": 154.8,
+        "perguntas": 0,
+        "voce_por_100pal": 2.2,
+        "viradas": [
+          26.2,
+          61.8
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 86.8,
+        "fim": 173.7,
+        "frases": 13,
+        "palavras": 221,
+        "ppm": 152.7,
+        "perguntas": 0,
+        "voce_por_100pal": 0.5,
+        "viradas": [
+          98.4,
+          136.9
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 173.7,
+        "fim": 260.5,
+        "frases": 14,
+        "palavras": 236,
+        "ppm": 163.0,
+        "perguntas": 1,
+        "voce_por_100pal": 0.4,
+        "viradas": [
+          182.6,
+          220.6
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 260.5,
+        "fim": 347.4,
+        "frases": 19,
+        "palavras": 243,
+        "ppm": 167.9,
+        "perguntas": 2,
+        "voce_por_100pal": 0.4,
+        "viradas": [
+          315.8,
+          329.8
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 347.4,
+        "fim": 434.2,
+        "frases": 14,
+        "palavras": 200,
+        "ppm": 138.2,
+        "perguntas": 0,
+        "voce_por_100pal": 2.5,
+        "viradas": [
+          371.0,
+          425.9
+        ]
+      },
+      {
+        "bloco": 6,
+        "ini": 434.2,
+        "fim": 521.1,
+        "frases": 15,
+        "palavras": 211,
+        "ppm": 145.8,
+        "perguntas": 1,
+        "voce_por_100pal": 1.4,
+        "viradas": []
+      },
+      {
+        "bloco": 7,
+        "ini": 521.1,
+        "fim": 607.9,
+        "frases": 19,
+        "palavras": 240,
+        "ppm": 165.8,
+        "perguntas": 1,
+        "voce_por_100pal": 1.2,
+        "viradas": [
+          546.0,
+          553.8,
+          572.2,
+          598.4
+        ]
+      },
+      {
+        "bloco": 8,
+        "ini": 607.9,
+        "fim": 694.8,
+        "frases": 9,
+        "palavras": 194,
+        "ppm": 134.0,
+        "perguntas": 0,
+        "voce_por_100pal": 0.5,
+        "viradas": []
+      },
+      {
+        "bloco": 9,
+        "ini": 694.8,
+        "fim": 781.6,
+        "frases": 14,
+        "palavras": 215,
+        "ppm": 148.5,
+        "perguntas": 1,
+        "voce_por_100pal": 4.7,
+        "viradas": [
+          748.6,
+          762.9,
+          767.0
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 781.6,
+        "fim": 868.5,
+        "frases": 16,
+        "palavras": 195,
+        "ppm": 134.7,
+        "perguntas": 2,
+        "voce_por_100pal": 7.2,
+        "viradas": []
+      }
+    ],
+    "views": 1157576,
+    "titulo": "If You Have Type O Positive Blood, Your DNA Has a Dark Secret",
+    "data": "2026-07-11"
+  },
+  {
+    "arquivo": "CP2m-dsQdOs.en.vtt",
+    "duracao_seg": 623.4,
+    "duracao_min": 10.39,
+    "palavras": 1694,
+    "palavras_por_minuto": 163.0,
+    "frases": 91,
+    "palavras_por_frase": 18.6,
+    "perguntas_total": 2,
+    "densidade_voce_por_100pal": 3.2,
+    "viradas_de_assunto": 13,
+    "gancho_30s": {
+      "frases": 8,
+      "palavras": 100,
+      "perguntas": 0
+    },
+    "mapa_de_blocos": [
+      {
+        "bloco": 1,
+        "ini": 0.0,
+        "fim": 62.3,
+        "frases": 13,
+        "palavras": 189,
+        "ppm": 181.9,
+        "perguntas": 0,
+        "voce_por_100pal": 6.3,
+        "viradas": [
+          2.5,
+          10.6
+        ]
+      },
+      {
+        "bloco": 2,
+        "ini": 62.3,
+        "fim": 124.7,
+        "frases": 12,
+        "palavras": 162,
+        "ppm": 155.9,
+        "perguntas": 0,
+        "voce_por_100pal": 1.2,
+        "viradas": [
+          65.2,
+          69.8,
+          75.6,
+          112.9
+        ]
+      },
+      {
+        "bloco": 3,
+        "ini": 124.7,
+        "fim": 187.0,
+        "frases": 9,
+        "palavras": 169,
+        "ppm": 162.6,
+        "perguntas": 1,
+        "voce_por_100pal": 5.3,
+        "viradas": [
+          138.8,
+          178.1
+        ]
+      },
+      {
+        "bloco": 4,
+        "ini": 187.0,
+        "fim": 249.4,
+        "frases": 7,
+        "palavras": 152,
+        "ppm": 146.3,
+        "perguntas": 0,
+        "voce_por_100pal": 1.3,
+        "viradas": [
+          210.4
+        ]
+      },
+      {
+        "bloco": 5,
+        "ini": 249.4,
+        "fim": 311.7,
+        "frases": 6,
+        "palavras": 148,
+        "ppm": 142.4,
+        "perguntas": 0,
+        "voce_por_100pal": 1.4,
+        "viradas": []
+      },
+      {
+        "bloco": 6,
+        "ini": 311.7,
+        "fim": 374.1,
+        "frases": 9,
+        "palavras": 195,
+        "ppm": 187.7,
+        "perguntas": 0,
+        "voce_por_100pal": 4.6,
+        "viradas": [
+          316.6,
+          354.0
+        ]
+      },
+      {
+        "bloco": 7,
+        "ini": 374.1,
+        "fim": 436.4,
+        "frases": 9,
+        "palavras": 150,
+        "ppm": 144.4,
+        "perguntas": 0,
+        "voce_por_100pal": 0.0,
+        "viradas": []
+      },
+      {
+        "bloco": 8,
+        "ini": 436.4,
+        "fim": 498.8,
+        "frases": 9,
+        "palavras": 174,
+        "ppm": 167.5,
+        "perguntas": 0,
+        "voce_por_100pal": 1.1,
+        "viradas": [
+          443.1
+        ]
+      },
+      {
+        "bloco": 9,
+        "ini": 498.8,
+        "fim": 561.1,
+        "frases": 9,
+        "palavras": 206,
+        "ppm": 198.3,
+        "perguntas": 0,
+        "voce_por_100pal": 1.0,
+        "viradas": [
+          518.5
+        ]
+      },
+      {
+        "bloco": 10,
+        "ini": 561.1,
+        "fim": 623.4,
+        "frases": 8,
+        "palavras": 149,
+        "ppm": 143.4,
+        "perguntas": 1,
+        "voce_por_100pal": 9.4,
+        "viradas": []
+      }
+    ],
+    "views": 6050,
+    "titulo": "The Permanent Fix for Puffy Chest That Actually Works",
+    "data": "2026-07-20"
+  }
+]
