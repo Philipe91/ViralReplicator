@@ -1,0 +1,24 @@
+{
+  "id": "br_demo3_arterias",
+  "idioma": "pt-BR",
+  "voz": "de-DE-FlorianMultilingualNeural",
+  "ritmo": "+8%",
+  "titulo": "DEMO 3 BR — estilo claro com pessoas (1 min)",
+  "nicho": "Saude/ciencia formato Think Science — teste de idioma",
+  "mercado": "Brasil (pt-BR)",
+  "nota_metodo": "Par em portugues do de_demo3_arterien. MESMA voz nos dois (de-DE-FlorianMultilingualNeural e multilingue), para o teste isolar o idioma e nao a identidade vocal. Texto escrito em portugues com as proprias palavras, nao traduzido palavra a palavra do alemao.",
+  "cenas": [
+    {
+      "n": 1,
+      "narracao": "Não existe alimento que limpe as suas artérias. Nenhum suco, nenhum chá, nenhuma dieta do limão. Essa faxina que você encontra em receita de internet não acontece dentro do seu corpo. E mesmo assim, as suas artérias hoje não são as mesmas de um ano atrás. Elas mudam o tempo todo, para os dois lados. A pergunta não é como esfregar elas por dentro. A pergunta é para que lado você está empurrando.",
+      "movimento": true
+    },
+    {
+      "n": 2,
+      "narracao": "Para entender ao que as suas artérias respondem, você precisa saber o que acontece ali dentro. A parede interna dos seus vasos é forrada por uma camada finíssima de células. Ela tem a espessura de uma célula só. Essa camada se chama endotélio, e ela não é um cano. É um órgão ativo. É ela que decide o quanto um vaso abre, se o sangue coagula, e o que atravessa a parede e o que não atravessa.",
+      "movimento": true
+    }
+  ],
+  "estilo": "explicativo_claro",
+  "musica": "de_thinkscience"
+}

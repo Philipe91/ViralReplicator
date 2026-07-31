@@ -1,0 +1,165 @@
+{
+  "id": "de_01_augenfarbe",
+  "idioma": "de-DE",
+  "voz": "de-DE-ConradNeural",
+  "ritmo": "+8%",
+  "titulo": "Was deine Augenfarbe wirklich über dich verrät",
+  "titulo_variacoes": [
+    "Deine Augenfarbe verrät mehr über dich, als du denkst",
+    "Wenn du blaue Augen hast, teilst du einen Vorfahren mit allen Blauäugigen",
+    "Was passiert in deinen Augen, wenn sie blau sind?",
+    "Blaue Augen: Der 8.000 Jahre alte Fehler in deiner DNA",
+    "Deine Augenfarbe ist kein Zufall — das steckt wirklich dahinter"
+  ],
+  "nicho": "Identidade (traço nao escolhido) — saude/ciencia, formato Think Science",
+  "mercado": "Alemanha / DACH (de-DE)",
+  "nota_metodo": "Roteiro ORIGINAL escrito a partir de conhecimento do assunto (genetica de OCA2/HERC2, mutacao fundadora de Eiberg 2008, espalhamento de Tyndall, risco de melanoma uveal). Nenhum texto de terceiro foi reaproveitado — o canal de referencia serviu so para entender formato, duracao e categoria de assunto.",
+  "cenas": [
+    {
+      "n": 1,
+      "punch_in": true,
+      "narracao": "Wenn du blaue Augen hast, dann teilst du einen einzigen Vorfahren mit jedem anderen blauäugigen Menschen auf diesem Planeten. Nicht viele. Einen. Vor sechs- bis zehntausend Jahren trug ein Mensch irgendwo zwischen dem Schwarzen Meer und Nordeuropa eine Veränderung im Erbgut, die es vorher nirgendwo gab. Jedes blaue Auge, das du heute siehst, geht auf diese eine Person zurück. Und das ist erst der Anfang von dem, was in deiner Iris steckt.",
+      "planos": [
+        { "imagem": "extreme macro photograph of a human blue iris filling the frame, visible fiber structure of the stroma, dark pupil, crisp detail", "ancora": "" }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 2,
+      "narracao": "Fangen wir bei dem an, was Augenfarbe überhaupt ist. In deiner Iris gibt es nur einen einzigen Farbstoff. Er heißt Melanin, und es ist derselbe Stoff, der deine Haut und deine Haare färbt. Es gibt kein blaues Pigment. Es gibt kein grünes Pigment. Es gibt nur mehr oder weniger Melanin in der vorderen Schicht der Iris. Braune Augen haben viel davon. Blaue Augen haben fast keins.",
+      "planos": [
+        { "imagem": "medical illustration cross section of the human iris showing the stroma layer and pigment epithelium, labeled layers without text, flat vector anatomical diagram, clean white background", "ancora": "" },
+        { "imagem": "side by side comparison illustration of a dark brown iris dense with melanin granules and a pale iris with almost no pigment, flat medical illustration, white background", "ancora": "Braune Augen haben viel davon" }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 3,
+      "narracao": "Und jetzt die Frage, an der die meisten hängen bleiben. Wenn es kein blaues Pigment gibt, warum sind blaue Augen dann blau? Die Antwort hat nichts mit Farbe zu tun, sondern mit Physik. Wenn Licht in eine Iris ohne Melanin fällt, wird es an den feinen Fasern im Gewebe gestreut. Kurze Wellenlängen werden stärker gestreut als lange. Kurz heißt blau. Es ist genau derselbe Effekt, der den Himmel blau macht.",
+      "planos": [
+        { "imagem": "scientific illustration of light rays entering a translucent fibrous tissue and scattering, short blue wavelengths bouncing back, physics diagram style, clean white background, no text", "ancora": "" },
+        { "imagem": "clear blue sky over an empty horizon, sunlight scattering, minimal composition, bright and clean", "ancora": "der den Himmel blau macht" }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 4,
+      "narracao": "Blaue Augen sind also keine gefärbten Augen. Sie sind ungefärbte Augen. Die Farbe entsteht nicht im Auge, sie entsteht im Licht. Deshalb sieht deine Augenfarbe an einem grauen Novembertag anders aus als in der Mittagssonne. Das Pigment hat sich nicht verändert. Das Licht hat sich verändert. Und wer blaue Augen hat, sieht diesen Unterschied besonders deutlich.",
+      "planos": [
+        { "imagem": "the same pale blue human iris photographed in two different lighting conditions, one soft grey overcast light one bright warm sunlight, macro detail, side by side", "ancora": "" },
+        { "imagem": "macro photograph of a human eye catching low warm sunlight, iris glowing pale blue, shallow depth of field", "ancora": "Und wer blaue Augen hat" }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 5,
+      "narracao": "In der Schule haben die meisten von uns etwas gelernt, das schlicht falsch ist. Ein Gen, braun setzt sich durch, blau nicht. Zwei braunäugige Eltern könnten demnach kein blauäugiges Kind bekommen. Das stimmt nicht. An der Augenfarbe sind über fünfzig bekannte Stellen im Erbgut beteiligt. Zwei braunäugige Eltern können sehr wohl ein blauäugiges Kind bekommen, und das ist weder selten noch ein Grund für Misstrauen.",
+      "planos": [
+        { "imagem": "old fashioned school biology chart with a punnett square grid, chalkboard aesthetic, crossed out with a red mark, no readable text, flat illustration", "ancora": "" },
+        { "imagem": "medical illustration of a DNA double helix with many small highlighted marker points along its length, dark blue and white, clean background", "ancora": "An der Augenfarbe sind über fünfzig" },
+        { "imagem": "warm illustration of two adult silhouettes and a small child silhouette, soft neutral background, no faces visible, gentle lighting", "ancora": "Zwei braunäugige Eltern können sehr wohl" }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 6,
+      "narracao": "Zwei Namen tauchen dabei immer wieder auf. Ein Gen namens OCA2 baut das Werkzeug, mit dem deine Zellen Melanin herstellen. Direkt daneben liegt ein Abschnitt im Gen HERC2, und der funktioniert wie ein Regler. Er entscheidet nicht, ob OCA2 existiert, sondern wie laut es arbeitet. Bei blauen Augen steht dieser Regler fast auf null. Das Werkzeug ist da. Es wird nur kaum benutzt.",
+      "planos": [
+        { "imagem": "medical illustration of a strand of DNA with two adjacent gene regions highlighted in different colors, one small region acting as a switch, clean scientific diagram, white background, no text", "ancora": "" },
+        { "imagem": "conceptual illustration of a dimmer control turned almost completely down, glowing faintly, dark background, minimal", "ancora": "der funktioniert wie ein Regler" }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 7,
+      "narracao": "Zurück zu dem Vorfahren vom Anfang. Dänische Forscher haben untersucht, wie diese Veränderung im Erbgut bei blauäugigen Menschen aussieht. Das Ergebnis war ungewöhnlich eindeutig. Die Stelle sieht bei ihnen praktisch identisch aus, quer über Länder und Kontinente hinweg. Wenn eine Veränderung unabhängig mehrfach entstanden wäre, würde sie unterschiedlich aussehen. Sie tut es nicht. Alles deutet darauf hin, dass sie genau einmal passiert ist.",
+      "planos": [
+        { "imagem": "scientific illustration of a single mutation point spreading through a branching family tree diagram, minimal lines, dark blue on white, no text", "ancora": "" },
+        { "imagem": "illustration of a stylized map of europe and the black sea region with a single glowing origin point, muted earth tones, no labels or text", "ancora": "quer über Länder und Kontinente" }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 8,
+      "narracao": "Warum hat sich diese Veränderung dann ausgerechnet im Norden Europas durchgesetzt? Ehrliche Antwort: das weiß niemand sicher. Eine Vermutung ist Vitamin D, weil hellere Menschen im lichtarmen Norden im Vorteil gewesen sein könnten. Eine andere ist schlicht, dass etwas Seltenes attraktiv wirkt und deshalb häufiger weitergegeben wurde. Beides sind Hypothesen. Wer dir das als bewiesen verkauft, hat die Studien nicht gelesen.",
+      "planos": [
+        { "imagem": "low winter sun over a nordic landscape with bare trees and snow, long shadows, pale cold light, cinematic wide shot", "ancora": "" },
+        { "imagem": "medical illustration of skin cross section with sunlight rays reaching the lower layers, vitamin D synthesis diagram style, flat vector, white background, no text", "ancora": "Eine Vermutung ist Vitamin D" }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 9,
+      "narracao": "Etwas, das viele Eltern kennen. Sehr viele Babys kommen mit hellen, grau-blauen Augen zur Welt und bekommen später eine andere Farbe. Das liegt daran, dass die Zellen in der Iris das Melanin erst nach der Geburt einlagern. Dieser Prozess braucht Monate, manchmal die ersten Jahre. Die endgültige Farbe steht bei den meisten Kindern erst mit etwa drei Jahren fest.",
+      "planos": [
+        { "imagem": "extreme macro of a newborn baby eye with pale grey blue iris, soft natural light, very shallow focus, tender", "ancora": "" },
+        { "imagem": "medical illustration showing melanin granules gradually accumulating in the iris tissue over time, three stages left to right, flat vector diagram, white background, no text", "ancora": "das Melanin erst nach der Geburt" }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 10,
+      "narracao": "Jetzt zu dem Teil, der dich im Alltag wirklich betrifft. Melanin in der Iris ist nicht nur Farbe, es ist auch ein Filter. Wer wenig davon hat, lässt mehr Streulicht ins Auge. Deshalb blenden helle Augen schneller. Sonne auf nasser Straße, Scheinwerfer bei Nacht, Schnee im Februar. Wenn du bei sowas immer zuerst blinzelst, während andere entspannt weiterschauen, liegt das nicht an dir. Es liegt an deiner Iris.",
+      "planos": [
+        { "imagem": "medical illustration of light entering an eye, one side dense pigment absorbing stray light, other side pale iris letting light scatter inside, comparison diagram, flat vector, white background", "ancora": "" },
+        { "imagem": "wet asphalt road at low sun with harsh glare and reflections, oncoming headlights, cinematic, high contrast", "ancora": "Sonne auf nasser Straße" }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 11,
+      "narracao": "Derselbe Filter erklärt auch einen Zusammenhang, der gut belegt ist. Menschen mit hellen Augen erkranken häufiger an einem Tumor der Aderhaut im Auge. Diese Erkrankung ist selten, das muss man dazusagen. Aber der Zusammenhang ist stabil und seit Langem bekannt. Die praktische Konsequenz ist unspektakulär und kostet fast nichts: eine Sonnenbrille mit echtem UV-Schutz, und zwar nicht nur im Sommerurlaub.",
+      "planos": [
+        { "imagem": "medical illustration cross section of the human eye highlighting the choroid layer behind the retina, flat anatomical vector diagram, clean white background, no text", "ancora": "" },
+        { "imagem": "a pair of simple sunglasses lying on a wooden table in bright summer light, sharp shadow, minimal composition", "ancora": "eine Sonnenbrille mit echtem UV-Schutz" }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 12,
+      "narracao": "Und jetzt der Teil, den die halbe Internetwelt falsch behauptet. Deine Augenfarbe sagt nichts über deinen Charakter. Nichts über Intelligenz, nichts über Treue, nichts über Durchsetzungsvermögen. Es gibt keine belastbaren Daten dafür. Was es gibt, sind Erwartungen: Menschen schreiben hellen Augen bestimmte Eigenschaften zu und finden sie dann. Das sagt etwas über den Betrachter aus, nicht über die Iris.",
+      "planos": [
+        { "imagem": "conceptual illustration of a personality quiz chart being crossed out, muted colors, flat vector, no readable text, white background", "ancora": "" },
+        { "imagem": "macro photograph of a human eye reflecting a soft window light, neutral expression, shallow focus, honest and plain", "ancora": "Das sagt etwas über den Betrachter" }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 13,
+      "narracao": "Bleiben die selteneren Farben. Grün ist die seltenste der geläufigen Augenfarben, weltweit haben nur wenige Prozent der Menschen grüne Augen. Grün entsteht, wenn wenig Melanin auf die blaue Streuung trifft und beides sich überlagert. Bernsteinfarbene Augen wirken golden, weil dort ein anderer, wärmerer Pigmentanteil überwiegt. Und graue Augen sind keine verwaschenen blauen Augen, sondern eine Frage der Faserdichte im Gewebe.",
+      "planos": [
+        { "imagem": "extreme macro of a green human iris with visible golden flecks over a blue base layer, high detail, natural light", "ancora": "" },
+        { "imagem": "extreme macro of an amber golden human iris, warm honey tones, fine radial fiber detail, natural light", "ancora": "Bernsteinfarbene Augen wirken golden" },
+        { "imagem": "extreme macro of a pale grey human iris with dense fine fiber structure, cool tones, high detail", "ancora": "Und graue Augen sind keine" }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 14,
+      "narracao": "Manche Menschen haben zwei verschiedene Augenfarben, oder einen andersfarbigen Sektor in einer Iris. Das nennt sich Heterochromie. In den allermeisten Fällen ist das angeboren und völlig harmlos. Wichtig ist der andere Fall: wenn sich die Farbe eines Auges bei einem Erwachsenen plötzlich verändert, ist das kein kosmetisches Thema. Das gehört augenärztlich abgeklärt, und zwar zeitnah.",
+      "planos": [
+        { "imagem": "macro photograph of a human face region showing two eyes with clearly different iris colors, one brown one blue, soft even light, no full face visible", "ancora": "" },
+        { "imagem": "clean modern ophthalmology examination room with a slit lamp device, empty chair, soft clinical light, no people, no text", "ancora": "Das gehört augenärztlich abgeklärt" }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 15,
+      "narracao": "Verändert sich Augenfarbe im Laufe des Lebens? Ein bisschen, ja. Bei manchen Menschen wird sie im Alter etwas heller, weil das Gewebe der Iris sich verändert. Aber das passiert langsam und subtil. Alles, was in Wochen passiert, ist kein Alterungsprozess. Und alles, was in Werbung verspricht, deine Augenfarbe dauerhaft und harmlos zu ändern, solltest du sehr kritisch betrachten.",
+      "planos": [
+        { "imagem": "macro of an older person's iris with visible age related changes in the fiber structure, subtle lightening, natural window light, dignified", "ancora": "" },
+        { "imagem": "conceptual illustration of a warning symbol over a cosmetic product bottle, muted colors, flat vector, no readable text, white background", "ancora": "Und alles, was in Werbung verspricht" }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 16,
+      "narracao": "Am Ende bleibt etwas, das ich ziemlich schön finde. Deine Augenfarbe ist kein Charakterzeugnis und keine Prophezeiung. Sie ist ein Protokoll. Eine Veränderung, die vor Tausenden von Jahren in einem einzigen Menschen entstanden ist, hat es bis in dein Gesicht geschafft, weil jede Generation dazwischen lange genug gelebt hat, um sie weiterzugeben. Wenn du das nächste Mal in den Spiegel schaust, schau eine Sekunde länger hin. Da steht mehr drin, als die meisten vermuten.",
+      "planos": [
+        { "imagem": "extreme macro of a human iris slowly filling the frame, intricate fiber detail catching soft light, contemplative, dark surrounding", "ancora": "" },
+        { "imagem": "a person's reflection partially visible in a bathroom mirror in soft morning light, only the eye area in focus, quiet and intimate", "ancora": "das nächste Mal in den Spiegel" }
+      ],
+      "movimento": true
+    }
+  ]
+}

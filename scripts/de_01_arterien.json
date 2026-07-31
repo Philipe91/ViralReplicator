@@ -1,0 +1,248 @@
+{
+  "id": "de_01_arterien",
+  "idioma": "de-DE",
+  "voz": "de-DE-ConradNeural",
+  "ritmo": "+8%",
+  "titulo": "Was deine Arterien wirklich sauber hält (und was nichts bringt)",
+  "titulo_variacoes": [
+    "Arterien reinigen: Was davon stimmt und was nicht",
+    "Das passiert in deinen Arterien, wenn du diese 6 Dinge isst",
+    "Warum man Arterien nicht reinigen kann — und was stattdessen funktioniert",
+    "Die 6 Bausteine, auf die deine Arterien wirklich reagieren",
+    "Deine Arterien sind heute anders als vor einem Jahr. Das entscheidet, in welche Richtung."
+  ],
+  "nicho": "Saude/ciencia formato Think Science — video 1 da sequencia cronologica (equivalente ao #1 deles: arterias)",
+  "mercado": "Alemanha / DACH (de-DE)",
+  "nota_metodo": "Roteiro ORIGINAL. O video de referencia foi lido para entender o ASSUNTO e a duracao, nao para reaproveitar texto. Estrutura em CATALOGO (licao tirada do video de 5,75M deles, que e catalogo e nao explicativo linear). Afirmacoes ajustadas para o que tem evidencia: placa nao se 'limpa', se estabiliza; K2 tratada como preliminar; nitrato/NO e fibra viscosa tem base solida.",
+  "cenas": [
+    {
+      "n": 1,
+      "punch_in": true,
+      "narracao": "Es gibt kein Lebensmittel, das deine Arterien reinigt. Kein Saft, kein Tee, keine Zitronenkur. Was du in Kochbüchern als Arterienreinigung findest, gibt es in deinem Körper nicht. Und trotzdem sind deine Arterien heute nicht dieselben wie vor einem Jahr. Sie verändern sich ständig, in beide Richtungen. Die Frage ist nicht, wie du sie sauber schrubbst. Die Frage ist, in welche Richtung du sie schiebst.",
+      "planos": [
+        {
+          "imagem": "medical illustration cross section of a healthy human artery with smooth inner wall and flowing red blood cells, flat vector anatomical style, clean white background, no text",
+          "ancora": ""
+        }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 2,
+      "narracao": "Um zu verstehen, worauf deine Arterien reagieren, musst du wissen, was da überhaupt passiert. Die Innenseite deiner Blutgefäße ist mit einer hauchdünnen Zellschicht ausgekleidet. Sie ist eine Zelle dick. Diese Schicht heißt Endothel, und sie ist kein Rohr, sondern ein aktives Organ. Sie entscheidet, wie weit sich ein Gefäß öffnet, ob Blut gerinnt, und was durch die Wand darf und was nicht.",
+      "planos": [
+        {
+          "imagem": "medical illustration of the endothelium, a single layer of flat cells lining the inside of a blood vessel, magnified view, flat vector diagram, white background, no text",
+          "ancora": ""
+        },
+        {
+          "imagem": "medical illustration of a blood vessel dilating and constricting, two states side by side, arrows showing diameter change, flat vector, white background, no text",
+          "ancora": "Sie entscheidet, wie weit sich ein Gefäß öffnet"
+        }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 3,
+      "narracao": "Wenn diese Schicht gereizt ist, wird sie durchlässig. Dann wandern Cholesterinpartikel in die Gefäßwand hinein, und dort bleiben sie stecken. Dein Immunsystem schickt Fresszellen los, die diese Partikel aufnehmen. Die Zellen füllen sich, sterben ab und bleiben liegen. Aus diesem Rest entsteht über Jahre die Plaque. Sie liegt nicht im Blutstrom wie Dreck in einem Rohr. Sie steckt in der Wand.",
+      "planos": [
+        {
+          "imagem": "medical illustration showing cholesterol particles passing through a damaged vessel lining into the artery wall, immune cells engulfing them, flat vector cross section, white background, no text",
+          "ancora": ""
+        },
+        {
+          "imagem": "medical illustration of a plaque forming inside the wall layer of an artery over time, three progressive stages, flat vector diagram, white background, no text",
+          "ancora": "Aus diesem Rest entsteht über Jahre"
+        },
+        {
+          "imagem": "comparison illustration: a dirty pipe with debris floating inside versus an artery with plaque embedded in the wall itself, clear contrast, flat vector, white background, no text",
+          "ancora": "Sie liegt nicht im Blutstrom"
+        }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 4,
+      "narracao": "Deshalb ist das Wort Reinigen so irreführend. Man kann nichts abspülen, was in der Wand sitzt. Was tatsächlich möglich ist, klingt langweiliger und ist viel wichtiger: Plaque kann stabil werden. Eine stabile Plaque hat eine dicke, feste Kappe und bleibt, wo sie ist. Eine instabile Plaque hat eine dünne Kappe, reißt auf, und genau dieser Riss löst die meisten Herzinfarkte aus. Nicht die Größe entscheidet. Die Stabilität entscheidet.",
+      "planos": [
+        {
+          "imagem": "medical illustration comparing a stable plaque with a thick fibrous cap and an unstable plaque with a thin cap starting to rupture, side by side cross sections, flat vector, white background, no text",
+          "ancora": ""
+        },
+        {
+          "imagem": "medical illustration of a ruptured plaque with a blood clot forming and blocking the artery, dramatic but clean flat vector diagram, white background, no text",
+          "ancora": "reißt auf, und genau dieser Riss"
+        }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 5,
+      "narracao": "Damit sind wir bei dem, worauf deine Gefäße wirklich reagieren. Baustein eins: fetter Seefisch. Lachs, Makrele, Hering, Sardine. Die Omega-3-Fettsäuren daraus werden in die Membranen deiner Zellen eingebaut und verändern, welche Entzündungsbotenstoffe dein Körper daraus herstellt. Zwei Portionen pro Woche sind die übliche Empfehlung. Und ja, Hering und Makrele aus der Dose zählen genauso.",
+      "planos": [
+        {
+          "imagem": "clean overhead photograph of a raw salmon fillet and whole mackerel on a light stone surface, natural daylight, minimal styling",
+          "ancora": ""
+        },
+        {
+          "imagem": "medical illustration of omega 3 fatty acid molecules being incorporated into a cell membrane bilayer, flat vector scientific diagram, white background, no text",
+          "ancora": "werden in die Membranen deiner Zellen"
+        }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 6,
+      "narracao": "Baustein zwei: Olivenöl. Nicht als Wundermittel, sondern als Ersatz. Der Effekt entsteht dadurch, dass es etwas anderes verdrängt, nämlich feste Fette. In der großen spanischen Ernährungsstudie war genau das der Unterschied zwischen den Gruppen. Wichtig ist die Menge, nicht der Tropfen zur Dekoration. Und natives Olivenöl extra behält die Begleitstoffe, die beim starken Raffinieren verloren gehen.",
+      "planos": [
+        {
+          "imagem": "olive oil being poured from a dark glass bottle into a small ceramic bowl, warm side light, clean minimal composition",
+          "ancora": ""
+        },
+        {
+          "imagem": "illustration comparing a plate of food prepared with solid fat versus the same plate with liquid oil, simple flat vector, white background, no text",
+          "ancora": "nämlich feste Fette"
+        },
+        {
+          "imagem": "close up of green olives on a branch in mediterranean sunlight, shallow depth of field",
+          "ancora": "In der großen spanischen Ernährungsstudie"
+        }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 7,
+      "narracao": "Baustein drei ist der unterschätzteste von allen: lösliche Ballaststoffe. Haferflocken, Gerste, Hülsenfrüchte, Äpfel. Diese Fasern binden im Darm Gallensäuren und schleusen sie hinaus. Deine Leber muss dann neue Gallensäuren bauen, und dafür holt sie sich Cholesterin aus dem Blut. Das ist kein Trick und kein Detox. Das ist Chemie, die jeden Tag in dir läuft, ob du davon weißt oder nicht.",
+      "planos": [
+        {
+          "imagem": "overhead flat lay of oats, barley grains, lentils and beans in separate small bowls on a light wooden surface, natural light, clean",
+          "ancora": ""
+        },
+        {
+          "imagem": "medical illustration of soluble fiber binding bile acids in the intestine and carrying them out, flat vector diagram with arrows, white background, no text",
+          "ancora": "binden im Darm Gallensäuren"
+        },
+        {
+          "imagem": "medical illustration of the liver pulling cholesterol from the bloodstream to synthesize new bile acids, flat vector anatomical diagram, white background, no text",
+          "ancora": "Deine Leber muss dann neue"
+        }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 8,
+      "narracao": "Baustein vier: Nüsse. Eine Handvoll am Tag, ungesalzen. Walnüsse, Mandeln, Haselnüsse. Sie liefern ungesättigte Fette, Ballaststoffe und Pflanzensterine gleichzeitig. Der häufigste Fehler ist die Menge: dreißig Gramm sind eine Handvoll, keine Schüssel vor dem Fernseher. Und geröstet und gesalzen aus der Tüte ist etwas anderes als eine Handvoll Nüsse.",
+      "planos": [
+        {
+          "imagem": "a small handful of mixed unsalted walnuts almonds and hazelnuts on a plain light surface, natural daylight, honest food photography",
+          "ancora": ""
+        },
+        {
+          "imagem": "visual comparison of a measured thirty gram portion of nuts next to a large bowl of nuts, clear scale difference, clean flat lay, no text",
+          "ancora": "dreißig Gramm sind eine Handvoll"
+        }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 9,
+      "narracao": "Baustein fünf ist der schönste, weil man ihn messen kann. Rucola, Rote Bete, Spinat und Mangold enthalten viel Nitrat. Bakterien auf deiner Zunge wandeln es um, und im Körper entsteht daraus Stickstoffmonoxid. Dieses Molekül sagt der Muskelschicht in deinen Gefäßwänden, dass sie sich entspannen soll. Die Gefäße werden weiter, der Druck sinkt. Das ist derselbe Mechanismus, den manche Blutdruckmedikamente nutzen.",
+      "planos": [
+        {
+          "imagem": "fresh arugula leaves beetroot and spinach arranged on a light stone surface, vivid green and deep red, natural daylight, clean",
+          "ancora": ""
+        },
+        {
+          "imagem": "medical illustration of nitrate converting to nitric oxide and signaling the smooth muscle layer of a blood vessel to relax, flat vector diagram with arrows, white background, no text",
+          "ancora": "im Körper entsteht daraus Stickstoffmonoxid"
+        },
+        {
+          "imagem": "medical illustration of an artery widening as the muscle layer relaxes, before and after diameter comparison, flat vector, white background, no text",
+          "ancora": "Die Gefäße werden weiter"
+        }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 10,
+      "narracao": "Baustein sechs: fermentierte Lebensmittel und die Vielfalt in deinem Darm. Sauerkraut, Kefir, Joghurt. Hier will ich ehrlich sein, weil im Internet viel behauptet wird. Dass Darmbakterien mit Gefäßgesundheit zusammenhängen, ist gut belegt. Dass ein bestimmtes Glas Sauerkraut deine Arterien verändert, ist es nicht. Was verlässlich funktioniert, ist banal: viele verschiedene Pflanzen über die Woche verteilt.",
+      "planos": [
+        {
+          "imagem": "glass jars of sauerkraut and kefir on a wooden kitchen shelf in soft daylight, homely and clean",
+          "ancora": ""
+        },
+        {
+          "imagem": "medical illustration of diverse gut bacteria in the intestinal lining, many different shapes and colors, flat vector scientific diagram, white background, no text",
+          "ancora": "Dass Darmbakterien mit Gefäßgesundheit"
+        },
+        {
+          "imagem": "overhead flat lay of a wide variety of colorful vegetables legumes and grains spread across a light surface, abundant and diverse, natural light",
+          "ancora": "viele verschiedene Pflanzen"
+        }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 11,
+      "narracao": "Jetzt der Teil, den kaum jemand macht: was davon überschätzt wird. Vitamin K2 als Kapsel wird gerade als Kalziumwächter verkauft. Die Idee ist plausibel, die Studienlage ist dünn. Knoblauchpillen, Detoxsäfte, Apfelessig am Morgen: keine davon räumt Plaque weg. Und Nahrungsergänzung ersetzt hier nichts, weil der Effekt bei echtem Essen aus dem Zusammenspiel kommt, nicht aus einem einzelnen Stoff im Presslingsformat.",
+      "planos": [
+        {
+          "imagem": "supplement capsules and pill bottles arranged on a clinical white surface, cold neutral light, no readable labels or text",
+          "ancora": ""
+        },
+        {
+          "imagem": "a green detox juice bottle and a bottle of apple cider vinegar on a plain white background, product style, no readable labels",
+          "ancora": "Detoxsäfte, Apfelessig am Morgen"
+        }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 12,
+      "narracao": "Und dann gibt es die Dinge, die stärker wirken als jedes Lebensmittel auf dieser Liste. Nicht rauchen steht mit Abstand an erster Stelle. Danach kommt Bewegung, und zwar die alltägliche: zügig gehen, Treppen, Rad. Danach Blutdruck und Schlaf. Wer raucht und Sardinen isst, hat nicht die Hälfte des Effekts. Er hat den kleineren Hebel gezogen und den größeren liegen gelassen.",
+      "planos": [
+        {
+          "imagem": "an ashtray with a single crushed cigarette on a plain surface, harsh side light, stark and unglamorous",
+          "ancora": ""
+        },
+        {
+          "imagem": "a person's legs walking briskly up outdoor stone stairs in morning light, no face visible, everyday clothing, motion",
+          "ancora": "zügig gehen, Treppen, Rad"
+        }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 13,
+      "narracao": "Zum Schluss das Praktische. Du kannst nicht spüren, wie deine Arterien aussehen. Es tut nichts weh, bis es zu spät ist. Deshalb sind zwei Zahlen mehr wert als jede Ernährungsliste: dein Blutdruck und dein LDL-Wert. Beide bekommst du beim Hausarzt in wenigen Minuten. Wer diese zwei Zahlen kennt, trifft bessere Entscheidungen als jemand, der drei Jahre lang Kurkuma trinkt und nie gemessen hat.",
+      "planos": [
+        {
+          "imagem": "a blood pressure cuff and monitor on a clean examination table in a doctors office, soft clinical light, no people, no readable text",
+          "ancora": ""
+        },
+        {
+          "imagem": "a small vial of blood in a laboratory rack against a clean neutral background, soft light, clinical, no labels or text",
+          "ancora": "dein Blutdruck und dein LDL-Wert"
+        }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 14,
+      "narracao": "Deine Arterien reagieren nicht auf eine Woche und nicht auf ein einzelnes Lebensmittel. Sie reagieren auf das, was du über Jahre wiederholst. Das ist die schlechte Nachricht, weil es keine Abkürzung gibt. Und es ist die gute Nachricht, weil du nie an einem Punkt bist, an dem es keinen Unterschied mehr macht. Die Richtung kannst du heute noch ändern.",
+      "planos": [
+        {
+          "imagem": "medical illustration of a healthy open artery with smooth walls and steady blood flow, calm and clean, flat vector anatomical style, white background, no text",
+          "ancora": ""
+        },
+        {
+          "imagem": "wide calm shot of a person walking away on a tree lined path in warm evening light, seen from behind, hopeful and quiet",
+          "ancora": "Die Richtung kannst du heute"
+        }
+      ],
+      "movimento": true
+    }
+  ],
+  "estilo": "medico",
+  "musica": "de_thinkscience"
+}

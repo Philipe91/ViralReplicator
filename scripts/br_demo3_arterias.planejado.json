@@ -1,0 +1,90 @@
+{
+  "id": "br_demo3_arterias",
+  "idioma": "pt-BR",
+  "voz": "de-DE-FlorianMultilingualNeural",
+  "ritmo": "+8%",
+  "titulo": "DEMO 3 BR — estilo claro com pessoas (1 min)",
+  "nicho": "Saude/ciencia formato Think Science — teste de idioma",
+  "mercado": "Brasil (pt-BR)",
+  "nota_metodo": "Par em portugues do de_demo3_arterien. MESMA voz nos dois (de-DE-FlorianMultilingualNeural e multilingue), para o teste isolar o idioma e nao a identidade vocal. Texto escrito em portugues com as proprias palavras, nao traduzido palavra a palavra do alemao.",
+  "cenas": [
+    {
+      "n": 1,
+      "narracao": "Não existe alimento que limpe as suas artérias. Nenhum suco, nenhum chá, nenhuma dieta do limão. Essa faxina que você encontra em receita de internet não acontece dentro do seu corpo. E mesmo assim, as suas artérias hoje não são as mesmas de um ano atrás. Elas mudam o tempo todo, para os dois lados. A pergunta não é como esfregar elas por dentro. A pergunta é para que lado você está empurrando.",
+      "movimento": true,
+      "planos": [
+        {
+          "ancora": "Não existe alimento que limpe",
+          "fala": "Não existe alimento que limpe as suas artérias. Nenhum suco, nenhum chá, nenhuma dieta do limão.",
+          "seg": 5.73,
+          "animar": true,
+          "imagem": "a friendly woman in her forties with short grey hair, wearing a blue jacket over a white shirt, standing in a bright kitchen full of plants, holding a tall glass of green juice and looking at it with polite doubt, large window with morning light behind her"
+        },
+        {
+          "ancora": "Essa faxina que você encontra",
+          "fala": "Essa faxina que você encontra em receita de internet não acontece dentro do seu corpo. E mesmo assim,",
+          "seg": 5.38,
+          "animar": false,
+          "imagem": "close view of two hands squeezing a lemon half into a glass jar of water on a light wooden kitchen counter, sliced lemons and a teapot beside it, potted herbs and a sunny window in the soft background"
+        },
+        {
+          "ancora": "as suas artérias hoje não",
+          "fala": "as suas artérias hoje não são as mesmas de um ano atrás. Elas mudam o tempo todo, para os dois lados.",
+          "seg": 5.59,
+          "animar": false,
+          "imagem": "an illustrated cutaway cross-section of a blood vessel floating in the air beside a friendly woman in her forties with short grey hair in a blue jacket, she gestures toward it, bright living room with plants and a big window, the cutaway drawn in the same soft illustrated style as the room"
+        },
+        {
+          "ancora": "A pergunta não é como",
+          "fala": "A pergunta não é como esfregar elas por dentro. A pergunta é para que lado você está empurrando.",
+          "seg": 4.99,
+          "animar": false,
+          "imagem": "a friendly man in his forties with short dark hair and light stubble, wearing a grey-blue sweater, walking away from the camera on a park path that forks in two, one branch open and sunlit and wide, the other narrow and overgrown, tall trees, warm afternoon light"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "narracao": "Para entender ao que as suas artérias respondem, você precisa saber o que acontece ali dentro. A parede interna dos seus vasos é forrada por uma camada finíssima de células. Ela tem a espessura de uma célula só. Essa camada se chama endotélio, e ela não é um cano. É um órgão ativo. É ela que decide o quanto um vaso abre, se o sangue coagula, e o que atravessa a parede e o que não atravessa.",
+      "movimento": true,
+      "planos": [
+        {
+          "ancora": "Para entender ao que as",
+          "fala": "Para entender ao que as suas artérias respondem, você precisa saber o que acontece ali dentro.",
+          "seg": 4.51,
+          "animar": true,
+          "imagem": "a friendly man in his forties with short dark hair and light stubble, wearing a grey-blue sweater, sitting at a light wooden table in a bright room with plants, a softly glowing illustrated diagram of a branching blood vessel hovering above the table in front of him"
+        },
+        {
+          "ancora": "A parede interna dos seus",
+          "fala": "A parede interna dos seus vasos é forrada por uma camada finíssima de células. Ela tem a espessura de uma célula só.",
+          "seg": 6.3,
+          "animar": false,
+          "imagem": "an illustrated cross-section of a blood vessel wall drawn in soft editorial style, the inner surface lined with a single neat row of rounded cells, warm beige and sage green palette, clean flat shapes, bright airy background"
+        },
+        {
+          "ancora": "Essa camada se chama endotélio,",
+          "fala": "Essa camada se chama endotélio, e ela não é um cano. É um órgão ativo. É ela que decide o quanto um vaso abre,",
+          "seg": 6.46,
+          "animar": false,
+          "imagem": "a friendly woman in her forties with short grey hair in a blue jacket standing beside a large illustrated cutaway of a blood vessel that reaches from floor to ceiling in a bright airy room, she looks at it with calm interest, big windows and plants"
+        },
+        {
+          "ancora": "se o sangue coagula, e",
+          "fala": "se o sangue coagula, e o que atravessa a parede e o que não atravessa.",
+          "seg": 3.36,
+          "animar": false,
+          "imagem": "an illustrated blood vessel widening open, drawn in soft flat editorial style in the foreground, and far behind it through a large window a person jogging along a green park path in morning light"
+        }
+      ]
+    }
+  ],
+  "estilo": "explicativo_claro",
+  "musica": "de_thinkscience",
+  "_plano_de_edicao": {
+    "alvo_segundos_por_plano": 4.5,
+    "planos": 8,
+    "clipes_animados": 2,
+    "imagens_estaticas": 6
+  }
+}

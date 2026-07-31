@@ -1,0 +1,66 @@
+{
+  "id": "de_demo_arterien",
+  "idioma": "de-DE",
+  "voz": "de-DE-ConradNeural",
+  "ritmo": "+8%",
+  "titulo": "DEMO — Was deine Arterien wirklich sauber hält",
+  "titulo_variacoes": [
+    "Arterien reinigen: Was davon stimmt und was nicht",
+    "Das passiert in deinen Arterien, wenn du diese 6 Dinge isst",
+    "Warum man Arterien nicht reinigen kann — und was stattdessen funktioniert",
+    "Die 6 Bausteine, auf die deine Arterien wirklich reagieren",
+    "Deine Arterien sind heute anders als vor einem Jahr. Das entscheidet, in welche Richtung."
+  ],
+  "nicho": "Saude/ciencia formato Think Science — video 1 da sequencia cronologica (equivalente ao #1 deles: arterias)",
+  "mercado": "Alemanha / DACH (de-DE)",
+  "nota_metodo": "Roteiro ORIGINAL. O video de referencia foi lido para entender o ASSUNTO e a duracao, nao para reaproveitar texto. Estrutura em CATALOGO (licao tirada do video de 5,75M deles, que e catalogo e nao explicativo linear). Afirmacoes ajustadas para o que tem evidencia: placa nao se 'limpa', se estabiliza; K2 tratada como preliminar; nitrato/NO e fibra viscosa tem base solida.",
+  "cenas": [
+    {
+      "n": 1,
+      "punch_in": true,
+      "narracao": "Es gibt kein Lebensmittel, das deine Arterien reinigt. Kein Saft, kein Tee, keine Zitronenkur. Was du in Kochbüchern als Arterienreinigung findest, gibt es in deinem Körper nicht. Und trotzdem sind deine Arterien heute nicht dieselben wie vor einem Jahr. Sie verändern sich ständig, in beide Richtungen. Die Frage ist nicht, wie du sie sauber schrubbst. Die Frage ist, in welche Richtung du sie schiebst.",
+      "planos": [
+        {
+          "imagem": "medical illustration cross section of a healthy human artery with smooth inner wall and flowing red blood cells, flat vector anatomical style, clean white background, no text",
+          "ancora": ""
+        }
+      ],
+      "movimento": false
+    },
+    {
+      "n": 2,
+      "narracao": "Um zu verstehen, worauf deine Arterien reagieren, musst du wissen, was da überhaupt passiert. Die Innenseite deiner Blutgefäße ist mit einer hauchdünnen Zellschicht ausgekleidet. Sie ist eine Zelle dick. Diese Schicht heißt Endothel, und sie ist kein Rohr, sondern ein aktives Organ. Sie entscheidet, wie weit sich ein Gefäß öffnet, ob Blut gerinnt, und was durch die Wand darf und was nicht.",
+      "planos": [
+        {
+          "imagem": "medical illustration of the endothelium, a single layer of flat cells lining the inside of a blood vessel, magnified view, flat vector diagram, white background, no text",
+          "ancora": ""
+        },
+        {
+          "imagem": "medical illustration of a blood vessel dilating and constricting, two states side by side, arrows showing diameter change, flat vector, white background, no text",
+          "ancora": "Sie entscheidet, wie weit sich ein Gefäß öffnet"
+        }
+      ],
+      "movimento": true
+    },
+    {
+      "n": 3,
+      "narracao": "Wenn diese Schicht gereizt ist, wird sie durchlässig. Dann wandern Cholesterinpartikel in die Gefäßwand hinein, und dort bleiben sie stecken. Dein Immunsystem schickt Fresszellen los, die diese Partikel aufnehmen. Die Zellen füllen sich, sterben ab und bleiben liegen. Aus diesem Rest entsteht über Jahre die Plaque. Sie liegt nicht im Blutstrom wie Dreck in einem Rohr. Sie steckt in der Wand.",
+      "planos": [
+        {
+          "imagem": "medical illustration showing cholesterol particles passing through a damaged vessel lining into the artery wall, immune cells engulfing them, flat vector cross section, white background, no text",
+          "ancora": ""
+        },
+        {
+          "imagem": "medical illustration of a plaque forming inside the wall layer of an artery over time, three progressive stages, flat vector diagram, white background, no text",
+          "ancora": "Aus diesem Rest entsteht über Jahre"
+        },
+        {
+          "imagem": "comparison illustration: a dirty pipe with debris floating inside versus an artery with plaque embedded in the wall itself, clear contrast, flat vector, white background, no text",
+          "ancora": "Sie liegt nicht im Blutstrom"
+        }
+      ],
+      "movimento": false
+    }
+  ],
+  "estilo": "medico"
+}

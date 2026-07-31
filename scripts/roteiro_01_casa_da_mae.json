@@ -1,0 +1,130 @@
+{
+  "id": "casa_da_mae",
+  "titulo": "Meu Irmão Vendeu a Casa da Nossa Mãe Enquanto Ela Estava na UTI — O Cartório Já Tinha Outro Nome",
+  "titulo_variacoes": [
+    "Meu Irmão Vendeu a Casa da Nossa Mãe Enquanto Ela Estava Internada. Ele Não Leu a Escritura.",
+    "Ele Vendeu a Casa da Nossa Mãe e Postou a Placa de Vendido no Grupo da Família",
+    "Meu Irmão Assinou a Venda da Casa. O Que Ele Não Sabia É Que Ela Não Era Dele.",
+    "Enquanto Eu Dormia no Hospital, Meu Irmão Vendia a Casa da Nossa Mãe",
+    "A Casa da Minha Mãe Foi Vendida Sem Ela Saber. O Erro Dele Foi de Três Anos Antes."
+  ],
+  "nicho": "Family Betrayal / Revenge Story (faceless narrado)",
+  "mercado": "Brasil (pt-BR)",
+  "voz": "pt_BR-jeff-medium",
+  "cenas": [
+    {
+      "n": 1,
+      "narracao": "Meu irmão vendeu a casa em que eu cresci enquanto nossa mãe estava na UTI. Ele mandou a foto da placa de vendido no grupo da família, às onze da noite, com um emoji de foguete. Como se fosse uma conquista. O que ele não sabia é que aquela casa não era dele para vender. E que eu tinha o documento que provava isso guardado há três anos.",
+      "imagem": "a blank unpainted wooden sign board staked in the overgrown front lawn of a modest house at night, seen from behind so the face of the sign is hidden, a single porch light on, empty street, cold blue and amber light, shallow depth of field, absolutely no writing anywhere",
+      "movimento": false,
+      "nota": "movimento desligado: o clipe LTXV girava a placa e terminava numa placa branca gigante, ruim justo no hook",
+      "punch_in": true
+    },
+    {
+      "n": 2,
+      "narracao": "Meu nome é Renata. Tenho trinta e quatro anos, e nos últimos quatro eu fui a filha que ficou. Não é um título bonito. É o nome que a família dá para quem não pode ir embora.",
+      "imagem": "a woman's silhouette from behind sitting alone in a dim hospital corridor at night, empty plastic chairs in a row, cold fluorescent light reflecting on the floor, no visible face",
+      "movimento": false
+    },
+    {
+      "n": 3,
+      "narracao": "Meu irmão Diogo é dois anos mais velho. Mora em outro estado, e todo mês de dezembro ele aparecia com uma caixa de bombom e a frase pronta: nossa, você está fazendo um trabalho incrível com a mãe. Ele dizia isso do sofá. Eu ouvia da cozinha, enxaguando a seringa da medicação.",
+      "imagem": "a kitchen sink at night with a single warm bulb overhead, medicine bottles and a glass of water on the counter, worn tile, the rest of the room in deep shadow",
+      "movimento": false
+    },
+    {
+      "n": 4,
+      "narracao": "A casa é aquela de esquina, no bairro antigo. Meu pai levantou os primeiros tijolos, minha mãe pagou o resto sozinha depois que ele morreu. Trinta e dois anos de prestação. Ela costumava dizer que a casa era o único lugar do mundo onde ninguém podia mandar ela ir embora.",
+      "imagem": "an old corner house with faded paint and a low garden wall photographed at dusk, warm light in one window, a mango tree leaning over the roof, quiet residential street",
+      "movimento": true
+    },
+    {
+      "n": 5,
+      "narracao": "Em março minha mãe teve o segundo AVC. O médico usou a palavra sedação prolongada, e eu entendi antes dele terminar a frase. Passei onze dias dormindo numa poltrona ao lado dela. No décimo primeiro dia, meu celular vibrou. Era o Diogo, e ele não estava perguntando dela.",
+      "imagem": "a reclining chair beside a hospital bed at night, a folded blanket, monitor glow reflected on the wall, blurred equipment in the foreground, no people",
+      "movimento": false
+    },
+    {
+      "n": 6,
+      "narracao": "Ele queria saber onde estavam as chaves da casa. Disse que ia dar uma geral, tirar o mofo, cuidar do que ninguém estava cuidando. Eu estava com quarenta horas sem dormir. Eu dei as chaves.",
+      "imagem": "a hand holding a worn keyring with two brass keys over a hospital tray table, harsh overhead light, sterile surfaces, high contrast",
+      "movimento": false
+    },
+    {
+      "n": 7,
+      "narracao": "Duas semanas depois eu passei na casa para pegar as roupas dela. O portão estava aberto. O armário do quarto dela estava vazio. Tinha uma fita de corretor amarrada na grade e um carro que eu não conhecia na garagem.",
+      "imagem": "an empty bedroom with an open wardrobe and bare hangers, sunlight cutting through a half closed blind, dust in the air, a bare mattress",
+      "movimento": true
+    },
+    {
+      "n": 8,
+      "narracao": "O corretor foi educado. Ele achou que eu era a irmã que já sabia. Falou do fechamento rápido, do comprador pagando à vista, de como o senhor Diogo tinha sido eficiente. E então ele disse a frase que eu ainda escuto: ele apresentou a procuração da sua mãe.",
+      "imagem": "a real estate lockbox hanging on a metal gate, out of focus street behind, late afternoon sun, no text or signage visible",
+      "movimento": false
+    },
+    {
+      "n": 9,
+      "narracao": "Minha mãe estava intubada havia três semanas. Não existia procuração nova. Existia uma de dois mil e dezenove, feita para resolver um problema de aposentadoria, que ela nunca revogou porque ninguém revoga o que esquece.",
+      "imagem": "a wax seal and a fountain pen resting on a stack of blank aged paper on a dark wooden desk, warm lamp light from the side, deep shadows, no readable writing",
+      "movimento": false
+    },
+    {
+      "n": 10,
+      "narracao": "Naquela noite ele mandou a foto no grupo. Placa de vendido, emoji de foguete, e a legenda: resolvido, agora dá pra pagar o hospital direito. Minha tia respondeu com três palmas. Meu primo respondeu parabéns. Ninguém perguntou se a dona da casa sabia.",
+      "imagem": "a phone lying face up on a rumpled bedsheet in a pitch dark room, its screen glow spilling onto the fabric, no people in frame, no face, cold blue light, extreme close up, no readable screen content",
+      "movimento": false
+    },
+    {
+      "n": 11,
+      "narracao": "Eu não respondi no grupo. Eu fui até a caixa de sapato que fica em cima do guarda-roupa da minha mãe. Aquela caixa que toda mãe brasileira tem, com o certificado de reservista do marido morto e a certidão de casamento amassada. E lá estava, dobrado em quatro.",
+      "imagem": "an old shoebox open on a bed with folded papers and faded photographs inside, warm afternoon light through a curtain, intimate close up, no readable text",
+      "movimento": true
+    },
+    {
+      "n": 12,
+      "narracao": "Três anos antes, quando ela recebeu o primeiro diagnóstico, minha mãe me chamou para tomar café e disse uma frase que eu não entendi na hora. Ela disse: eu não quero que você tenha que discutir com o seu irmão depois que eu não puder falar.",
+      "imagem": "two coffee cups on a small kitchen table by a window, morning light, one chair pushed back, steam rising, no people in frame",
+      "movimento": false,
+      "transicao": "dissolve"
+    },
+    {
+      "n": 13,
+      "narracao": "No dia seguinte ela foi ao cartório sozinha, de ônibus, e fez uma doação em vida com reserva de usufruto. A propriedade da casa passou para o meu nome no mesmo dia. Ela continuou dona do direito de morar lá até o último dia da vida dela. E registrou na matrícula do imóvel.",
+      "imagem": "an elderly woman's hands with a simple gold ring resting on a polished counter, a rubber stamp beside them, institutional beige wall, warm overhead light, no faces, no readable documents",
+      "movimento": false
+    },
+    {
+      "n": 14,
+      "narracao": "O que meu irmão vendeu, com uma procuração vencida de uma mulher sedada, foi uma casa que já tinha outro nome na matrícula havia três anos. Ele nunca puxou a certidão. Ele nunca achou que precisasse.",
+      "imagem": "a heavy metal filing cabinet drawer pulled open in a dim archive room, rows of folders, dust motes in a shaft of light, no readable labels",
+      "movimento": true
+    },
+    {
+      "n": 15,
+      "narracao": "Eu não gritei com ele. Eu liguei para a advogada que minha mãe tinha usado no cartório, e ela me atendeu no domingo. Na terça o comprador recebeu a notificação. Na quinta o tabelião confirmou que a escritura era nula. E na sexta o Diogo apareceu na porta do hospital, pela primeira vez em onze dias.",
+      "imagem": "an empty hospital entrance at dawn seen from inside, automatic glass doors, wet pavement outside, cold blue light, one row of chairs",
+      "movimento": false,
+      "transicao": "dissolve"
+    },
+    {
+      "n": 16,
+      "narracao": "Ele não perguntou dela. Ele perguntou o que eu tinha feito. Eu disse a verdade: nada. Eu só não avisei que a caixa de sapato existia. O comprador quer o dinheiro de volta com correção, e ele já tinha usado a entrada para trocar de carro.",
+      "imagem": "a dark car parked under a flickering streetlight at night, wet asphalt reflecting the light, empty street, one shattered puddle of reflection",
+      "movimento": true
+    },
+    {
+      "n": 17,
+      "narracao": "Minha mãe acordou em maio. Ela perdeu parte dos movimentos do lado esquerdo e quase toda a paciência. Quando eu contei, ela ficou calada por um tempo longo, olhando a janela. Depois ela disse: eu sabia. Foi por isso que eu fui de ônibus, sozinha, e não contei para ninguém.",
+      "imagem": "sunlight falling across a hospital bed sheet and a hand resting on it, a window with sheer curtains blurred behind, soft warm light, hopeful and quiet, no face",
+      "movimento": true,
+      "transicao": "dissolve"
+    },
+    {
+      "n": 18,
+      "narracao": "A casa continua na esquina, com a tinta descascada e o pé de manga por cima do telhado. Minha mãe mora lá. Eu sou a dona no papel e a filha que ficou na prática, e as duas coisas custaram exatamente o mesmo. Se a sua mãe já te chamou pra tomar café e falou uma frase estranha, presta atenção. Às vezes é a única vez que ela vai conseguir avisar.",
+      "imagem": "an old corner house with faded paint and a low garden wall, a mango tree leaning over the roof, quiet residential street, photographed at golden hour, freshly watered garden, one window open with a curtain moving, warm low sun, peaceful, deep long shadows",
+      "seed_de": 4,
+      "movimento": true
+    }
+  ]
+}
