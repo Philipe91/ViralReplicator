@@ -116,3 +116,23 @@ Atualize a tabela de estado na seção 8 de `docs/03-protocolo-publicacao.md`.
 - **Sempre revalide o que salvou.** O handle do canal falhou silenciosamente na primeira tentativa e só apareceu ao abrir a página pública.
 - **Downloads do Chrome não caem em `~/Downloads`** nesta máquina. Se precisar de um arquivo do navegador, peça ao usuário para baixar.
 - **`file_upload` só aceita caminhos que a sessão pode ler.** Copie para o scratchpad ou para dentro do projeto antes.
+
+## Limitação confirmada: não consigo baixar arquivo pelo navegador
+
+Testado em 31/07 no Gemini Notebook, depois de já ter falhado no YouTube Studio.
+**Não é caso isolado nem falta de tentativa.** Os quatro caminhos e onde cada um
+bate na parede:
+
+1. **Botão de download da página** — clico, uma aba abre e fecha, e o arquivo não
+   aparece em Downloads, Desktop, Documents nem em varredura do perfil inteiro
+   por arquivos recentes acima de 1 MB.
+2. **URL direta da mídia** — extraível via `javascript_tool`, mas exige sessão:
+   redireciona para `accounts.google.com/ServiceLogin`. `curl` sem cookie não passa.
+3. **`fetch()` dentro da página autenticada** — bloqueado por **CORS**. O
+   `<video>` toca (mídia não sofre a mesma restrição), mas `fetch` da mesma URL
+   é recusado.
+4. **`chrome://downloads`** — a extensão é proibida de navegar para URLs internas
+   do Chrome.
+
+**Peça ao dono desde o começo.** `Ctrl+J` no Chrome resolve em dez segundos, e o
+arquivo cai em `C:\Users\ph_re\Downloads`. Não gaste turnos tentando contornar.
