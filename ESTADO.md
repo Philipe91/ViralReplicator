@@ -1,6 +1,6 @@
 # ESTADO — onde o projeto parou
 
-_Gerado automaticamente em 31/07/2026 17:14 por `estado.py`. Não edite fora do bloco manual._
+_Gerado automaticamente em 31/07/2026 22:37 por `estado.py`. Não edite fora do bloco manual._
 
 **Se você é uma sessão nova do Claude: leia este arquivo primeiro.** Ele diz
 o que já está no disco, o que a última conversa estava fazendo e qual é o
@@ -91,7 +91,7 @@ item 3 acima.
 
 - **ComfyUI** (`127.0.0.1:8188`): 🟢 no ar
 - **git**: ramo `fix/saneamento-minimo`, 2 arquivo(s) não commitado(s)
-- último commit: `25986ab9 feat(importar): traz planos e takes de vídeo externo para o pipeline`
+- último commit: `c16f1390 docs(publicar): registra por que download pelo navegador não funciona`
 
 ## Conversas em aberto
 
@@ -99,12 +99,12 @@ Sessões do Claude Code que tocaram este projeto nos últimos 14 dias, da mais
 recente para a mais antiga. Para reabrir uma: entre na pasta indicada e rode
 `claude --resume` (ou `claude --resume <id>`).
 
-### `C:\Users\ph_re\Documents\ViralReplicator` — 31/07 17:13
+### `C:\Users\ph_re\Documents\ViralReplicator` — 31/07 22:36
 
 - retomar: `cd "C:\Users\ph_re\Documents\ViralReplicator"` → `claude --resume 24d147a1-3716-4564-a41c-3b693540a0c8`
-- **última fala do dono:** Antes de usar o ClaudeWeb.
-- **última resposta do Claude:** Não peguei o que você quis dizer — a frase ficou pela metade. Mas seja qual for, a coisa útil é a mesma: garantir que o estado está salvo. Vou atualizar o `ESTADO.md`:
-- últimas ações: [mcp__claude-in-chrome__computer], [Bash] Look for the downloaded file in common locations, [mcp__claude-in-chrome__computer], [Bash] Search for a recently downloaded video file, [Bash] Read the manual block of ESTADO.md
+- **última fala do dono:** faz um teste, deixe esse ponto aqui como checkpoint
+- **última resposta do Claude:** Checkpoint primeiro — é ele que protege o que já está de pé.
+- últimas ações: [Bash] Document the download limitation and commit, [SendUserFile], [Bash] Check state before tagging the checkpoint
 
 ### `C:\Users\ph_re\Documents\ViralReplicator` — 30/07 23:56
 
