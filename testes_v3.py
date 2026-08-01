@@ -256,6 +256,46 @@ def test_diagrama_chave_invalida_por_versao_e_params():
         exec_diagrama.VERSAO = original
 
 
+def test_fluxo_dimensiona_pelo_conteudo():
+    """A caixa acompanha o texto. A 1ª versão esticava até o rodapé e sobrava um
+    vazio grande embaixo — caixa muito maior que o conteúdo lê como erro de
+    layout, não como respiro."""
+    import exec_diagrama
+    from PIL import Image
+
+    def altura_da_caixa(etapas):
+        with tempfile.TemporaryDirectory() as d:
+            saida = exec_diagrama.desenhar(
+                {"tipo": "fluxo", "titulo": "T", "etapas": etapas}, Path(d) / "f.png")
+            with Image.open(saida) as bruta:
+                im = bruta.convert("RGB")
+            # varre a coluna que corta a 1ª caixa e mede a faixa clara dela
+            ys = [y for y in range(0, 1080, 2) if sum(im.getpixel((200, y))) > 730]
+            return (max(ys) - min(ys)) if ys else 0
+
+    # 4 etapas para a caixa ficar estreita (~360px) e o texto quebrar de verdade.
+    # Com 2 etapas a caixa tem 781px e um texto de 15 palavras cabe em 2 linhas —
+    # foi assim que a 1ª versão deste teste mediu um crescimento pequeno demais e
+    # reprovou código que estava certo.
+    def quatro(txt):
+        return [{"titulo": "A", "texto": txt}] + [{"titulo": c, "texto": "x"} for c in "BCD"]
+
+    curto = altura_da_caixa(quatro("Kurz."))
+    longo = altura_da_caixa(quatro(
+        "Ein deutlich längerer Text der über viele Zeilen umbrechen muss, damit die "
+        "Box tatsächlich wachsen kann und der Test etwas misst."))
+    checar(curto > 0 and longo > 0, f"não achei as caixas: curto={curto} longo={longo}")
+    checar(longo > curto + 100, f"caixa deveria crescer com o texto: {curto} -> {longo}")
+
+
+def test_fluxo_aguenta_etapa_unica():
+    import exec_diagrama
+    with tempfile.TemporaryDirectory() as d:
+        exec_diagrama.desenhar({"tipo": "fluxo", "etapas": [{"titulo": "Só uma"}]},
+                               Path(d) / "f.png")
+        checar(True, "")
+
+
 def test_diagrama_rejeita_arquetipo_desconhecido():
     import exec_diagrama
     with tempfile.TemporaryDirectory() as d:

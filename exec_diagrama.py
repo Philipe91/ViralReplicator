@@ -40,7 +40,8 @@ import json
 from pathlib import Path
 
 import vetor_base as vb
-from vetor_base import ALTURA, LARGURA, PALETA, RODAPE_PROIBIDO
+from vetor_base import (ALTURA, LARGURA, MARGEM_LATERAL, PALETA, RODAPE_PROIBIDO,
+                        TOPO_SEGURO)
 
 # SUBA ISTO sempre que o DESENHO mudar, mesmo sem mudar os params.
 #
@@ -53,7 +54,9 @@ from vetor_base import ALTURA, LARGURA, PALETA, RODAPE_PROIBIDO
 #         raio/centro reequilibrados
 #   v3 -> paleta, fontes, fundo e título movidos para vetor_base (refatoração
 #         pura: o PNG sai idêntico ao de v2, só a chave muda)
-VERSAO = 3
+#   v4 -> arquétipo `fluxo` (processo em N etapas com seta), caixa dimensionada
+#         pelo conteúdo
+VERSAO = 4
 
 
 def corte_tubo(d, params: dict):
@@ -121,8 +124,103 @@ def _rotulo(d, texto, x, y, ancora_x, ancora_y, f, cor=None, lado="dir"):
     d.text((tx, y - 26), texto, font=f, fill=cor)
 
 
+def fluxo(d, params: dict):
+    """Processo em N etapas, com seta entre elas.
+
+    Nasceu de olhar o que o Gemini Notebook fez melhor que nós. O teste de
+    31/07 concluiu que nenhum dos 13 frames dele era aproveitável — texto
+    queimado em 100%, 1280x720 a 404kbps — mas o DESENHO DA INFORMAÇÃO de um
+    deles era superior ao nosso: onde mostrávamos um corte com dois rótulos,
+    ele mostrava as quatro etapas da formação da placa, cada uma nomeada.
+
+    O que se copia aqui é a estrutura, não o pixel: sai na nossa paleta, no
+    nosso idioma, em 1080p vetorial. E serve para qualquer processo em etapas,
+    não só para placa — que é a diferença entre copiar uma imagem e aprender
+    uma forma.
+    """
+    etapas = params.get("etapas") or []
+    if not etapas:
+        return
+    n = len(etapas)
+    visiveis = vb.revelados(params, n)
+
+    esq, dir_ = MARGEM_LATERAL, LARGURA - MARGEM_LATERAL
+    seta = 58 if n > 1 else 0
+    largura = (dir_ - esq - seta * (n - 1)) / n
+
+    f_num = vb.fonte(34, negrito=True)
+    f_tit = vb.fonte(42, negrito=True)
+    f_txt = vb.fonte(29)
+
+    # A caixa é dimensionada pelo CONTEÚDO mais comprido, não pela área
+    # disponível. A primeira versão esticava a caixa até o rodapé e sobrava um
+    # vazio grande embaixo de cada etapa — caixa muito maior que o texto lê como
+    # erro de layout, não como respiro.
+    linhas_tit = max((len(_quebrar(d, str(e.get("titulo", "")), f_tit, int(largura - 40))[:2])
+                      for e in etapas), default=1)
+    linhas_txt = max((len(_quebrar(d, str(e.get("texto", "")), f_txt, int(largura - 44))[:6])
+                      for e in etapas), default=1)
+    altura = 92 + linhas_tit * 48 + 14 + linhas_txt * 38 + 34
+    area_ini, area_fim = TOPO_SEGURO + 40, ALTURA - RODAPE_PROIBIDO - 60
+    altura = min(altura, area_fim - area_ini)
+    topo = area_ini + (area_fim - area_ini - altura) // 2
+
+    for i, etapa in enumerate(etapas):
+        x = int(esq + (largura + seta) * i)
+        x1 = int(x + largura)
+        if i >= visiveis:
+            continue
+        destaque = bool(etapa.get("destaque"))
+        cor_borda = PALETA["destaque"] if destaque else PALETA["musculo"]
+
+        d.rounded_rectangle([x, topo, x1, topo + altura], radius=18,
+                            fill=PALETA["parede_fina"], outline=cor_borda, width=5)
+
+        # o número é o que transforma uma fileira de caixas em SEQUÊNCIA
+        cxn, cyn = x + 44, topo + 40
+        d.ellipse([cxn - 26, cyn - 26, cxn + 26, cyn + 26], fill=cor_borda)
+        num = str(i + 1)
+        ln = vb.largura_texto(d, num, f_num)
+        d.text((cxn - ln // 2, cyn - 20), num, font=f_num,
+               fill=PALETA["fundo"][:3] if destaque else PALETA["texto"])
+
+        titulo = str(etapa.get("titulo", ""))
+        if titulo:
+            for j, linha in enumerate(_quebrar(d, titulo, f_tit, int(largura - 40))[:2]):
+                d.text((x + 22, topo + 92 + j * 48), linha, font=f_tit,
+                       fill=PALETA["destaque"] if destaque else PALETA["texto"])
+
+        texto = str(etapa.get("texto", ""))
+        if texto:
+            base_y = topo + 92 + 48 * len(_quebrar(d, titulo, f_tit, int(largura - 40))[:2]) + 14
+            for j, linha in enumerate(_quebrar(d, texto, f_txt, int(largura - 44))[:6]):
+                d.text((x + 22, base_y + j * 38), linha, font=f_txt,
+                       fill=PALETA["texto_fraco"])
+
+        if i < n - 1 and i + 1 < visiveis:
+            ym = topo + altura // 2
+            d.line([(x1 + 12, ym), (x1 + seta - 20, ym)], fill=PALETA["traco"], width=5)
+            d.polygon([(x1 + seta - 22, ym - 14), (x1 + seta - 4, ym),
+                       (x1 + seta - 22, ym + 14)], fill=PALETA["traco"])
+
+
+def _quebrar(d, texto: str, f, largura_max: int) -> list:
+    palavras, linhas, atual = texto.split(), [], ""
+    for p in palavras:
+        tentativa = f"{atual} {p}".strip()
+        if atual and vb.largura_texto(d, tentativa, f) > largura_max:
+            linhas.append(atual)
+            atual = p
+        else:
+            atual = tentativa
+    if atual:
+        linhas.append(atual)
+    return linhas
+
+
 ARQUETIPOS = {
     "corte_tubo": corte_tubo,
+    "fluxo": fluxo,
 }
 
 
